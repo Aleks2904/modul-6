@@ -125,7 +125,7 @@ a {
     height: 26px;
     margin-top: -4px;
     border: none;
-    background: url("img_css/call-answer.png");
+    background: url("img/icon/call-answer.png");
     background-repeat: no-repeat;
     background-position: center top;
     -webkit-transition: 1s;
