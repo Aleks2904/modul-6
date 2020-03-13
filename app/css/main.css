@@ -55,3 +55,88 @@ a {
 
 .overflow {
   overflow: hidden; }
+
+.header {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0;
+  margin-bottom: 2px;
+  padding: 0 6%;
+  padding-top: 28px; }
+  .header__burger {
+    width: 24px;
+    height: 18px;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: transparent; }
+    .header__burger_element {
+      display: block;
+      width: 24px;
+      height: 2px;
+      margin-bottom: 6px;
+      background: -webkit-gradient(linear, left bottom, left top, from(#f26522), to(#fa0891));
+      background: -o-linear-gradient(bottom, #f26522 0%, #fa0891 100%);
+      background: linear-gradient(0deg, #f26522 0%, #fa0891 100%); }
+  .header__navigation-ul {
+    position: fixed;
+    z-index: 10;
+    display: none;
+    width: 106%;
+    height: 100vh;
+    margin-top: 55px;
+    margin-left: -6%;
+    padding: 0;
+    background-color: #fff; }
+  .header__navigation-li {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 80%;
+    margin: 0 auto 40px;
+    list-style: none; }
+    .header__navigation-li :last-child {
+      margin-bottom: 0; }
+  .header__navigation-a {
+    font-size: 30px;
+    font-weight: 700px;
+    display: inline-block;
+    margin: 0 auto; }
+    .header__navigation-a :hover {
+      color: #fc557c; }
+  .header__phone-text {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1f1f24; }
+  .header__phone-bottom {
+    width: 26px;
+    height: 26px;
+    margin-top: -4px;
+    border: none;
+    background: url("img_css/call-answer.png");
+    background-repeat: no-repeat;
+    background-position: center top;
+    -webkit-transition: 1s;
+    -o-transition: 1s;
+    transition: 1s; }
+    .header__phone-bottom :hover {
+      -webkit-transform: scale(1.2);
+          -ms-transform: scale(1.2);
+              transform: scale(1.2);
+      -webkit-transition: 1s;
+      -o-transition: 1s;
+      transition: 1s; }
+    .header__phone-bottom_text {
+      display: none; }

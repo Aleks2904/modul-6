@@ -9,10 +9,9 @@
     <link rel="preload" href="fonts/Robotobold700.woff2" as="font">
     <link rel="preload" href="fonts/Robotoblack900.woff2" as="font">
 
-    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/libs/normalize.css">
+    <link rel="stylesheet" href="css/libs/libs.min.css">
     <link rel="stylesheet" href="css/fonts.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/mods/swiper.min.css">
     
     <link rel="stylesheet" href="css/main.css">
 
@@ -20,49 +19,43 @@
 </head>
 <body>
     <header class="header">
-        <div class="dashboard">
-            <nav class="dashboard__navigation">
-                <button class="dashboard__burger js-dashboard__burger" aria-label="развернуть меню" aria-expanded="false" aria-controls="nav">
-                    <span class="dashboard__burger_element"></span>
-                    <span class="dashboard__burger_element"></span>
-                    <span class="dashboard__burger_element"></span>
-                </button>
-
-                <div class="proso-tak">
-                    
-                </div>
-
-                <ul id="nav" class="dashboard__navigation-ul js-dashboard__navigation-ul">
-                    <li class="dashboard__navigation-li">
-                        <a href="#" class="dashboard__navigation-a">
-                            Услуги
-                        </a>
-                    </li>
-
-                    <li class="dashboard__navigation-li">
-                        <a href="#" class="dashboard__navigation-a">
-                            Портфолио
-                        </a>
-                    </li>
-
-                    <li class="dashboard__navigation-li">
-                        <a href="#" class="dashboard__navigation-a">
-                            Стоимость
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-
-            <a href="#" class="dashboard__phone">
-                +7 (499) 995-55-77
-            </a>
-
-            <button type="button" class="dashboard__phone-bottom" id="js-dashboard-phone-bottom">
-                <span class="dashboard__phone-bottom_text">
-                    Заказать звонок
-                </span>
+        <nav class="header__navigation">
+            <button class="header__burger js-header__burger" aria-label="развернуть меню" aria-expanded="false" aria-controls="nav">
+                <span class="header__burger_element"></span>
+                <span class="header__burger_element"></span>
+                <span class="header__burger_element"></span>
             </button>
-        </div>
+
+            <ul id="nav" class="header__navigation-ul js-header__navigation-ul">
+                <li class="header__navigation-li">
+                    <a href="#" class="header__navigation-a">
+                        Услуги
+                    </a>
+                </li>
+
+                <li class="header__navigation-li">
+                    <a href="#" class="header__navigation-a">
+                        Портфолио
+                    </a>
+                </li>
+
+                <li class="header__navigation-li">
+                    <a href="#" class="header__navigation-a">
+                        Стоимость
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <a href="#" class="header__phone-text">
+            +7 (499) 995-55-77
+        </a>
+
+        <button type="button" class="header__phone-bottom" id="js-header-phone-bottom">
+            <span class="header__phone-bottom_text">
+                Заказать звонок
+            </span>
+        </button>
     </header>
 
     <main class="main">
@@ -749,11 +742,8 @@
         </symbol>
     </svg>
 
-    <script src="js/jquery-3.4.1.min.js"></script> 
-    <script src="js/jquery.maskedinput.min.js"></script> 
-    <script src="js/swiper.min.js"></script>
-    <script src="js/swiper-active.js"></script>
-    <script src="js/minimize-menu.js"></script>
-    <script src="js/js-modal.js"></script>
+    <script src="js/redy/libs.min.js"></script>
+    <script src="js/redy/jquery.maskedinput.min.js"></script>
+    <script src="js/redy/scripts.min.js"></script>
 </body>
 </html>
