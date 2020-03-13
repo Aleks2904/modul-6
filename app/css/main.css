@@ -69,7 +69,19 @@ a {
   margin: 0;
   margin-bottom: 2px;
   padding: 0 6%;
-  padding-top: 28px; }
+  padding-top: 28px;
+  outline: none; }
+  @media (min-width: 1024px) {
+    .header {
+      padding: 38px 4% 10px;
+      background-color: #fbfbfb;
+      margin: 0; } }
+  @media (min-width: 1920px) {
+    .header {
+      background-color: #fbfbfb;
+      padding-bottom: 20px;
+      margin-left: 288px;
+      margin-top: -2px; } }
   .header__burger {
     width: 24px;
     height: 18px;
@@ -77,6 +89,13 @@ a {
     padding: 0;
     border: none;
     background: transparent; }
+    @media (min-width: 1024px) {
+      .header__burger {
+        width: 45px;
+        height: 32px; } }
+    @media (min-width: 1920px) {
+      .header__burger {
+        display: none; } }
     .header__burger_element {
       display: block;
       width: 24px;
@@ -85,6 +104,11 @@ a {
       background: -webkit-gradient(linear, left bottom, left top, from(#f26522), to(#fa0891));
       background: -o-linear-gradient(bottom, #f26522 0%, #fa0891 100%);
       background: linear-gradient(0deg, #f26522 0%, #fa0891 100%); }
+      @media (min-width: 1024px) {
+        .header__burger_element {
+          width: 45px;
+          height: 5px;
+          margin-bottom: 8px; } }
   .header__navigation-ul {
     position: fixed;
     z-index: 10;
@@ -95,6 +119,16 @@ a {
     margin-left: -6%;
     padding: 0;
     background-color: #fff; }
+    @media (min-width: 1920px) {
+      .header__navigation-ul {
+        display: -webkit-box !important;
+        display: -webkit-flex !important;
+        display: -ms-flexbox !important;
+        display: flex !important;
+        position: static;
+        height: 100%;
+        margin: 0;
+        background-color: #fbfbfb; } }
   .header__navigation-li {
     display: -webkit-box;
     display: -webkit-flex;
@@ -107,30 +141,61 @@ a {
     width: 80%;
     margin: 0 auto 40px;
     list-style: none; }
+    @media (min-width: 1920px) {
+      .header__navigation-li {
+        margin: 0;
+        margin-right: 25px; } }
     .header__navigation-li :last-child {
       margin-bottom: 0; }
   .header__navigation-a {
     font-size: 30px;
     font-weight: 700px;
     display: inline-block;
+    color: #1f1f24;
     margin: 0 auto; }
     .header__navigation-a :hover {
       color: #fc557c; }
+    @media (min-width: 1920px) {
+      .header__navigation-a {
+        font-size: 16px;
+        font-weight: 400; } }
   .header__phone-text {
     font-size: 18px;
     font-weight: 700;
     color: #1f1f24; }
+    @media (min-width: 1024px) {
+      .header__phone-text {
+        font-size: 25px;
+        margin-right: -44%; } }
+    @media (min-width: 1920px) {
+      .header__phone-text {
+        margin-top: -5px;
+        margin-right: -27%; } }
   .header__phone-bottom {
     width: 26px;
     height: 26px;
     margin-top: -4px;
     border: none;
-    background: url("img/icon/call-answer.png");
+    background: url("../img/icon/call-answer.png");
     background-repeat: no-repeat;
     background-position: center top;
     -webkit-transition: 1s;
     -o-transition: 1s;
     transition: 1s; }
+    @media (min-width: 1024px) {
+      .header__phone-bottom {
+        width: 206px;
+        margin-top: -7px;
+        padding: 0;
+        text-align: center;
+        background: none; } }
+    @media (min-width: 1920px) {
+      .header__phone-bottom {
+        margin-top: -9px;
+        margin-right: 20.2%;
+        -webkit-transition: 1s;
+        -o-transition: 1s;
+        transition: 1s; } }
     .header__phone-bottom :hover {
       -webkit-transform: scale(1.2);
           -ms-transform: scale(1.2);
@@ -140,3 +205,11 @@ a {
       transition: 1s; }
     .header__phone-bottom_text {
       display: none; }
+      @media (min-width: 1024px) {
+        .header__phone-bottom_text {
+          font-size: 16px;
+          font-weight: 400;
+          display: block;
+          padding: 13px 0;
+          color: #f53f4f;
+          border: 1.0px solid #f82370; } }

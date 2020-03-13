@@ -10,6 +10,21 @@
     padding:0 6%;
     padding-top:28px;
 
+    outline: none;
+
+    @media (min-width:1024px){
+        padding:38px 4% 10px;
+        background-color: #fbfbfb;
+        margin: 0;
+    }
+
+    @media (min-width:1920px){
+        background-color: #fbfbfb;
+        padding-bottom: 20px;
+        margin-left: 288px;
+        margin-top: -2px;
+    }
+
     &__navigation {
     }
 
@@ -22,6 +37,15 @@
         border:none;
         background:transparent;
 
+        @media (min-width:1024px){
+            width:45px;
+            height:32px;
+        }
+
+        @media (min-width:1920px){
+            display: none;
+        }
+
         &_element {
             display:block;
 
@@ -30,6 +54,12 @@
             margin-bottom:6px;
 
             background: $gradient;
+
+            @media (min-width:1024px){
+                width:45px;
+                height:5px;
+                margin-bottom:8px;
+            }
         }
     }
 
@@ -46,6 +76,14 @@
         padding:0;
 
         background-color:#fff;
+
+        @media (min-width:1920px){
+            display: flex !important;
+            position: static;
+            height: 100%;
+            margin: 0;
+            background-color: #fbfbfb;
+        }
     }
 
     &__navigation-li {
@@ -56,6 +94,11 @@
         margin:0 auto 40px;
 
         list-style:none;
+
+        @media (min-width:1920px){
+            margin: 0;
+            margin-right: 25px;
+        }
 
         :last-child{
             margin-bottom:0;
@@ -68,10 +111,17 @@
 
         display:inline-block;
 
+        color: #1f1f24;
+
         margin:0 auto;
 
         :hover{
             color:#fc557c;
+        }
+
+        @media (min-width:1920px){
+            font-size: 16px;
+            font-weight: 400;
         }
     }
 
@@ -80,6 +130,17 @@
         font-weight:700;
 
         color:#1f1f24;
+
+        @media (min-width:1024px){
+            font-size:25px;
+
+            margin-right:-44%;
+        }
+
+        @media (min-width:1920px){
+            margin-top: -5px;
+            margin-right:-27%;
+        }
     }
 
     &__phone-bottom {
@@ -88,10 +149,26 @@
         margin-top:-4px;
 
         border:none;
-        background:url('img/icon/call-answer.png');
+        background:url('../img/icon/call-answer.png');
         background-repeat:no-repeat;
         background-position:center top;
         transition: 1s;
+
+        @media (min-width:1024px){
+            width:206px;
+            margin-top:-7px;
+            padding:0;
+
+            text-align:center;
+
+            background:none;
+        }
+
+        @media (min-width:1920px){
+            margin-top:-9px;
+            margin-right: 20.2%;
+            transition: 1s;
+        }
 
         :hover{
             transform: scale(1.2);
@@ -100,7 +177,21 @@
 
         &_text {
             display:none;
+
+            @media (min-width:1024px){
+                font-size:16px;
+                font-weight:400;
+
+                display:block;
+
+                padding:13px 0;
+
+                color:#f53f4f;
+                border:1.0px solid #f82370;
+            }
         }
     }
 }
+
+
 

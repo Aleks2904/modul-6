@@ -1,0 +1,170 @@
+.modal-all {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 30;
+
+    width: 100%;
+}
+
+.active{
+    opacity: 1;
+    visibility: visible;
+    transition: 1s;
+}
+
+.no-active {
+    opacity: 0;
+    visibility: hidden;
+    transition: 1s;
+}
+
+.button-close{
+    position: absolute;
+    
+    padding: 0;
+
+    top: 0;
+    right: 0;
+
+    margin: 2%;
+
+    width: 30px;
+    height: 30px;
+    transition: 0.5s;
+
+    :hover{
+        transform: scale(1.5);
+        transition: 0.5s;
+    }
+
+    &__liner-1{
+        position: absolute;
+        display: block;
+        width: 95%;
+        height: 3px;
+        background: black;
+        margin: 0 2.5%;
+        margin-top: -1.5px;
+        transform:rotate(-45deg);
+    }
+
+    &__liner-2{
+        position: absolute;
+        display: block;
+        width: 95%;
+        height: 3px;
+        background: black;
+        margin: 0 2.5%;
+        margin-top: -1.5px;
+    
+        transform:rotate(45deg); 
+    }
+}
+
+.request-call-block {
+    @extend %modal-block;
+
+		&__title {
+            @extend %modal-title;
+		}
+
+		&__form {
+            @extend %modal-form;
+		}
+
+		&__intro-label {
+            @extend %modal-label;
+		}
+
+		&__intro-input {
+            @extend %modal-input;
+		}
+
+		&__tel-label {
+            @extend %modal-label;
+		}
+
+		&__tel-input {
+            @extend %modal-input;
+		}
+
+		&__button {
+            @extend %modal-button;
+		}
+
+		&__close {
+            
+		}
+}
+
+.follow-up {
+    @extend %modal-block;
+
+		&__title {
+            @extend %modal-title;
+		}
+
+		&__close {
+            
+		}
+}
+
+.find-price {
+    @extend %modal-block;
+
+		&__title {
+            @extend %modal-title;
+		}
+
+		&__form {
+            @extend %modal-form;
+		}
+
+		&__page-label {
+            @extend %modal-label;
+		}
+
+		&__page-input {
+            @extend %modal-input;
+		}
+
+		&__block-label {
+            @extend %modal-label;
+		}
+
+		&__block-input {
+            @extend %modal-input;
+		}
+
+		&__sloider-label {
+            @extend %modal-label;
+		}
+
+		&__sloider-input {
+            @extend %modal-inpyt;
+		}
+
+		&__button {
+            @extend %modal-button;
+		}
+
+		&__prise {
+            margin: 20px;
+		}
+
+		&__close {
+		}
+}
+
+.order-project {
+    @extend %modal-block;
+
+		&__title {
+            @extend %modal-title;
+		}
+
+		&__close {
+            
+		}
+}
