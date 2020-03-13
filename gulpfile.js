@@ -20,15 +20,27 @@ gulp.task('sass', function() { // Создаем таск Sass
 gulp.task('scripts', function() {
     return gulp.src([ // Берем все необходимые библиотеки
         'libs/jquery/dist/jquery.min.js', // Берем jQuery
-        'libs/magnific-popup/dist/jquery.magnific-popup.min.js' // Берем Magnific Popup
+        'libs/magnific-popup/dist/jquery.magnific-popup.min.js', // Берем Magnific Popup
+        'libs/swiper/package/js/swiper.js',
+        'libs/jquery.maskedinput.min.js'
         ])
         .pipe(concat('libs.min.js')) // Собираем их в кучу в новом файле libs.min.js
         .pipe(uglify()) // Сжимаем JS файл
-        .pipe(gulp.dest('app/js')); // Выгружаем в папку app/js
+        .pipe(gulp.dest('app/js/redy')); // Выгружаем в папку app/js
+});
+
+gulp.task('scripts2', function() {
+    return gulp.src('app/js/*.js')
+        .pipe(concat('scripts.min.js')) // Собираем их в кучу в новом файле libs.min.js
+        .pipe(uglify()) // Сжимаем JS файл
+        .pipe(gulp.dest('app/js/redy')); // Выгружаем в папку app/js
 });
 
 gulp.task('css-libs', function() {
-    return gulp.src('libs/magnific-popup/dist/magnific-popup.css') // Выбираем файл для минификации (только для библиотек, ручные стили нет смысла сжимать)
+    return gulp.src([
+        'libs/magnific-popup/dist/magnific-popup.css',
+        'libs/swiper/package/css/swiper.css'
+        ]) // Выбираем файл для минификации (только для библиотек, ручные стили нет смысла сжимать)
         .pipe(concat('libs.min.css')) // Собираем их в кучу в новом файле libs.min.js
         .pipe(cssnano()) // Сжимаем
         .pipe(gulp.dest('app/css/libs')); // Выгружаем в папку app/css
@@ -58,7 +70,7 @@ gulp.task('prebuild', async function() {
     var buildFonts = gulp.src('app/fonts/**/*') // Переносим шрифты в продакшен
     .pipe(gulp.dest('dist/fonts'))
 
-    var buildJs = gulp.src('app/js/**/*') // Переносим скрипты в продакшен
+    var buildJs = gulp.src('app/js/redy/**/*')    // Переносим скрипты в продакшен
     .pipe(gulp.dest('dist/js'))
 
     var buildHtml = gulp.src('app/*.html') // Переносим HTML в продакшен
@@ -72,7 +84,7 @@ gulp.task('clear', function (callback) {
 
 gulp.task('watch', function() {
     gulp.watch('app/scss/**/*.scss', gulp.parallel('sass')); // Наблюдение за sass файлами
-    gulp.watch(['app/js/common.js', 'app/libs/**/*.js'], gulp.parallel('scripts')); // Наблюдение за главным JS файлом и за библиотеками
+    gulp.watch('app/js/**/*.js', gulp.parallel('scripts')); // Наблюдение за главным JS файлом и за библиотеками
 });
-gulp.task('default', gulp.parallel('css-libs', 'sass', 'scripts', 'watch'));
-gulp.task('build', gulp.parallel('prebuild', 'clean', 'img', 'sass', 'scripts'));
+gulp.task('default', gulp.parallel('css-libs', 'sass', 'scripts', 'scripts2', 'watch'));
+gulp.task('build', gulp.parallel('prebuild', 'clean', 'img', 'sass', 'scripts', 'scripts2'));
