@@ -139,9 +139,10 @@
     }
 
     &__picture {
-        @media (min-width:1024px){
-            position:relative;
+        position:relative;
+        height: 300px;
 
+        @media (min-width:1024px){
             float:right;
 
             width:50%;
@@ -152,22 +153,44 @@
     &__svg {
         position:absolute;
         left:55%;
-
+        top: -300px;
         width:158%;
-        height:116%;
+        
 
         display:block;
 
         transform:translateX(-50%);
 
+        fill: url(#grad);
+
         @media (min-width:1024px){
+            display: none;
+        }
+    }
+
+    &__svg-1024{
+        display: none;
+
+        fill: url(#grad);
+        
+        @media (min-width:1024px){
+            display: block;
+
             top:13%;
             left:-9%;
 
             width:180%;
         }
+    }
+
+    &__svg-1920{
+        display: none;
+
+        fill: url(#grad);
 
         @media (min-width:1920px){
+            display: block;
+
             top:0%;
             left: 0%;
 

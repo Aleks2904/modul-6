@@ -8,7 +8,11 @@ var gulp         = require('gulp'), // Подключаем Gulp
     imagemin     = require('gulp-imagemin'), // Подключаем библиотеку для работы с изображениями
     pngquant     = require('imagemin-pngquant'), // Подключаем библиотеку для работы с png
     cache        = require('gulp-cache'), // Подключаем библиотеку кеширования
-    autoprefixer = require('gulp-autoprefixer');// Подключаем библиотеку для автоматического добавления префиксов
+    autoprefixer = require('gulp-autoprefixer'),// Подключаем библиотеку для автоматического добавления префиксов
+    cheerio      = require('gulp-cheerio'), // удаляет в свг стандартные стили котоыре мешают его стилизовать
+    replace      = require('gulp-replace'), // исправление косяков от cheerio
+    svgSprite    = require('gulp-svg-sprite'), //собирает все свг в 1 спрайт ( у него очень большой функционал, почитать api)
+    svgMin       = require('gulp-svgmin');  //минификация свг
 
 gulp.task('sass', function() { // Создаем таск Sass
     return gulp.src('app/scss/**/*.scss') // Берем источник
@@ -76,6 +80,35 @@ gulp.task('prebuild', async function() {
     .pipe(gulp.dest('dist'));
 
 });
+
+gulp.task('svg', function(){
+    return gulp.src('app/img/svg/**/*') 
+    .pipe(svgMin({
+        js2svg: {
+            pretty: true
+        }
+    }))
+
+    .pipe(cheerio({
+        run: function($) {
+           $('[fill]').removeAttr('fill'); 
+           $('[stroke]').removeAttr('stroke'); 
+           $('[style]').removeAttr('style'); 
+        },
+        parserOptions: {xmlMode: true}
+    }))
+
+    .pipe(replace('&gt;', '>'))
+    
+    .pipe(svgSprite({
+        mode:{
+            symbol: {
+                sprite: "sprite.svg"
+            }
+        }
+    }))
+    .pipe(gulp.dest('app/img')) 
+})
 
 gulp.task('clear', function (callback) {
     return cache.clearAll();

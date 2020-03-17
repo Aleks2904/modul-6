@@ -562,28 +562,42 @@ a {
         -webkit-transform: translate(49.6vw, 36.2vh) rotate(21deg);
             -ms-transform: translate(49.6vw, 36.2vh) rotate(21deg);
                 transform: translate(49.6vw, 36.2vh) rotate(21deg); } }
-  @media (min-width: 1024px) {
-    .my-presentation__picture {
-      position: relative;
-      float: right;
-      width: 50%;
-      height: 100%; } }
+  .my-presentation__picture {
+    position: relative;
+    height: 300px; }
+    @media (min-width: 1024px) {
+      .my-presentation__picture {
+        float: right;
+        width: 50%;
+        height: 100%; } }
   .my-presentation__svg {
     position: absolute;
     left: 55%;
+    top: -300px;
     width: 158%;
-    height: 116%;
     display: block;
     -webkit-transform: translateX(-50%);
         -ms-transform: translateX(-50%);
-            transform: translateX(-50%); }
+            transform: translateX(-50%);
+    fill: url(#grad); }
     @media (min-width: 1024px) {
       .my-presentation__svg {
+        display: none; } }
+  .my-presentation__svg-1024 {
+    display: none;
+    fill: url(#grad); }
+    @media (min-width: 1024px) {
+      .my-presentation__svg-1024 {
+        display: block;
         top: 13%;
         left: -9%;
         width: 180%; } }
+  .my-presentation__svg-1920 {
+    display: none;
+    fill: url(#grad); }
     @media (min-width: 1920px) {
-      .my-presentation__svg {
+      .my-presentation__svg-1920 {
+        display: block;
         top: 0%;
         left: 0%;
         -webkit-transform: translate(10.5%, 0) rotate(-8deg);
@@ -720,7 +734,10 @@ a {
             align-self: center;
     width: 19%;
     min-height: 40px;
-    margin-bottom: 3.8%; }
+    margin-bottom: 3.8%;
+    fill: url(#grad); }
+    .my-job__example-svg :hover {
+      fill: green; }
     @media (min-width: 1024px) {
       .my-job__example-svg {
         width: 30%;
@@ -1021,7 +1038,10 @@ a {
     width: 14px;
     height: 14px;
     margin-top: 5px;
-    margin-right: 20px; }
+    margin-right: 20px;
+    fill: url(#grad); }
+    .phone__icon :hover {
+      fill: green; }
     @media (min-width: 1024px) {
       .phone__icon {
         width: 18px;
@@ -1045,7 +1065,10 @@ a {
     width: 14px;
     height: 14px;
     margin-top: 5px;
-    margin-right: 20px; }
+    margin-right: 20px;
+    fill: url(#grad); }
+    .mail__icon :hover {
+      fill: green; }
     @media (min-width: 1024px) {
       .mail__icon {
         width: 22px;
@@ -1100,7 +1123,10 @@ a {
     .social-networks_li :last-child {
       margin-right: 0; }
   .social-networks_svg {
-    width: 70%; }
+    width: 70%;
+    fill: #8993ad; }
+    .social-networks_svg :hover {
+      fill: green; }
 
 .copyright {
   font-size: 12px;

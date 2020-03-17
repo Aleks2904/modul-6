@@ -83,6 +83,12 @@
             margin-top:5px;
             margin-right:20px;
 
+            fill: url(#grad);
+
+        :hover{
+            fill: green;
+        }
+
             @media (min-width:1024px){
                 width:18px;
                 height:18px;
@@ -111,6 +117,12 @@
             height:14px;
             margin-top:5px;
             margin-right:20px;
+
+            fill: url(#grad);
+
+        :hover{
+            fill: green;
+        }
 
             @media (min-width:1024px){
                 width:22px;
@@ -184,6 +196,11 @@
 
 		&_svg {
             width:70%;
+            fill: #8993ad;
+
+            :hover{
+                fill: green;
+            }
 		}
 }
 .copyright {
