@@ -151,118 +151,118 @@
 
         <section class="my-presentation">
             <div class="my-presentation__signs">
-                <span class="my-presentation__signs-1 signs-all">
+                <span class="my-presentation__signs-1">
                     { }
                 </span>
 
-                <span class="my-presentation__signs-2 signs-all">
+                <span class="my-presentation__signs-2">
                     #
                 </span>
 
-                <span class="my-presentation__signs-3 signs-all">
+                <span class="my-presentation__signs-3">
                     &lt;/&gt;
                 </span>
 
-                <span class="my-presentation__signs-4 signs-all">
+                <span class="my-presentation__signs-4">
                     &lt;div&gt;
                 </span>
 
-                <span class="my-presentation__signs-5 signs-all">
+                <span class="my-presentation__signs-5">
                     &lt;/&gt;
                 </span>
 
-                <span class="my-presentation__signs-6 signs-all">
+                <span class="my-presentation__signs-6">
                     &lt;div&gt;
                 </span>
 
-                <div class="my-presentation__pocture">
-                    <svg class="my-presentation__svg" alt="фон для картинки">
-                        <use xlink:href="#fonts"></use>
-                    </svg>
-
-                    <svg class="my-presentation__svg_1024" vivebox="0 0 942 645" role="image" aria-label="фон для картинки">
+                <div class="my-presentation__picture">
+                    <svg class="my-presentation__svg" vivebox="0 0 942 645" role="image" aria-label="фон для картинки">
                         <use xlink:href="#fonts2"></use>
                     </svg>
 
-                    <picture >
-                        <source media="(min-width: 1024px)" srcset="img/im_foto_1024.png">
-                        <source media="(min-width: 320px)" srcset="img/im_foto.png">
+                    <picture>
+                        <source type="image/webp" media="(min-width: 1920px)" srcset="img/block-1/im_foto_1920.webp">
+                        <source type="image/webp" media="(min-width: 1024px)" srcset="img/block-1/im_foto_1024.webp">
+                        <source type="image/webp" srcset="img/block-1/im_foto.webp">
+
+                        <source media="(min-width: 1920px)" srcset="img/block-1/im_foto_1920.png">
+                        <source media="(min-width: 1024px)" srcset="img/block-1/im_foto_1024.png">
     
-                        <img src="img/im_foto.png" alt="тут должно быть мое фото, но мне лень ..." class="my-presentation__img"> 
+                        <img src="img/block-1/im_foto.png" alt="тут должно быть мое фото, но мне лень ..." class="my-presentation__img"> 
                     </picture>
                 </div>
             </div>
 
 
-            <div class="my-presentation__info">
-                <h1 class="my-presentation__presentation">
+            <div class="my-info">
+                <h1 class="my-info__title">
                     Дмитрий Алексеев
                 </h1>
 
-                <p class="my-presentation__description">
+                <p class="my-info__subtitle">
                     Frontend-разработчик и веб-верстальщик
                 </p>
 
-                <button type="button" class="my-presentation__buttom-info" id="js-my-presentation-buttom">
+                <button type="button" class="my-info__buttom" id="js-my-presentation-buttom">
                     Узнать больше
                 </button>
             </div>
         </section>
 
         <section class="my-job">
-            <h2 class="my-job__presentation">
+            <h2 class="my-job__title">
                 Что я делаю
             </h2>
     
             <ul class="my-job__example">
-                <li class="my-job__example-li">
+                <li class="my-job__item">
                     <svg class="my-job__example-svg" vivebox="0 0 512 512" aria-label="Описани картинки 1">
                         <use xlink:href="#main_1"></use>
                     </svg>
 
-                    <p class="my-job__example-description">
+                    <p class="my-job__subtitle">
                         Вёрстка лендинг&mdash;страниц и&nbsp;сайтов любой сложности
                     </p>
                 </li>
 
-                <li class="my-job__example-li">
+                <li class="my-job__item">
                     <svg class="my-job__example-svg" vivebox="0 0 480 480" aria-label="Описани картинки 2">
                         <use xlink:href="#main_2"></use>
                     </svg>
 
-                    <p class="my-job__example-description">
+                    <p class="my-job__subtitle">
                         Адаптивная вёрстка под все браузеры и&nbsp;устройства
                     </p>
                 </li>
 
-                <li class="my-job__example-li">
+                <li class="my-job__item">
                     <svg class="my-job__example-svg" vivebox="0 0 512 512" aria-label="Описани картинки 3">
                         <use xlink:href="#main_3"></use>
                     </svg>
 
-                    <p class="my-job__example-description">
+                    <p class="my-job__subtitle">
                         Frontend&nbsp;&mdash; разработка и&nbsp;программирование
                     </p>
                 </li>
 
-                <li class="my-job__example-li">
+                <li class="my-job__item">
                     <svg class="my-job__example-svg" vivebox="0 0 512 512" aria-label="Описани картинки 4">
                         <use xlink:href="#main_4"></use>
                     </svg>
 
-                    <p class="my-job__example-description">
+                    <p class="my-job__subtitle">
                         Исправление и&nbsp;доработка существующей вёрстки
                     </p>
                 </li>
             </ul>
 
-            <button type="button" class="my-job__button-prices" id="js-my-job-button">
+            <button type="button" class="my-job__button" id="js-my-job-button">
                 Узнать стоимость
             </button>
         </section>
 
         <section class="work-example">
-            <h2 class="work-example__presentation">
+            <h2 class="work-example__title">
                 Примеры моих работ
             </h2>
 
@@ -271,11 +271,11 @@
                 <div class="swiper-wrapper">
                     <!-- Slides -->
                     <div class="swiper-slide">
-                        <a href="#" class="swiper__a">
-                            <figure class="swiper__figure">
-                                <img class="slide__foto" src="img/rectangle_4_119.png" alt="малыш">
+                        <a href="#" class="swiper-item">
+                            <figure class="swiper-item__figure">
+                                <img class="swiper-item__foto" src="img/rectangle_4_119.png" alt="малыш">
     
-                                <figcaption class="slide__description">
+                                <figcaption class="swiper-item__subtitle">
                                     Сайт магазина детской одежды
                                 </figcaption>
                             </figure>
@@ -283,11 +283,11 @@
                     </div>
 
                     <div class="swiper-slide">
-                        <a href="#" class="swiper__a">
-                            <figure class="swiper__figure">
-                                <img class="slide__foto" src="img/rectangle_4_119.png" alt="малыш">
+                        <a href="#" class="swiper-item">
+                            <figure class="swiper-item__figure">
+                                <img class="swiper-item__foto" src="img/rectangle_4_119.png" alt="малыш">
 
-                                <figcaption class="slide__description">
+                                <figcaption class="swiper-item__subtitle">
                                     Сайт магазина детской одежды
                                 </figcaption>
                             </figure>
@@ -295,11 +295,11 @@
                     </div>
 
                     <div class="swiper-slide">
-                        <a href="#" class="swiper__a">
-                            <figure class="swiper__figure">
-                                <img class="slide__foto" src="img/rectangle_4_119.png" alt="малыш">
+                        <a href="#" class="swiper-item">
+                            <figure class="swiper-item__figure">
+                                <img class="swiper-item__foto" src="img/rectangle_4_119.png" alt="малыш">
 
-                                <figcaption class="slide__description">
+                                <figcaption class="swiper-item__subtitle">
                                     Сайт магазина детской одежды
                                 </figcaption>
                             </figure>
@@ -313,37 +313,37 @@
             <div class="swiper-button-prev swiper-button-all"></div>
             <div class="swiper-button-next swiper-button-all"></div>
 
-            <button type="button" class="work-example__button-bue-work" id="js-work-example-button">
+            <button type="button" class="work-example__button" id="js-work-example-button">
                 Заказать проект
             </button>
         </section>
 
         <section class="advertising">
-            <h2 class="advertising__info">
+            <h2 class="advertising__title">
                 Адаптивная вёрстка под все устройства и&nbsp;браузеры от&nbsp;1000 рублей всего за&nbsp;4&nbsp;часа.*
             </h2>
 
-            <p class="advertising__description">
+            <p class="advertising__subtitle">
                 Срок и&nbsp;стоимость могут отличаться от&nbsp;заявленных и&nbsp;рассчитываются индивидуально, в&nbsp;зависимости от&nbsp;сложности задач.
             </p>
 
-            <span class="advertising__signs-1 advertising-signs-all">
+            <span class="advertising__signs-1">
                 { }
             </span>
 
-            <span class="advertising__signs-2 advertising-signs-all">
+            <span class="advertising__signs-2">
                 &lt;/&gt;
             </span>
 
-            <span class="advertising__signs-3 advertising-signs-all">
+            <span class="advertising__signs-3">
                 &lt;div&gt;
             </span>
 
-            <span class="advertising__signs-4 advertising-signs-all">
+            <span class="advertising__signs-4">
                 { }
             </span>
 
-            <span class="advertising__signs-5 advertising-signs-all">
+            <span class="advertising__signs-5">
                 #
             </span>
         </section>

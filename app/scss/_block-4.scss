@@ -1,0 +1,142 @@
+.advertising {
+    padding:43px 0 42px 18px;
+
+    background-image:$gradient;
+
+    @media (min-width:1024){
+        position:relative;
+
+        padding:75px 0 80px 40px;
+    }
+
+    &__title {
+        font-size:28px;
+        font-weight:700;
+        line-height:40px;
+
+        margin:0;
+        margin-bottom:30px;
+
+        color:#fff;
+
+        @media (min-width:1024){
+            font-size:45px;
+            line-height:60px;
+
+            margin-bottom:29px;
+        }
+
+        @media (min-width:1920){
+            width: 52%;
+            margin: 0 auto;
+        }
+    }
+
+    &__subtitle {
+        font-size:15px;
+        font-weight:400;
+        line-height:30px;
+
+        margin:0;
+        margin-left:16px;
+
+        color:#fff;
+
+        ::before{
+            font-size:20px;
+        
+            margin-left:-15px;
+        
+            content:'*';
+        }    
+        
+        @media (min-width:1024){
+            font-size:18px;
+
+            width:80%;
+            margin-left:15px;
+        }
+
+        @media (min-width:1920){
+            width:50%;
+            margin:0 auto;
+        }
+    }
+
+    &__signs-1 {
+        display: none;
+
+        @extend %reclam-signs;
+
+        @media (min-width:1024){
+            display: block;
+            
+            transform:translate(11.4vw, -32.5vh) rotate(26deg);
+        }
+
+        @media (min-width:1920){
+            transform:translate(4.5vw, -20.7vh) rotate(26deg);
+        }
+    }
+
+    &__signs-2 {
+        display: none;
+
+        @extend %reclam-signs;
+
+        @media (min-width:1024){
+            display: block;
+
+            font-size:40.8px;
+
+            transform:translate(81.4vw, 0vh) rotate(-22deg);
+        }
+
+        @media (min-width:1920){
+            transform:translate(84.2vw, -19.2vh) rotate(-22deg);
+        }
+    }
+
+    &__signs-3 {
+        display: none;
+
+        @extend %reclam-signs;
+
+        @media (min-width:1024){
+            display: block;
+
+            font-size:25px;
+
+            transition:2s;
+            transform:translate(46vw, 2.1vh) rotate(20deg);
+        }
+
+        @media (min-width:1920){
+            font-size:38.8px;
+
+            transform:translate(72vw, 1.5vh) rotate(20deg);
+        }
+    }
+
+    &__signs-4 {
+        display: none;
+
+        @media (min-width:1920){
+            display: block;
+
+            transform:translate(90vw, -1.7vh) rotate(-18deg);
+        }
+    }
+
+    &__signs-5 {
+        display: none;
+
+        @media (min-width:1920){
+            display: block;
+
+            font-size:55.8px;
+
+            transform:translate(10.7vw, -3.5vh) rotate(16deg);
+        }
+    }
+}

@@ -1,4 +1,4 @@
-
+$(document).ready(function () {
     /* маска для телфона */
     $("#request-call-block-label").mask("+7 - (999) - 999 - 99 - 99");
 
@@ -82,3 +82,4 @@
         $("#js-order-project").addClass("active")
         $("#js-order-project").removeClass('no-active')
     });
+});

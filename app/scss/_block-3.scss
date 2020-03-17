@@ -1,0 +1,145 @@
+.work-example {
+    padding:41px 15px 50px;
+
+    background-color:#fbfbfb;
+
+    @media (min-width:1024){
+        padding:100px 15px 101px; 
+    }
+
+    @media (min-width:1920){
+        padding:100px 15px 101px;
+        position: relative;
+    }
+
+    &__title {
+        @extend %title;
+    }
+
+    &__button {
+        @extend %button;
+    }
+}
+.swiper-container {
+    margin:43px 0 36px !important;
+    padding-bottom:67px;
+
+    @media (min-width:1024){
+        margin:110px 0 86px !important;
+        padding-bottom:135px;
+    }
+
+    @media (min-width:1920){
+        margin:110px auto 86px !important;
+        padding-bottom:10px;
+        width: 62% !important;
+    }
+}
+.swiper-wrapper {
+    margin:0 auto !important;
+}
+.swiper-slide {
+    width:85%;
+
+    text-align:center;
+
+    @media (min-width:1920){
+        width: 31.6% !important;
+    }
+}
+.swiper-item {
+    display: block;
+
+    &__figure {
+        margin:0;
+    }
+
+    &__foto {
+        margin-bottom:13px;
+
+        @media (min-width:1024){
+            width:82%;
+            margin-bottom:25px;
+        }
+
+        @media (min-width:1920){
+            width: 100%;
+            margin-bottom:26px;
+            height: 290px;
+        }
+    }
+
+    &__subtitle {
+        @extend %subtitle;
+
+        @media (min-width:1920){
+            display: inline-block;
+        }
+    }
+}
+.swiper-pagination-bullet {
+    width:9px;
+    height:9px;
+    margin:0 8.5px !important;
+
+    @media (min-width:1024){
+        width:18px;
+        height:18px;
+        margin:0 15px !important;
+    }
+
+    @media (min-width:1920){
+        display: none;
+    }
+}
+.swiper-pagination-bullet-active{
+    background-color:#ff4e2e !important;
+}
+.swiper-button-all {
+    display: none;
+
+    @media (min-width:1920){
+        display: block;
+    }
+}
+.swiper-button-prev {
+    @media (min-width:1920){
+        background: url("../img/icon/arrow.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        position: absolute;
+        top: 375px;
+        left: 340px;
+        width: 80px;
+        height: 80px;
+        box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.07);
+
+        border: 1px solid transparent;
+        border-radius: 50%;
+
+        ::after{
+            content: none;
+        }
+    }
+}
+.swiper-button-next {
+    @media (min-width:1920){
+        background: url("../img/icon/arrow.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        transform: rotate(180deg);
+        position: absolute;
+        top: 375px;
+        right: 340px;
+        width: 80px;
+        height: 80px;
+        box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.07);
+
+        border: 1px solid transparent;
+        border-radius: 50%;
+
+        ::after{
+            content: none;
+        }
+    }
+}
