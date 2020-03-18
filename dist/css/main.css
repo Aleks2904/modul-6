@@ -95,7 +95,7 @@ a {
   transition: 1s;
   display: block;
   margin: 0 auto; }
-  .my-info__buttom :hover, .my-job__button :hover, .work-example__button :hover, .connection__button :hover {
+  .my-info__buttom:hover, .my-job__button:hover, .work-example__button:hover, .connection__button:hover {
     -webkit-transform: scale(1.2);
         -ms-transform: scale(1.2);
             transform: scale(1.2);
@@ -363,7 +363,7 @@ a {
         -webkit-transition: 1s;
         -o-transition: 1s;
         transition: 1s; } }
-    .header__phone-bottom :hover {
+    .header__phone-bottom:hover {
       -webkit-transform: scale(1.2);
           -ms-transform: scale(1.2);
               transform: scale(1.2);
