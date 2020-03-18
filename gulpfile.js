@@ -54,7 +54,7 @@ gulp.task('clean', async function() {
 });
 
 gulp.task('img', function() {
-    return gulp.src(['app/img/**/*', '!app/img/svg/*/**']) 
+    return gulp.src(['app/img/**/*', '!app/img/**/*.svg']) 
         .pipe(cache(imagemin({
             interlaced: true,
             progressive: true,
@@ -73,10 +73,13 @@ gulp.task('prebuild', async function() {
     .pipe(gulp.dest('dist/fonts'))
 
     var buildJs = gulp.src('app/js/redy/**/*')    // Переносим скрипты в продакшен
-    .pipe(gulp.dest('dist/js'))
+    .pipe(gulp.dest('dist/js/redy'))
 
     var buildHtml = gulp.src('app/*.html') // Переносим HTML в продакшен
     .pipe(gulp.dest('dist'));
+
+    var buildSvg = gulp.src('app/img/symbol/sprite.svg') // Переносим HTML в продакшен
+    .pipe(gulp.dest('dist/img/symbol'));
 });
 
 gulp.task('svg', function(){
@@ -116,5 +119,5 @@ gulp.task('watch', function() {
     gulp.watch('app/scss/**/*.scss', gulp.parallel('sass')); // Наблюдение за sass файлами
     gulp.watch('app/js/**/*.js', gulp.parallel('scripts')); // Наблюдение за главным JS файлом и за библиотеками
 });
-gulp.task('default', gulp.parallel('css-libs', 'sass', 'scripts', 'scripts2', 'watch'));
-gulp.task('build', gulp.parallel('prebuild', 'clean', 'img', 'sass', 'scripts', 'scripts2'));
+gulp.task('default', gulp.parallel('css-libs', 'sass', 'scripts', 'scripts2','svg', 'watch'));
+gulp.task('build', gulp.parallel('prebuild', 'clean', 'img', 'sass', 'scripts', 'scripts2', 'svg'));
