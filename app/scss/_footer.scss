@@ -50,7 +50,11 @@
 
             color:#8993ad;
 
-            :last-child{
+            &:hover{
+                color: green;
+            }
+
+            &:last-child{
                 margin-bottom:0;
             }
 
@@ -75,6 +79,14 @@
 
             margin-bottom:24px;
 
+            &:hover{
+                .contacts__phone-icon,
+                .contacts__phone-number{
+                    color: green;
+                    fill: green;
+                }
+            }
+
             @media (min-width:1024px){
                 margin-bottom:32px;
             }
@@ -87,10 +99,6 @@
             margin-right:20px;
 
             fill: url(#grad);
-
-            &:hover{
-                fill: green;
-            }
 
             @media (min-width:1024px){
                 width:18px;
@@ -112,6 +120,14 @@
 
         &__mail {
             display:flex;
+
+            &:hover{
+                .contacts__mail-icon,
+                .contacts__mail-number{
+                    color: green;
+                    fill: green;
+                }
+            }
         }
 
         &__mail-icon {
@@ -121,10 +137,6 @@
             margin-right:20px;
 
             fill: url(#grad);
-
-            &:hover{
-                fill: green;
-            }
 
             @media (min-width:1024px){
                 width:22px;
@@ -155,6 +167,8 @@
         min-width: 280px;
 
         margin-bottom: 50px;
+
+        cursor: pointer;
 
         @extend %button;
 
@@ -200,21 +214,23 @@
 
         list-style:none;
 
-        :last-child{
+        &:last-child{
             margin-right:0;
         }
     }
 
     &__a {
+        .connection__svg{
+            &:hover{
+                color: green;
+                fill: green;
+            }
+        }
     }
 
     &__svg {
         width:70%;
         fill: #8993ad;
-
-        :hover{
-            fill: green;
-        }
     }
 }
 .copyright {

@@ -93,6 +93,7 @@ a {
   -webkit-transition: 1s;
   -o-transition: 1s;
   transition: 1s;
+  cursor: pointer;
   display: block;
   margin: 0 auto; }
   .my-info__buttom:hover, .my-job__button:hover, .work-example__button:hover, .connection__button:hover {
@@ -141,7 +142,7 @@ a {
 
 .request-call-block, .follow-up, .find-price, .order-project {
   position: fixed;
-  top: 20%;
+  top: 10%;
   left: 50%;
   -webkit-transform: translateX(-50%);
       -ms-transform: translateX(-50%);
@@ -254,6 +255,7 @@ a {
     height: 18px;
     margin: 0;
     padding: 0;
+    cursor: pointer;
     border: none;
     background: transparent; }
     @media (min-width: 1024px) {
@@ -285,6 +287,7 @@ a {
     margin-top: 55px;
     margin-left: -6%;
     padding: 0;
+    padding-top: 10%;
     background-color: #fff; }
     @media (min-width: 1920px) {
       .header__navigation-ul {
@@ -311,8 +314,10 @@ a {
     @media (min-width: 1920px) {
       .header__navigation-li {
         margin: 0;
-        margin-right: 25px; } }
-    .header__navigation-li :last-child {
+        margin-right: 25px; }
+        .header__navigation-li:last-child {
+          margin-right: 0; } }
+    .header__navigation-li:last-child {
       margin-bottom: 0; }
   .header__navigation-a {
     font-size: 30px;
@@ -320,7 +325,7 @@ a {
     display: inline-block;
     color: #1f1f24;
     margin: 0 auto; }
-    .header__navigation-a :hover {
+    .header__navigation-a:hover {
       color: #fc557c; }
     @media (min-width: 1920px) {
       .header__navigation-a {
@@ -342,6 +347,7 @@ a {
     width: 26px;
     height: 26px;
     margin-top: -4px;
+    cursor: pointer;
     border: none;
     background: url("../img/icon/call-answer.png");
     background-repeat: no-repeat;
@@ -408,11 +414,14 @@ a {
   top: 0;
   right: 0;
   margin: 2%;
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
-  transition: 0.5s; }
+  transition: 0.5s;
+  background: transparent;
+  border: none;
+  outline-color: black; }
   .button-close:hover {
     -webkit-transform: scale(1.5);
         -ms-transform: scale(1.5);
@@ -751,6 +760,8 @@ a {
             flex-direction: column; }
     .my-job__item:last-child {
       margin-bottom: 0; }
+    .my-job__item:hover .my-job__example-svg {
+      fill: green; }
     @media (min-width: 1024px) {
       .my-job__item {
         width: 40%;
@@ -775,8 +786,6 @@ a {
     min-height: 40px;
     margin-bottom: 3.8%;
     fill: url(#grad); }
-    .my-job__example-svg:hover {
-      fill: green; }
     @media (min-width: 1024px) {
       .my-job__example-svg {
         width: 30%;
@@ -1071,7 +1080,9 @@ a {
     display: block;
     letter-spacing: .2px;
     color: #8993ad; }
-    .footer-navigation__a :last-child {
+    .footer-navigation__a:hover {
+      color: green; }
+    .footer-navigation__a:last-child {
       margin-bottom: 0; }
     @media (min-width: 1024px) {
       .footer-navigation__a {
@@ -1091,6 +1102,10 @@ a {
     display: -ms-flexbox;
     display: flex;
     margin-bottom: 24px; }
+    .contacts__phone:hover .contacts__phone-icon,
+    .contacts__phone:hover .contacts__phone-number {
+      color: green;
+      fill: green; }
     @media (min-width: 1024px) {
       .contacts__phone {
         margin-bottom: 32px; } }
@@ -1100,8 +1115,6 @@ a {
     margin-top: 5px;
     margin-right: 20px;
     fill: url(#grad); }
-    .contacts__phone-icon:hover {
-      fill: green; }
     @media (min-width: 1024px) {
       .contacts__phone-icon {
         width: 18px;
@@ -1119,14 +1132,16 @@ a {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex; }
+    .contacts__mail:hover .contacts__mail-icon,
+    .contacts__mail:hover .contacts__mail-number {
+      color: green;
+      fill: green; }
   .contacts__mail-icon {
     width: 14px;
     height: 14px;
     margin-top: 5px;
     margin-right: 20px;
     fill: url(#grad); }
-    .contacts__mail-icon:hover {
-      fill: green; }
     @media (min-width: 1024px) {
       .contacts__mail-icon {
         width: 22px;
@@ -1147,7 +1162,8 @@ a {
 
 .connection__button {
   min-width: 280px;
-  margin-bottom: 50px; }
+  margin-bottom: 50px;
+  cursor: pointer; }
   @media (min-width: 1024px) {
     .connection__button {
       font-size: 16px;
@@ -1184,14 +1200,16 @@ a {
 .connection__li {
   margin-right: 4%;
   list-style: none; }
-  .connection__li :last-child {
+  .connection__li:last-child {
     margin-right: 0; }
+
+.connection__a .connection__svg:hover {
+  color: green;
+  fill: green; }
 
 .connection__svg {
   width: 70%;
   fill: #8993ad; }
-  .connection__svg :hover {
-    fill: green; }
 
 .copyright {
   font-size: 12px;

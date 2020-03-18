@@ -33,6 +33,8 @@
         margin:0;
         padding:0;
 
+        cursor: pointer;
+
         border:none;
         background:transparent;
 
@@ -73,6 +75,7 @@
         margin-top:55px;
         margin-left:-6%;
         padding:0;
+        padding-top: 10%;
 
         background-color:#fff;
 
@@ -97,9 +100,13 @@
         @media (min-width:1920px){
             margin: 0;
             margin-right: 25px;
+
+            &:last-child{
+                margin-right:0;
+            }
         }
 
-        :last-child{
+        &:last-child{
             margin-bottom:0;
         }
     }
@@ -114,7 +121,7 @@
 
         margin:0 auto;
 
-        :hover{
+        &:hover{
             color:#fc557c;
         }
 
@@ -146,6 +153,8 @@
         width:26px;
         height:26px;
         margin-top:-4px;
+
+        cursor: pointer;
 
         border:none;
         background:url('../img/icon/call-answer.png');

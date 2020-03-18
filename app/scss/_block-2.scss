@@ -55,6 +55,12 @@
             margin-bottom:0;
         }
 
+        &:hover{
+            .my-job__example-svg{
+                fill: green;
+            }
+        }
+
         @media (min-width:1024px){
             width:40%;
             margin-right:18.5%;
@@ -88,10 +94,6 @@
         margin-bottom:3.8%;
 
         fill: url(#grad);
-
-        &:hover{
-            fill: green;
-        }
 
         @media (min-width:1024px){
             width:30%;

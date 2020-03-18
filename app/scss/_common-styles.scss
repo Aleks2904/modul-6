@@ -41,6 +41,8 @@ $gradient: linear-gradient(0.0deg, #f26522 0%, #fa0891 100%);
     background-color:#ff4e2e;
     transition: 1s;
 
+    cursor: pointer;
+
     display: block;
 
     margin: 0 auto;
@@ -98,7 +100,7 @@ $gradient: linear-gradient(0.0deg, #f26522 0%, #fa0891 100%);
 
 %modal-block {
     position: fixed;
-    top: 20%;
+    top: 10%;
     left: 50%;
     transform:translateX(-50%);
     padding: 60px 0 60px;

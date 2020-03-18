@@ -1,6 +1,6 @@
 $(document).ready(function(){
-    const button_minimize_EL = $('.js-dashboard__burger'),      
-          minimize_menu_EL = $('.js-dashboard__navigation-ul');
+    const button_minimize_EL = $('.js-header__burger'),      
+          minimize_menu_EL = $('.js-header__navigation-ul');
 
     button_minimize_EL.on('click', function(){
         event.preventDefault();
