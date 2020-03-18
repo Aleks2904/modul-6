@@ -54,15 +54,14 @@ gulp.task('clean', async function() {
 });
 
 gulp.task('img', function() {
-    return gulp.src('app/img/**/*') // Берем все изображения из app
-        .pipe(cache(imagemin({ // С кешированием
-        // .pipe(imagemin({ // Сжимаем изображения без кеширования
+    return gulp.src(['app/img/**/*', '!app/img/svg/*/**']) 
+        .pipe(cache(imagemin({
             interlaced: true,
             progressive: true,
             svgoPlugins: [{removeViewBox: false}],
             use: [pngquant()]
-        }))/**/)
-        .pipe(gulp.dest('dist/img')); // Выгружаем на продакшен
+        })))
+        .pipe(gulp.dest('dist/img')); 
 });
 
 gulp.task('prebuild', async function() {
@@ -78,7 +77,6 @@ gulp.task('prebuild', async function() {
 
     var buildHtml = gulp.src('app/*.html') // Переносим HTML в продакшен
     .pipe(gulp.dest('dist'));
-
 });
 
 gulp.task('svg', function(){
