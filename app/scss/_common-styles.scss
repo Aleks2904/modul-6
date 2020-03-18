@@ -95,6 +95,7 @@ $gradient: linear-gradient(0.0deg, #f26522 0%, #fa0891 100%);
 }
 
  // модальные окна
+
 %modal-block {
     position: fixed;
     top: 20%;
@@ -112,6 +113,14 @@ $gradient: linear-gradient(0.0deg, #f26522 0%, #fa0891 100%);
     background-image: $gradient;
     transition: 1s;
     opacity: 0;
+
+    @media (min-width:1024px){
+        width: 70%;
+    }
+
+    @media (min-width:1920px){
+        width: 60%;
+    }
 }
 
 %modal-title {
@@ -150,7 +159,8 @@ $gradient: linear-gradient(0.0deg, #f26522 0%, #fa0891 100%);
 
 %modal-input {
     padding: 8px 10px;
-    margin: 0;
+    display: block;
+    margin: 0 auto;
     margin-bottom: 30px;
     border-radius: 5px;
     outline: none;

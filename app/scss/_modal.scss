@@ -33,7 +33,7 @@
     height: 30px;
     transition: 0.5s;
 
-    :hover{
+    &:hover{
         transform: scale(1.5);
         transition: 0.5s;
     }
@@ -58,6 +58,7 @@
         margin: 0 2.5%;
         margin-top: -1.5px;
     
+        transition: 0s;
         transform:rotate(45deg); 
     }
 }
@@ -114,44 +115,53 @@
     @extend %modal-block;
 
 		&__title {
-            @extend %modal-title;
+                  @extend %modal-title;
 		}
 
 		&__form {
-            @extend %modal-form;
+                  margin-bottom: 40px;
+                  
+                  @extend %modal-form;
 		}
 
 		&__page-label {
-            @extend %modal-label;
+                  @extend %modal-label;
 		}
 
 		&__page-input {
-            @extend %modal-input;
+                  @extend %modal-input;
 		}
 
 		&__block-label {
-            @extend %modal-label;
+                  @extend %modal-label;
 		}
 
 		&__block-input {
-            @extend %modal-input;
+                  @extend %modal-input;
 		}
 
 		&__sloider-label {
-            @extend %modal-label;
+                  @extend %modal-label;
 		}
 
 		&__sloider-input {
-            @extend %modal-input;
+                  @extend %modal-input;
 		}
 
 		&__button {
-            @extend %modal-button;
+                  @extend %modal-button;
 		}
 
 		&__prise {
-            margin: 20px;
-		}
+                  display: none;
+
+                  margin: 20px;
+                  color: blanchedalmond;
+                  border: solid 3px blanchedalmond;
+                  border-radius: 10px;
+                  padding: 10px 25px;
+                  font-size: 30px;
+            }
 
 		&__close {
 		}

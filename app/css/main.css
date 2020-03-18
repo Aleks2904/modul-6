@@ -170,6 +170,12 @@ a {
   -o-transition: 1s;
   transition: 1s;
   opacity: 0; }
+  @media (min-width: 1024px) {
+    .request-call-block, .follow-up, .find-price, .order-project {
+      width: 70%; } }
+  @media (min-width: 1920px) {
+    .request-call-block, .follow-up, .find-price, .order-project {
+      width: 60%; } }
 
 .request-call-block__title, .follow-up__title, .find-price__title, .order-project__title {
   font-size: 30px;
@@ -197,7 +203,8 @@ a {
 
 .request-call-block__intro-input, .request-call-block__tel-input, .find-price__page-input, .find-price__block-input, .find-price__sloider-input {
   padding: 8px 10px;
-  margin: 0;
+  display: block;
+  margin: 0 auto;
   margin-bottom: 30px;
   border-radius: 5px;
   outline: none; }
@@ -406,7 +413,7 @@ a {
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s; }
-  .button-close :hover {
+  .button-close:hover {
     -webkit-transform: scale(1.5);
         -ms-transform: scale(1.5);
             transform: scale(1.5);
@@ -432,12 +439,24 @@ a {
     background: black;
     margin: 0 2.5%;
     margin-top: -1.5px;
+    -webkit-transition: 0s;
+    -o-transition: 0s;
+    transition: 0s;
     -webkit-transform: rotate(45deg);
         -ms-transform: rotate(45deg);
             transform: rotate(45deg); }
 
+.find-price__form {
+  margin-bottom: 40px; }
+
 .find-price__prise {
-  margin: 20px; }
+  display: none;
+  margin: 20px;
+  color: blanchedalmond;
+  border: solid 3px blanchedalmond;
+  border-radius: 10px;
+  padding: 10px 25px;
+  font-size: 30px; }
 
 .my-presentation {
   margin-bottom: 35px;

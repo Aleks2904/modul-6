@@ -43,11 +43,11 @@ $(document).ready(function () {
                 block = '200',
                 sloider = '300';
 
-        let buyPage = $('.find-price__page-input').val(),
+        var buyPage = $('.find-price__page-input').val(),
             buyBlock = $('.find-price__block-input').val(),
             buySloider = $('.find-price__sloider-input').val();
 
-        let resultPage = '0',
+        var resultPage = '0',
             resultBlock = '0',
             resultSloider = '0';
         
