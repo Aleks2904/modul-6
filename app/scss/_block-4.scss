@@ -9,6 +9,10 @@
         padding:75px 0 80px 40px;
     }
 
+    @media (min-width:1920px){
+        padding:75px 0 80px 40px;
+    }
+
     &__title {
         font-size:28px;
         font-weight:700;
@@ -26,9 +30,9 @@
             margin-bottom:29px;
         }
 
-        @media (min-width:1920){
+        @media (min-width:1920px){
             width: 52%;
-            margin: 0 auto;
+            margin: 0 auto 28px;
         }
     }
 
@@ -125,6 +129,8 @@
         display: none;
         position: absolute;
 
+        @extend %reclam-signs;
+
         @media (min-width:1920px){
             display: block;
 
@@ -135,6 +141,8 @@
     &__signs-5 {
         display: none;
         position: absolute;
+
+        @extend %reclam-signs;
 
         @media (min-width:1920px){
             display: block;

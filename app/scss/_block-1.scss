@@ -8,7 +8,7 @@
     }
 
     @media (min-width:1920px){
-        margin-bottom:88px;
+        margin-bottom:95px;
     }
 
 
@@ -187,6 +187,10 @@
 
             width:180%;
         }
+
+        @media (min-width:1920px){
+            display: none;
+        }
     }
 
     &__svg-1920{
@@ -200,10 +204,10 @@
 
             top:0%;
             left: 0%;
-
+            
             transform:translate(10.5%, 0) rotate(-8deg);
 
-            width:105%;
+            width:100%;
         }
     }
 
@@ -244,8 +248,7 @@
     }
 
     @media (min-width:1920px){
-        bottom:234px;
-
+        bottom:230px;
         margin-left:375px;
     }
 
@@ -260,7 +263,8 @@
         }
 
         @media (min-width:1920px){
-            margin-bottom:20px;
+            margin-bottom:40px;
+            font-size: 80px;
         }
     }
 

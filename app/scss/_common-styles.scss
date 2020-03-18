@@ -12,10 +12,6 @@ $gradient: linear-gradient(0.0deg, #f26522 0%, #fa0891 100%);
     @media (min-width:1024px){
         font-size:54px;
     }
-
-    @media (min-width:1920px){
-        font-size: 80px;
-    }
 }
 
 %subtitle{
@@ -93,7 +89,7 @@ $gradient: linear-gradient(0.0deg, #f26522 0%, #fa0891 100%);
 
     transition:2s;
 
-    @media (min-width:1920){
+    @media (min-width:1920px){
         font-size:48.8px;
     }
 }
