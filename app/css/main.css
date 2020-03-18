@@ -194,7 +194,7 @@ a {
 .request-call-block__intro-label, .request-call-block__tel-label, .find-price__page-label, .find-price__block-label, .find-price__sloider-label {
   display: block;
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 700;
   line-height: 24px;
   margin: 0 auto 8px;
   text-align: center;
@@ -212,7 +212,7 @@ a {
 .request-call-block__button, .find-price__button {
   display: block;
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 700;
   display: block;
   width: 87.5%;
   margin: 0 auto;
