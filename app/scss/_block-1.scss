@@ -1,9 +1,9 @@
 .my-presentation {
-    margin-bottom:41px;
+    margin-bottom:35px;
     position: relative;
 
     @media (min-width:1024px){
-        margin-bottom:83px;
+        margin-bottom:99px;
         background-color: #fbfbfb;
     }
 
@@ -18,7 +18,7 @@
         overflow:hidden;
 
         height:414px;
-        margin-bottom:11px;
+        margin-bottom:6px;
         padding-top:84px;
 
         @media (min-width:1024px){
@@ -40,7 +40,7 @@
         @extend %signs;
 
         @media (min-width:1024px){
-            transform:translate(7.5vw, -1.2vh) rotate(26deg);
+            transform:translate(7.7vw, -1.0vh) rotate(26deg);
         }
 
         @media (min-width:1920px){
@@ -57,7 +57,7 @@
         @media (min-width:1024px){
             font-size:54px;
 
-            transform:translate(5.6vw, 57vh) rotate(18deg);
+            transform:translate(5.6vw, 43vh) rotate(18deg);
         }
 
         @media (min-width:1920px){
@@ -76,7 +76,8 @@
         @extend %signs;
 
         @media (min-width:1024px){
-            transform:translate(41.0vw, 7.5vh) rotate(15deg);
+            font-size:45px;
+            transform:translate(41.5vw, 6.2vh) rotate(15deg);
         }
 
         @media (min-width:1920px){
@@ -97,7 +98,7 @@
         @media (min-width:1024px){
             font-size:30px;
 
-            transform:translate(86.5vw, -2.4vh) rotate(-14deg);
+            transform:translate(86.5vw, -1.5vh) rotate(-14deg);
         }
 
         @media (min-width:1920px){
@@ -110,13 +111,15 @@
     &__signs-5 {
         display:none;
 
+        transition:2s;
+
         @extend %signs;
 
         @media (min-width:1024px){
             display:block;
             font-size:42.8px;
 
-            transform:translate(34.7vw, 50.6vh) rotate(-21deg);
+            transform:translate(34.7vw, 38.4vh) rotate(-21deg);
         }
 
         @media (min-width:1920px){
@@ -140,11 +143,13 @@
 
     &__picture {
         position:relative;
-        height: 300px;
+        height: 330px;
+        margin: 0;
 
         @media (min-width:1024px){
             float:right;
 
+            bottom: 5px;
             width:50%;
             height:100%;
         }
@@ -153,9 +158,9 @@
     &__svg {
         position:absolute;
         left:55%;
-        top: -300px;
+        top: 10%;
+
         width:158%;
-        
 
         display:block;
 
@@ -172,6 +177,7 @@
         display: none;
 
         fill: url(#grad);
+        position:absolute;
         
         @media (min-width:1024px){
             display: block;
@@ -187,6 +193,7 @@
         display: none;
 
         fill: url(#grad);
+        position:absolute;
 
         @media (min-width:1920px){
             display: block;
@@ -204,7 +211,7 @@
         position:absolute;
         z-index:2;
         left:59%;
-        top:19%;
+        top:0%;
 
         float:right;
 
@@ -231,7 +238,7 @@
 
     @media (min-width:1024px){
         position:absolute;
-        bottom:225px;
+        bottom:222px;
 
         margin-left:40px;
     }
@@ -245,10 +252,10 @@
     &__title {
         @extend %title;
 
-        margin-bottom:6px;
+        margin-bottom:0px;
 
         @media (min-width:1024px){
-            margin-bottom:23px;
+            margin-bottom:30px;
             margin-left:0;
         }
 
@@ -266,6 +273,7 @@
         @media (min-width:1024px){
             margin-bottom:48px ;
             white-space:nowrap;
+            width: 100%;
         }
 
         @media (min-width:1920px){
@@ -276,5 +284,10 @@
 
     &__buttom {
         @extend %button;
+
+        @media (min-width:1024px){
+            margin-left: 0;
+
+        }
     }
 }

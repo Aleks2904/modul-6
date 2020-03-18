@@ -1,9 +1,9 @@
 .advertising {
-    padding:43px 0 42px 18px;
+    padding:42px 0 43px 18.5px;
 
     background-image:$gradient;
 
-    @media (min-width:1024){
+    @media (min-width:1024px){
         position:relative;
 
         padding:75px 0 80px 40px;
@@ -15,11 +15,11 @@
         line-height:40px;
 
         margin:0;
-        margin-bottom:30px;
+        margin-bottom:31px;
 
         color:#fff;
 
-        @media (min-width:1024){
+        @media (min-width:1024px){
             font-size:45px;
             line-height:60px;
 
@@ -42,22 +42,22 @@
 
         color:#fff;
 
-        ::before{
+        &::before{
+            content:'*';
+            
             font-size:20px;
         
             margin-left:-15px;
-        
-            content:'*';
         }    
         
-        @media (min-width:1024){
+        @media (min-width:1024px){
             font-size:18px;
 
             width:80%;
             margin-left:15px;
         }
 
-        @media (min-width:1920){
+        @media (min-width:1920px){
             width:50%;
             margin:0 auto;
         }
@@ -65,53 +65,56 @@
 
     &__signs-1 {
         display: none;
+        position: absolute;
 
         @extend %reclam-signs;
 
-        @media (min-width:1024){
+        @media (min-width:1024px){
             display: block;
             
-            transform:translate(11.4vw, -32.5vh) rotate(26deg);
+            transform:translate(11.3vw, -24vh) rotate(26deg);
         }
 
-        @media (min-width:1920){
+        @media (min-width:1920px){
             transform:translate(4.5vw, -20.7vh) rotate(26deg);
         }
     }
 
     &__signs-2 {
         display: none;
+        position: absolute;
 
         @extend %reclam-signs;
 
-        @media (min-width:1024){
+        @media (min-width:1024px){
             display: block;
 
             font-size:40.8px;
 
-            transform:translate(81.4vw, 0vh) rotate(-22deg);
+            transform:translate(81.4vw, 0vh) rotate(-21.8deg);
         }
 
-        @media (min-width:1920){
+        @media (min-width:1920px){
             transform:translate(84.2vw, -19.2vh) rotate(-22deg);
         }
     }
 
     &__signs-3 {
         display: none;
+        position: absolute;
 
         @extend %reclam-signs;
 
-        @media (min-width:1024){
+        @media (min-width:1024px){
             display: block;
 
             font-size:25px;
 
             transition:2s;
-            transform:translate(46vw, 2.1vh) rotate(20deg);
+            transform:translate(46vw, 2.0vh) rotate(20deg);
         }
 
-        @media (min-width:1920){
+        @media (min-width:1920px){
             font-size:38.8px;
 
             transform:translate(72vw, 1.5vh) rotate(20deg);
@@ -120,8 +123,9 @@
 
     &__signs-4 {
         display: none;
+        position: absolute;
 
-        @media (min-width:1920){
+        @media (min-width:1920px){
             display: block;
 
             transform:translate(90vw, -1.7vh) rotate(-18deg);
@@ -130,8 +134,9 @@
 
     &__signs-5 {
         display: none;
+        position: absolute;
 
-        @media (min-width:1920){
+        @media (min-width:1920px){
             display: block;
 
             font-size:55.8px;

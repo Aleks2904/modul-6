@@ -1,35 +1,39 @@
 .work-example {
-    padding:41px 15px 50px;
+    padding:41px 15px 51px;
 
     background-color:#fbfbfb;
 
-    @media (min-width:1024){
+    @media (min-width:1024px){
         padding:100px 15px 101px; 
     }
 
-    @media (min-width:1920){
+    @media (min-width:1920px){
         padding:100px 15px 101px;
         position: relative;
     }
 
     &__title {
+        line-height: 35px;
+
         @extend %title;
     }
 
     &__button {
+        min-width: 280px;
+
         @extend %button;
     }
 }
 .swiper-container {
     margin:43px 0 36px !important;
-    padding-bottom:67px;
+    padding-bottom:66px;
 
-    @media (min-width:1024){
+    @media (min-width:1024px){
         margin:110px 0 86px !important;
         padding-bottom:135px;
     }
 
-    @media (min-width:1920){
+    @media (min-width:1920px){
         margin:110px auto 86px !important;
         padding-bottom:10px;
         width: 62% !important;
@@ -55,14 +59,15 @@
     }
 
     &__foto {
-        margin-bottom:13px;
+        margin-bottom:11px;
 
-        @media (min-width:1024){
-            width:82%;
-            margin-bottom:25px;
+        @media (min-width:1024px){
+            width: 455px;
+            height: 358px;
+            margin-bottom:21px;
         }
 
-        @media (min-width:1920){
+        @media (min-width:1920px){
             width: 100%;
             margin-bottom:26px;
             height: 290px;
@@ -70,9 +75,15 @@
     }
 
     &__subtitle {
+        font-size: 18px;
+
         @extend %subtitle;
 
-        @media (min-width:1920){
+        @media (min-width:1024px){
+            font-size: 25px;  
+        }
+
+        @media (min-width:1920px){
             display: inline-block;
         }
     }
@@ -82,13 +93,13 @@
     height:9px;
     margin:0 8.5px !important;
 
-    @media (min-width:1024){
+    @media (min-width:1024px){
         width:18px;
         height:18px;
         margin:0 15px !important;
     }
 
-    @media (min-width:1920){
+    @media (min-width:1920px){
         display: none;
     }
 }
@@ -98,12 +109,12 @@
 .swiper-button-all {
     display: none;
 
-    @media (min-width:1920){
+    @media (min-width:1920px){
         display: block;
     }
 }
 .swiper-button-prev {
-    @media (min-width:1920){
+    @media (min-width:1920px){
         background: url("../img/icon/arrow.png");
         background-repeat: no-repeat;
         background-position: center;
@@ -123,7 +134,7 @@
     }
 }
 .swiper-button-next {
-    @media (min-width:1920){
+    @media (min-width:1920px){
         background: url("../img/icon/arrow.png");
         background-repeat: no-repeat;
         background-position: center;

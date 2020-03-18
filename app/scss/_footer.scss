@@ -2,7 +2,7 @@
     background-color:#fbfbfb;
 }
 .footer-container {
-    padding:46px 19px 43px;
+    padding:46px 19px 25px;
 
     @media (min-width:1024px){
         display:flex;
@@ -15,7 +15,7 @@
     }
 }
 .footer-navigation {
-    margin-bottom:40px;
+    margin-bottom:44px;
 
     @media (min-width:1024px){
         margin-right:180px;
@@ -36,7 +36,7 @@
             list-style:none;
 
             @media (min-width:1024px){
-                margin-bottom:13px;
+                margin-bottom:14px;
             }
 		}
 
@@ -60,6 +60,8 @@
 		}
 }
 .contacts {
+    margin-bottom:24px;
+
     @media (min-width:1024px){
         margin-right:130px;
     }
@@ -67,17 +69,18 @@
     @media (min-width:1920px){
         margin-right:213px;
     }
-}
-.phone {
-    display:flex;
 
-    margin-bottom:24px;
+        &__phone {
+            display:flex;
 
-    @media (min-width:1024px){
-        margin-bottom:29.5px;
-    }
+            margin-bottom:24px;
 
-		&__icon {
+            @media (min-width:1024px){
+                margin-bottom:32px;
+            }
+        }    
+
+        &__phone-icon {
             width:14px;
             height:14px;
             margin-top:5px;
@@ -85,17 +88,17 @@
 
             fill: url(#grad);
 
-        :hover{
-            fill: green;
-        }
+            &:hover{
+                fill: green;
+            }
 
             @media (min-width:1024px){
                 width:18px;
                 height:18px;
             }
-		}
+        }
 
-		&__number {
+        &__phone-number {
             font-size:20px;
             font-weight:500;
 
@@ -105,14 +108,13 @@
                 font-size:25px;
                 font-weight:400;
             }
-		}
-}
-.mail {
-    display:flex;
+        }
 
-    margin-bottom:23px;
+        &__mail {
+            display:flex;
+        }
 
-		&__icon {
+        &__mail-icon {
             width:14px;
             height:14px;
             margin-top:5px;
@@ -120,18 +122,19 @@
 
             fill: url(#grad);
 
-        :hover{
-            fill: green;
-        }
+            &:hover{
+                fill: green;
+            }
 
             @media (min-width:1024px){
                 width:22px;
                 height:22px;
                 margin-right:24px;
             }
-		}
 
-		&__number {
+        }
+
+        &__mail-number {
             font-size:20px;
             font-weight:500;
 
@@ -141,67 +144,78 @@
                 font-size:25px;
                 font-weight:400;
             }
-		}
+        }
 }
 .connection {
     @media (min-width:1024px){
         display:block;
     }
-}
-.request-call-block {
-    @extend %button;
 
-    @media (min-width:1024px){
-        font-size:16px;
-        font-weight:400;
+    &__button {
+        min-width: 280px;
 
-        display:block;
+        margin-bottom: 50px;
 
-        width:248px;
-        margin:0;
-        margin-top:-5px;
-        margin-bottom:29px;
-        padding:12px 0 12px;
+        @extend %button;
 
-        text-align:center;
+        @media (min-width:1024px){
+            font-size:16px;
+            font-weight:400;
 
-        color:#ff6375;
-        border:1px solid #ff5e79;
-        background-color:transparent;
-    }
-}
-.social-networks {
-    display:flex;
+            display:block;
 
-    width:80%;
-    margin:0 ;
-    margin-bottom:20px;
-    padding:0;
+            min-width: 248px;
+            width:248px;
+            height: 45px;
+            margin:0;
+            margin-top:-5px;
+            margin-bottom:29px;
+            padding: 0;
 
-    @media (min-width:1024px){
-        justify-content:space-around;
+            text-align:center;
 
-        width:100%;
+            color:#ff6375;
+            border:1px solid #ff5e79;
+            background-color:transparent;
+        }
     }
 
-		&_li {
-            margin-right:4%;
+    &__ul {
+        display:flex;
 
-            list-style:none;
+        width:80%;
+        margin:0 ;
+        margin-bottom:20px;
+        padding:0;
 
-            :last-child{
-                margin-right:0;
-            }
-		}
+        @media (min-width:1024px){
+            justify-content:space-around;
 
-		&_svg {
-            width:70%;
-            fill: #8993ad;
+            width:100%;
+        }
+    }
 
-            :hover{
-                fill: green;
-            }
-		}
+    &__li {
+        margin-right:4%;
+
+        list-style:none;
+
+        :last-child{
+            margin-right:0;
+        }
+    }
+
+    &__a {
+    }
+
+    &__svg {
+        width:70%;
+        fill: #8993ad;
+
+        :hover{
+            fill: green;
+        }
+    }
 }
 .copyright {
     font-size:12px;
