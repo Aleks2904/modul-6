@@ -39,7 +39,7 @@ $gradient: linear-gradient(0.0deg, #f26522 0%, #fa0891 100%);
     text-align: center;
     border:none;
     background-color:#ff4e2e;
-    transition: 1s;
+    transition: transform 1s;
 
     cursor: pointer;
 
@@ -49,7 +49,7 @@ $gradient: linear-gradient(0.0deg, #f26522 0%, #fa0891 100%);
 
     &:hover{
         transform: scale(1.2);
-        transition: 1s;
+        transition: transform 1s;
     }
 
     @media (min-width:1024px){
@@ -61,6 +61,7 @@ $gradient: linear-gradient(0.0deg, #f26522 0%, #fa0891 100%);
 
     @media (min-width:1920px){
         width:270px;
+        height: 60px;
     }
 }
 
@@ -89,7 +90,7 @@ $gradient: linear-gradient(0.0deg, #f26522 0%, #fa0891 100%);
 
     color:#fff;
 
-    transition:2s;
+    transition: transform 2s;
 
     @media (min-width:1920px){
         font-size:48.8px;
@@ -113,7 +114,7 @@ $gradient: linear-gradient(0.0deg, #f26522 0%, #fa0891 100%);
     width: 80%;
     margin: 0 ;
     background-image: $gradient;
-    transition: 1s;
+    transition: transform 1s;
     opacity: 0;
 
     @media (min-width:1024px){
@@ -189,10 +190,10 @@ $gradient: linear-gradient(0.0deg, #f26522 0%, #fa0891 100%);
     border:none;
     background-color: #fbfbfb;
 
-    transition: 1s;
+    transition: transform 1s;
 
     &:hover{
         transform: scale(1.2);
-        transition: 1s;
+        transition: transform 1s;
     }
 }

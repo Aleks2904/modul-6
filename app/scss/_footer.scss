@@ -2,7 +2,7 @@
     background-color:#fbfbfb;
 }
 .footer-container {
-    padding:46px 19px 25px;
+    padding:46px 19px 20px;
 
     @media (min-width:1024px){
         display:flex;
@@ -15,7 +15,7 @@
     }
 }
 .footer-navigation {
-    margin-bottom:44px;
+    margin-bottom:42px;
 
     @media (min-width:1024px){
         margin-right:180px;
@@ -229,8 +229,8 @@
     }
 
     &__svg {
-        width:70%;
         fill: #8993ad;
+        width: 70%;
     }
 }
 .copyright {
@@ -239,7 +239,7 @@
 
     width:100%;
     margin:0;
-    padding:15px 0;
+    padding:19px 0;
 
     text-align:center;
 

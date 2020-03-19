@@ -7,7 +7,7 @@
     }
 
     @media (min-width:1920px){
-        padding-bottom:110px;
+        padding-bottom:106px;
     }
 
     &__title {
@@ -16,7 +16,7 @@
         margin-bottom:34px;
 
         @media (min-width:1024px){
-            margin-bottom:89px;
+            margin-bottom:92px;
         }
     }
 
@@ -28,14 +28,14 @@
         @media (min-width:1024px){
             display:flex;
             flex-wrap:wrap;
-            margin-bottom:93px;
+            margin-bottom:90px;
             padding:0 18% 0;
         }
 
         @media (min-width:1920px){
             flex-wrap:nowrap;
             justify-content: space-between;
-            margin-bottom:93px;
+            margin-bottom:89px;
         }
     }
 
@@ -64,7 +64,7 @@
         @media (min-width:1024px){
             width:40%;
             margin-right:18.5%;
-            margin-bottom:11.5%;
+            margin-bottom:11.9%;
 
             &:nth-child(even){
                 margin-right:0; 
