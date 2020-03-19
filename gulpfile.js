@@ -13,6 +13,7 @@ var gulp         = require('gulp'), // Подключаем Gulp
     replace      = require('gulp-replace'), // исправление косяков от cheerio
     svgSprite    = require('gulp-svg-sprite'), //собирает все свг в 1 спрайт ( у него очень большой функционал, почитать api)
     svgMin       = require('gulp-svgmin');  //минификация свг
+    borwerSync   = require('browser-sync').create(); //браузер синк
 
 gulp.task('sass', function() { // Создаем таск Sass
     return gulp.src('app/scss/**/*.scss') // Берем источник
@@ -20,6 +21,14 @@ gulp.task('sass', function() { // Создаем таск Sass
         .pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true })) // Создаем префиксы
         .pipe(gulp.dest('app/css')) // Выгружаем результата в папку app/css
 });
+
+gulp.task('borwerSync', function(){
+    borwerSync.init({
+        server:{
+            baseDir: "./app"
+        }
+    })
+})
 
 gulp.task('scripts', function() {
     return gulp.src([ // Берем все необходимые библиотеки
@@ -118,6 +127,9 @@ gulp.task('clear', function (callback) {
 gulp.task('watch', function() {
     gulp.watch('app/scss/**/*.scss', gulp.parallel('sass')); // Наблюдение за sass файлами
     gulp.watch('app/js/**/*.js', gulp.parallel('scripts')); // Наблюдение за главным JS файлом и за библиотеками
+    gulp.watch('app/**/*.html').on('change', borwerSync.reload);
+    gulp.watch('app/**/*.css').on('change', borwerSync.reload);
+    gulp.watch('app/**/*.js').on('change', borwerSync.reload);
 });
-gulp.task('default', gulp.parallel('css-libs', 'sass', 'scripts', 'scripts2','svg', 'watch'));
+gulp.task('default', gulp.parallel( 'borwerSync', 'css-libs', 'sass', 'scripts', 'scripts2','svg', 'watch'));
 gulp.task('build', gulp.parallel('prebuild', 'clean', 'img', 'sass', 'scripts', 'scripts2', 'svg'));
