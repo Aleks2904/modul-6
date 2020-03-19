@@ -6,7 +6,7 @@
 
     @media (min-width:1024px){
         display:flex;
-
+        justify-content: space-between;
         padding:104px 40px 35px;
     }
 
@@ -161,6 +161,7 @@
 .connection {
     @media (min-width:1024px){
         display:block;
+        width: 30%;
     }
 
     &__button {

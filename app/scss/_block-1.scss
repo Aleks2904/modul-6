@@ -63,7 +63,7 @@
         @media (min-width:1920px){
             font-size:60px;
 
-            transform:translate(12.7vw, 18.6vh) rotate(18deg);
+            transform:translate(12.7vw, 19.6vh) rotate(18deg);
         }
     }
 
@@ -83,7 +83,7 @@
         @media (min-width:1920px){
             font-size:42px;
 
-            transform:translate(19.5vw, 45vh) rotate(-25deg);
+            transform:translate(19.5vw, 48vh) rotate(-25deg);
         }
     }
 
@@ -130,6 +130,8 @@
     &__signs-6 {
         display:none;
 
+        transition: transform 2s;
+
         @extend %signs;
 
         @media (min-width:1920px){
@@ -137,7 +139,7 @@
 
             font-size:38px;
 
-            transform:translate(49.4vw, 33.9vh) rotate(21deg);
+            transform:translate(49.4vw, 36.4vh) rotate(21deg);
         }
     }
 

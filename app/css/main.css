@@ -557,9 +557,9 @@ a {
     @media (min-width: 1920px) {
       .my-presentation__signs-2 {
         font-size: 60px;
-        -webkit-transform: translate(12.7vw, 18.6vh) rotate(18deg);
-            -ms-transform: translate(12.7vw, 18.6vh) rotate(18deg);
-                transform: translate(12.7vw, 18.6vh) rotate(18deg); } }
+        -webkit-transform: translate(12.7vw, 19.6vh) rotate(18deg);
+            -ms-transform: translate(12.7vw, 19.6vh) rotate(18deg);
+                transform: translate(12.7vw, 19.6vh) rotate(18deg); } }
   .my-presentation__signs-3 {
     font-size: 18px;
     -webkit-transition: -webkit-transform 2s;
@@ -579,9 +579,9 @@ a {
     @media (min-width: 1920px) {
       .my-presentation__signs-3 {
         font-size: 42px;
-        -webkit-transform: translate(19.5vw, 45vh) rotate(-25deg);
-            -ms-transform: translate(19.5vw, 45vh) rotate(-25deg);
-                transform: translate(19.5vw, 45vh) rotate(-25deg); } }
+        -webkit-transform: translate(19.5vw, 48vh) rotate(-25deg);
+            -ms-transform: translate(19.5vw, 48vh) rotate(-25deg);
+                transform: translate(19.5vw, 48vh) rotate(-25deg); } }
   .my-presentation__signs-4 {
     font-size: 15px;
     -webkit-transition: -webkit-transform 2s;
@@ -622,14 +622,19 @@ a {
       .my-presentation__signs-5 {
         display: none; } }
   .my-presentation__signs-6 {
-    display: none; }
+    display: none;
+    -webkit-transition: -webkit-transform 2s;
+    transition: -webkit-transform 2s;
+    -o-transition: transform 2s;
+    transition: transform 2s;
+    transition: transform 2s, -webkit-transform 2s; }
     @media (min-width: 1920px) {
       .my-presentation__signs-6 {
         display: block;
         font-size: 38px;
-        -webkit-transform: translate(49.4vw, 33.9vh) rotate(21deg);
-            -ms-transform: translate(49.4vw, 33.9vh) rotate(21deg);
-                transform: translate(49.4vw, 33.9vh) rotate(21deg); } }
+        -webkit-transform: translate(49.4vw, 36.4vh) rotate(21deg);
+            -ms-transform: translate(49.4vw, 36.4vh) rotate(21deg);
+                transform: translate(49.4vw, 36.4vh) rotate(21deg); } }
   .my-presentation__picture {
     position: relative;
     height: 330px;
@@ -1022,9 +1027,9 @@ a {
                 transform: translate(11.3vw, -32.5vh) rotate(26deg); } }
     @media (min-width: 1920px) {
       .advertising__signs-1 {
-        -webkit-transform: translate(4.6vw, -19.4vh) rotate(26deg);
-            -ms-transform: translate(4.6vw, -19.4vh) rotate(26deg);
-                transform: translate(4.6vw, -19.4vh) rotate(26deg); } }
+        -webkit-transform: translate(4.6vw, -20.4vh) rotate(26deg);
+            -ms-transform: translate(4.6vw, -20.4vh) rotate(26deg);
+                transform: translate(4.6vw, -20.4vh) rotate(26deg); } }
   .advertising__signs-2 {
     display: none;
     position: absolute; }
@@ -1037,9 +1042,9 @@ a {
                 transform: translate(81.4vw, 0vh) rotate(-21.8deg); } }
     @media (min-width: 1920px) {
       .advertising__signs-2 {
-        -webkit-transform: translate(84.2vw, -18vh) rotate(-22deg);
-            -ms-transform: translate(84.2vw, -18vh) rotate(-22deg);
-                transform: translate(84.2vw, -18vh) rotate(-22deg); } }
+        -webkit-transform: translate(84.2vw, -19.2vh) rotate(-22deg);
+            -ms-transform: translate(84.2vw, -19.2vh) rotate(-22deg);
+                transform: translate(84.2vw, -19.2vh) rotate(-22deg); } }
   .advertising__signs-3 {
     display: none;
     position: absolute; }
@@ -1090,6 +1095,10 @@ a {
       display: -webkit-flex;
       display: -ms-flexbox;
       display: flex;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
       padding: 104px 40px 35px; } }
   @media (min-width: 1920px) {
     .footer-container {
@@ -1196,7 +1205,8 @@ a {
 
 @media (min-width: 1024px) {
   .connection {
-    display: block; } }
+    display: block;
+    width: 30%; } }
 
 .connection__button {
   min-width: 280px;
