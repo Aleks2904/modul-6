@@ -18,8 +18,8 @@
         overflow:hidden;
 
         height:414px;
+        width: 100%;
         margin-bottom:6px;
-        padding-top:84px;
 
         @media (min-width:1024px){
             width:100%;
@@ -35,35 +35,53 @@
 
     &__signs-1 {
         transition: transform 2s;
-        transform:translate(15.3vw, -4.4vh) rotate(26deg);
+        transform:  rotate(26deg);
+
+        left: 15%;
+        top: 11%;
 
         @extend %signs;
 
         @media (min-width:1024px){
-            transform:translate(7.6vw, -1.6vh) rotate(26deg);
+            transform: rotate(26deg);
+
+            left: 7.5%;
+            top: 10.5%;
         }
 
         @media (min-width:1920px){
-            transform:translate(6.6vw, -1vh) rotate(26deg);
+            transform: rotate(26deg);
+
+            left: 6.6%;
+            top: 7.4%;
         }
     }
 
     &__signs-2 {
         transition: transform 2s;
-        transform:translate(12.2vw, 8.5vh) rotate(18deg);
+        transform: rotate(18deg);
+
+        left: 12%;
+        top: 37%;
 
         @extend %signs;
 
         @media (min-width:1024px){
             font-size:54px;
 
-            transform:translate(5.6vw, 57vh) rotate(18deg);
+            transform: rotate(18deg);
+
+            left: 5.7%;
+            top: 80%;
         }
 
         @media (min-width:1920px){
             font-size:60px;
 
-            transform:translate(12.7vw, 19.6vh) rotate(18deg);
+            transform: rotate(18deg);
+
+            left: 12.75%;
+            top: 40.5%;
         }
     }
 
@@ -71,19 +89,28 @@
         font-size:18px;
 
         transition: transform 2s;
-        transform:translate(54.2vw, -6.7vh) rotate(-27deg);
+        transform: rotate(-27deg);
+
+        left: 53.8%;
+        top: 7.5%;
 
         @extend %signs;
 
         @media (min-width:1024px){
             font-size:45px;
-            transform:translate(41.2vw, 8vh) rotate(15deg);
+            transform: rotate(15deg);
+
+            left: 41.2%;
+            top: 21.7%;
         }
 
         @media (min-width:1920px){
             font-size:42px;
 
-            transform:translate(19.5vw, 48vh) rotate(-25deg);
+            transform: rotate(-25deg);
+
+            left: 19.5%;
+            top: 86%;
         }
     }
 
@@ -91,20 +118,29 @@
         font-size:15px;
 
         transition: transform 2s;
-        transform:translate(77vw, 1vh) rotate(18deg);
+        transform: rotate(18deg);
+
+        left: 76.5%;
+        top: 22%;
 
         @extend %signs;
 
         @media (min-width:1024px){
             font-size:30px;
 
-            transform:translate(86.5vw, -2.3vh) rotate(-14deg);
+            transform: rotate(-14deg);
+
+            left: 86.45%;
+            top: 9.5%;
         }
 
         @media (min-width:1920px){
             font-size:30px;
 
-            transform:translate(41vw, 1.6vh) rotate(-18deg);
+            transform: rotate(-18deg);
+
+            left: 41%;
+            top: 12%;
         }
     }
 
@@ -119,7 +155,10 @@
             display:block;
             font-size:42.8px;
 
-            transform:translate(34.8vw, 51vh) rotate(-21deg);
+            transform: rotate(-21deg);
+
+            left: 35%;
+            top: 73%;
         }
 
         @media (min-width:1920px){
@@ -139,7 +178,10 @@
 
             font-size:38px;
 
-            transform:translate(49.4vw, 36.4vh) rotate(21deg);
+            transform: rotate(21deg);
+
+            left: 49.5%;
+            top: 66.8%;
         }
     }
 
@@ -147,11 +189,11 @@
         position:relative;
         height: 330px;
         margin: 0;
+        margin-top: 82px;
 
         @media (min-width:1024px){
             float:right;
 
-            bottom: 5px;
             width:50%;
             height:100%;
         }
@@ -160,7 +202,7 @@
     &__svg {
         position:absolute;
         left:55%;
-        top: 9%;
+        top: 9.5%;
 
         width:158%;
 
@@ -184,7 +226,7 @@
         @media (min-width:1024px){
             display: block;
 
-            top:13%;
+            top:11%;
             left:-9%;
 
             width:180%;
@@ -204,7 +246,7 @@
         @media (min-width:1920px){
             display: block;
 
-            top:-2.5%;
+            top: -17%;
             left: 3%;
             
             transform:translate(10.5%, 0) rotate(0deg);
@@ -231,7 +273,7 @@
         }
 
         @media (min-width:1920px){
-            top:-1.8%;
+            top:-16%;
             left:48%;
 
             transform:translateX(-52%);

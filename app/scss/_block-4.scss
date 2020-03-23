@@ -76,11 +76,17 @@
         @media (min-width:1024px){
             display: block;
             
-            transform:translate(11.3vw, -32.5vh) rotate(26deg);
+            transform: rotate(26deg);
+
+            left: 15.2%;
+            top: 6%;
         }
 
         @media (min-width:1920px){
-            transform:translate(4.6vw, -20.4vh) rotate(26deg);
+            transform: rotate(26deg);
+
+            left: 6.8%;
+            top: 16%;
         }
     }
 
@@ -95,11 +101,17 @@
 
             font-size:40.8px;
 
-            transform:translate(81.4vw, 0vh) rotate(-21.8deg);
+            transform: rotate(-21.8deg);
+
+            left: 85.3%;
+            top: 78.5%;
         }
 
         @media (min-width:1920px){
-            transform:translate(84.2vw, -19.2vh) rotate(-22deg);
+            transform: rotate(-22deg);
+
+            left: 86.3%;
+            top: 21%;
         }
     }
 
@@ -121,7 +133,10 @@
         @media (min-width:1920px){
             font-size:38.8px;
 
-            transform:translate(72vw, 1.5vh) rotate(20deg);
+            transform: rotate(20deg);
+
+            left: 74%;
+            top: 83%;
         }
     }
 
@@ -134,7 +149,10 @@
         @media (min-width:1920px){
             display: block;
 
-            transform:translate(90vw, -2.4vh) rotate(-18deg);
+            transform: rotate(-18deg);
+
+            left: 92%;
+            top: 70%;
         }
     }
 
@@ -149,7 +167,10 @@
 
             font-size:55.8px;
 
-            transform:translate(10.7vw, -3.2vh) rotate(16deg);
+            transform: rotate(16deg);
+
+            left: 12.8%;
+            top: 68%;
         }
     }
 }
