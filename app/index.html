@@ -19,6 +19,8 @@
     <link rel="stylesheet" href="css/libs/normalize.css">
     <link rel="stylesheet" href="css/libs/libs.min.css">
     <link rel="stylesheet" href="css/fonts.css">
+
+    <link rel="stylesheet" href="img/symbol/sprite.svg">
     
     <link rel="stylesheet" href="css/main.css">
 
@@ -68,6 +70,96 @@
     </header>
 
     <main class="main">
+        <section class="modal-all">
+            <div class="request-call-block js-all-block" id="js-request-call-block">
+                <h2 class="request-call-block__title">
+                    Заказать звонок
+                </h2>
+
+                <form class="request-call-block__form">
+                    <label for="request-call-block-id" class="request-call-block__intro-label">
+                        Представтесь пожалуйста 
+                    </label>
+
+                    <input type="text" required class="request-call-block__intro-input" id="request-call-block-id" aria-label="Введите Ф.И.О." placeholder="Введите Ф.И.О.">
+
+                    <label for="request-call-block-number" class="request-call-block__tel-label">
+                        Введите ваш номер
+                    </label>
+
+                    <input type="text" required class="request-call-block__tel-input" id="request-call-block-label" aria-label="Введите ваш номер телефона" placeholder="+7 - (ххх) - ххх - хх - хх">
+
+                    <button type="submit" class="request-call-block__button">
+                        Заказать звонок !
+                    </button>
+                </form>
+
+                <button class="request-call-block__close button-close js-button-close" aria-label="Закрыть окно">
+                    <span class="button-close__liner-1"></span>
+                    <span class="button-close__liner-2"></span>
+                </button>
+            </div>
+
+            <div class="follow-up js-all-block" id="js-follow-up">
+                <h2 class="follow-up__title">
+                    фантазии на оформление этого окна у меня не хватило
+                </h2>
+
+                <button class="follow-up__close button-close js-button-close" aria-label="Закрыть окно">
+                    <span class="button-close__liner-1"></span>
+                    <span class="button-close__liner-2"></span>
+                </button>
+            </div>
+
+            <div class="find-price js-all-block" id="js-find-price">
+                <h2 class="find-price__title">
+                    Узнать цену
+                </h2>
+
+                <form class="find-price__form">
+                    <label for="page-id" class="find-price__page-label">
+                        Сколько страниц вы хотите на вашем сайте ? 
+                    </label>
+
+                    <input type="number" class="find-price__page-input" id="page-id" aria-label="введите колличество страниц" placeholder="Колличество страниц">
+
+                    <label for="block-id" class="find-price__block-label">
+                        Сколько блоков вы хотите на вашем сайте ?
+                    </label>
+
+                    <input type="number" class="find-price__block-input" id="block-id" aria-label="введите колличество блоков" placeholder="Колличество блоков">
+
+                    <label for="sloider-id" class="find-price__sloider-label">
+                        Сколько слайдеров вы хотите на вашем сайте ?
+                    </label>
+
+                    <input type="number" class="find-price__sloider-input" id="sloider-id" aria-label="введите колличество слайдеров" placeholder="Колличество слайдеров">
+                
+                    <button type="submit" class="find-price__button" id="js-find-price-button">
+                        Рассчитать стоймость
+                    </button>
+                </form>
+
+                <span aria-label="приблизительная стоймость сайта " class="find-price__prise" id="js-find-price-prise"></span>
+
+                <button class="find-price__close button-close js-button-close" aria-label="Закрыть окно">
+                    <span class="button-close__liner-1"></span>
+                    <span class="button-close__liner-2"></span>
+                </button>
+            </div>
+
+            <div class="order-project js-all-block" id="js-order-project">
+                <h2 class="order-project__title">
+                    и здесь я не смог придумать не чего оригинального
+                </h2>
+
+                <button class="order-project__close button-close js-button-close" aria-label="Закрыть окно">
+                    <span class="button-close__liner-1"></span>
+                    <span class="button-close__liner-2"></span>
+                </button>
+            </div>
+        </section>
+
         <section class="my-presentation">
             <div class="my-presentation__container">
                 <div class="my-presentation__signs">
@@ -120,7 +212,6 @@
                         </picture>
                     </div>
                 </div>
-    
     
                 <div class="my-info">
                     <h1 class="my-info__title">
@@ -260,32 +351,32 @@
                 <p class="advertising__subtitle">
                     Срок и&nbsp;стоимость могут отличаться от&nbsp;заявленных и&nbsp;рассчитываются индивидуально, в&nbsp;зависимости от&nbsp;сложности задач.
                 </p>
+    
+                <span class="advertising__signs-1">
+                    { }
+                </span>
+    
+                <span class="advertising__signs-2">
+                    &lt;/&gt;
+                </span>
+    
+                <span class="advertising__signs-3">
+                    &lt;div&gt;
+                </span>
+    
+                <span class="advertising__signs-4">
+                    { }
+                </span>
+    
+                <span class="advertising__signs-5">
+                    #
+                </span>
             </div>
-
-            <span class="advertising__signs-1">
-                { }
-            </span>
-
-            <span class="advertising__signs-2">
-                &lt;/&gt;
-            </span>
-
-            <span class="advertising__signs-3">
-                &lt;div&gt;
-            </span>
-
-            <span class="advertising__signs-4">
-                { }
-            </span>
-
-            <span class="advertising__signs-5">
-                #
-            </span>
         </section>
     </main>
 
     <footer class="footer">
-        <div class="footer__container">
+        <div class="footer-container">
             <nav class="footer-navigation">
                 <ul class="footer-navigation__ul">
                     <li class="footer-navigation__li">
@@ -377,95 +468,6 @@
 
     </footer>
 
-    <div class="modal-all">
-        <div class="request-call-block js-all-block" id="js-request-call-block">
-            <h2 class="request-call-block__title">
-                Заказать звонок
-            </h2>
-
-            <form class="request-call-block__form">
-                <label for="request-call-block-id" class="request-call-block__intro-label">
-                    Представтесь пожалуйста 
-                </label>
-
-                <input type="text" required class="request-call-block__intro-input" id="request-call-block-id" aria-label="Введите Ф.И.О." placeholder="Введите Ф.И.О.">
-
-                <label for="request-call-block-number" class="request-call-block__tel-label">
-                    Введите ваш номер
-                </label>
-
-                <input type="text" required class="request-call-block__tel-input" id="request-call-block-label" aria-label="Введите ваш номер телефона" placeholder="+7 - (ххх) - ххх - хх - хх">
-
-                <button type="submit" class="request-call-block__button">
-                    Заказать звонок !
-                </button>
-            </form>
-
-            <button class="request-call-block__close button-close js-button-close" aria-label="Закрыть окно">
-                <span class="button-close__liner-1"></span>
-                <span class="button-close__liner-2"></span>
-            </button>
-        </div>
-
-        <div class="follow-up js-all-block" id="js-follow-up">
-            <h2 class="follow-up__title">
-                фантазии на оформление этого окна у меня не хватило
-            </h2>
-
-            <button class="follow-up__close button-close js-button-close" aria-label="Закрыть окно">
-                <span class="button-close__liner-1"></span>
-                <span class="button-close__liner-2"></span>
-            </button>
-        </div>
-
-        <div class="find-price js-all-block" id="js-find-price">
-            <h2 class="find-price__title">
-                Узнать цену
-            </h2>
-
-            <form class="find-price__form">
-                <label for="page-id" class="find-price__page-label">
-                    Сколько страниц вы хотите на вашем сайте ? 
-                </label>
-
-                <input type="number" class="find-price__page-input" id="page-id" aria-label="введите колличество страниц" placeholder="Колличество страниц">
-
-                <label for="block-id" class="find-price__block-label">
-                    Сколько блоков вы хотите на вашем сайте ?
-                </label>
-
-                <input type="number" class="find-price__block-input" id="block-id" aria-label="введите колличество блоков" placeholder="Колличество блоков">
-
-                <label for="sloider-id" class="find-price__sloider-label">
-                    Сколько слайдеров вы хотите на вашем сайте ?
-                </label>
-
-                <input type="number" class="find-price__sloider-input" id="sloider-id" aria-label="введите колличество слайдеров" placeholder="Колличество слайдеров">
-            
-                <button type="submit" class="find-price__button" id="js-find-price-button">
-                    Рассчитать стоймость
-                </button>
-            </form>
-
-            <span aria-label="приблизительная стоймость сайта " class="find-price__prise" id="js-find-price-prise"></span>
-
-            <button class="find-price__close button-close js-button-close" aria-label="Закрыть окно">
-                <span class="button-close__liner-1"></span>
-                <span class="button-close__liner-2"></span>
-            </button>
-        </div>
-
-        <div class="order-project js-all-block" id="js-order-project">
-            <h2 class="order-project__title">
-                и здесь я не смог придумать не чего оригинального
-            </h2>
-
-            <button class="order-project__close button-close js-button-close" aria-label="Закрыть окно">
-                <span class="button-close__liner-1"></span>
-                <span class="button-close__liner-2"></span>
-            </button>
-        </div>
-    </div>
 
     <svg class="svg-sprites">
         <defs> 

@@ -1,5 +1,11 @@
 $gradient: linear-gradient(0.0deg, #f26522 0%, #fa0891 100%);
 
+%container{
+    margin: 0 auto;
+    @media (min-width:1920px){
+        max-width: 1920px;
+    }
+}
 
 %title{
     font-size: 30px;

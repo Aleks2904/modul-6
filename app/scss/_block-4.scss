@@ -13,6 +13,14 @@
         padding:75px 0 80px 40px;
     }
 
+    &__container{
+        @extend %container;
+
+        @media (min-width:1024px){
+            position:relative;
+        }
+    }
+
     &__title {
         font-size:28px;
         font-weight:700;

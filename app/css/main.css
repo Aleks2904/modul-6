@@ -56,6 +56,12 @@ a {
 .overflow {
   overflow: hidden; }
 
+.header__container, .my-presentation__container, .my-job__container, .work-example__container, .advertising__container, .footer-container {
+  margin: 0 auto; }
+  @media (min-width: 1920px) {
+    .header__container, .my-presentation__container, .my-job__container, .work-example__container, .advertising__container, .footer-container {
+      max-width: 1920px; } }
+
 .my-info__title, .my-job__title, .work-example__title {
   font-size: 30px;
   font-weight: 900;
@@ -249,13 +255,22 @@ a {
     transition: transform 1s, -webkit-transform 1s; }
 
 .header {
-  width: 100%;
   margin: 0;
-  padding: 0; }
+  margin-bottom: 2px;
+  padding: 0 6%;
+  padding-top: 30px;
+  outline: none; }
   @media (min-width: 1024px) {
     .header {
-      background-color: #fbfbfb; } }
+      padding: 38px 4% 10px;
+      background-color: #fbfbfb;
+      margin: 0; } }
+  @media (min-width: 1920px) {
+    .header {
+      background-color: #fbfbfb;
+      padding: 42px 75px 20px 365px; } }
   .header__container {
+    width: 100%;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -263,20 +278,7 @@ a {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
         -ms-flex-pack: justify;
-            justify-content: space-between;
-    width: 88%;
-    margin: 0 auto;
-    padding-top: 30px; }
-    @media (min-width: 1024px) {
-      .header__container {
-        padding: 38px 0 10px;
-        background-color: #fbfbfb;
-        width: 92%; } }
-    @media (min-width: 1920px) {
-      .header__container {
-        padding: 42px 0 20px 0;
-        width: 62%;
-        max-width: 1170px; } }
+            justify-content: space-between; }
   .header__navigation {
     background-color: #fbfbfb; }
   .header__burger {
@@ -320,10 +322,10 @@ a {
     background-color: #fff; }
     @media (min-width: 1920px) {
       .header__navigation-ul {
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -ms-flexbox;
-        display: flex;
+        display: -webkit-box !important;
+        display: -webkit-flex !important;
+        display: -ms-flexbox !important;
+        display: flex !important;
         position: static;
         height: 100%;
         margin: 0;
@@ -396,6 +398,7 @@ a {
     @media (min-width: 1920px) {
       .header__phone-bottom {
         margin-top: -13px;
+        margin-right: 20.2%;
         -webkit-transition: 1s;
         -o-transition: 1s;
         transition: 1s;
@@ -500,8 +503,7 @@ a {
   font-size: 30px; }
 
 .my-presentation {
-  margin-bottom: 35px;
-  position: relative; }
+  margin-bottom: 35px; }
   @media (min-width: 1024px) {
     .my-presentation {
       margin-bottom: 94px;
@@ -509,12 +511,17 @@ a {
   @media (min-width: 1920px) {
     .my-presentation {
       margin-bottom: 97px; } }
+  .my-presentation__container {
+    position: relative; }
+    @media (min-width: 1024px) {
+      .my-presentation__container {
+        background-color: #fbfbfb; } }
   .my-presentation__signs {
     position: relative;
     overflow: hidden;
     height: 414px;
-    width: 100%;
-    margin-bottom: 6px; }
+    margin-bottom: 6px;
+    padding-top: 84px; }
     @media (min-width: 1024px) {
       .my-presentation__signs {
         width: 100%;
@@ -670,17 +677,17 @@ a {
   .my-presentation__picture {
     position: relative;
     height: 330px;
-    margin: 0;
-    margin-top: 82px; }
+    margin: 0; }
     @media (min-width: 1024px) {
       .my-presentation__picture {
         float: right;
+        bottom: 5px;
         width: 50%;
         height: 100%; } }
   .my-presentation__svg {
     position: absolute;
     left: 55%;
-    top: 9.5%;
+    top: 9%;
     width: 158%;
     display: block;
     -webkit-transform: translateX(-50%);
@@ -697,7 +704,7 @@ a {
     @media (min-width: 1024px) {
       .my-presentation__svg-1024 {
         display: block;
-        top: 11%;
+        top: 13%;
         left: -9%;
         width: 180%; } }
     @media (min-width: 1920px) {
@@ -710,7 +717,7 @@ a {
     @media (min-width: 1920px) {
       .my-presentation__svg-1920 {
         display: block;
-        top: -17%;
+        top: -2.5%;
         left: 3%;
         -webkit-transform: translate(10.5%, 0) rotate(0deg);
             -ms-transform: translate(10.5%, 0) rotate(0deg);
@@ -734,7 +741,7 @@ a {
                 transform: translateX(-50%); } }
     @media (min-width: 1920px) {
       .my-presentation__img {
-        top: -16%;
+        top: -1.8%;
         left: 48%;
         -webkit-transform: translateX(-52%);
             -ms-transform: translateX(-52%);
@@ -887,6 +894,11 @@ a {
     .work-example {
       padding: 102px 15px 102px;
       position: relative; } }
+  .work-example__container {
+    background-color: #fbfbfb; }
+    @media (min-width: 1920px) {
+      .work-example__container {
+        position: relative; } }
   .work-example__title {
     line-height: 35px; }
   .work-example__button {
@@ -1012,6 +1024,9 @@ a {
   @media (min-width: 1920px) {
     .advertising {
       padding: 75px 0 80px 40px; } }
+  @media (min-width: 1024px) {
+    .advertising__container {
+      position: relative; } }
   .advertising__title {
     font-size: 28px;
     font-weight: 700;
@@ -1134,7 +1149,7 @@ a {
   background-color: #fbfbfb; }
 
 .footer-container {
-  padding: 46px 19px 51px; }
+  padding: 46px 19px 20px; }
   @media (min-width: 1024px) {
     .footer-container {
       display: -webkit-box;
@@ -1280,7 +1295,9 @@ a {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  width: 80%;
   margin: 0;
+  margin-bottom: 20px;
   padding: 0; }
   @media (min-width: 1024px) {
     .connection__ul {
@@ -1290,22 +1307,10 @@ a {
       width: 100%; } }
 
 .connection__li {
-  margin-right: 25px;
+  margin-right: 4%;
   list-style: none; }
   .connection__li:last-child {
     margin-right: 0; }
-  .connection__li:nth-child(1) {
-    width: 35px;
-    height: 21px; }
-  .connection__li:nth-child(2) {
-    width: 30px;
-    height: 28px; }
-  .connection__li:nth-child(3) {
-    width: 29px;
-    height: 25px; }
-  .connection__li:nth-child(4) {
-    width: 25px;
-    height: 25px; }
 
 .connection__a .connection__svg:hover {
   color: green;
@@ -1313,7 +1318,7 @@ a {
 
 .connection__svg {
   fill: #8993ad;
-  width: 100%; }
+  width: 70%; }
 
 .copyright {
   font-size: 12px;

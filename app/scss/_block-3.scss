@@ -12,6 +12,16 @@
         position: relative;
     }
 
+    &__container{
+        @extend %container;
+
+        background-color:#fbfbfb;
+
+        @media (min-width:1920px){
+            position: relative;
+        }
+    }
+
     &__title {
         line-height: 35px;
 
