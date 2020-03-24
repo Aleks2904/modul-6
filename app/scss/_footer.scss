@@ -207,17 +207,17 @@
         display:flex;
         justify-content:space-between;
 
-        width:69%;
+        width:248px;
         margin:0 ;
         padding:0;
 
         @media (min-width:1024px){
-            width:78%;
+            width:248px;
             padding-top: 2px;
         }
 
         @media (min-width:1920px){
-            width:70%;
+            width:248px;
             padding-top: 2px;
         }
     }

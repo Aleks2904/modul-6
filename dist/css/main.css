@@ -1315,16 +1315,16 @@ a {
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 69%;
+  width: 248px;
   margin: 0;
   padding: 0; }
   @media (min-width: 1024px) {
     .connection__ul {
-      width: 78%;
+      width: 248px;
       padding-top: 2px; } }
   @media (min-width: 1920px) {
     .connection__ul {
-      width: 70%;
+      width: 248px;
       padding-top: 2px; } }
 
 .connection__li {
