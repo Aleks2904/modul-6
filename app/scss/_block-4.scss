@@ -86,15 +86,15 @@
             
             transform: rotate(26deg);
 
-            left: 15.2%;
-            top: 6%;
+            left: 11.7%;
+            top: -25.6%;
         }
 
         @media (min-width:1920px){
             transform: rotate(26deg);
 
-            left: 6.8%;
-            top: 16%;
+            left: 4.9%;
+            top: -7.5%;
         }
     }
 
@@ -111,15 +111,15 @@
 
             transform: rotate(-21.8deg);
 
-            left: 85.3%;
-            top: 78.5%;
+            left: 84.7%;
+            top: 100.5%;
         }
 
         @media (min-width:1920px){
             transform: rotate(-22deg);
 
-            left: 86.3%;
-            top: 21%;
+            left: 85.9%;
+            top: 0%;
         }
     }
 
@@ -134,8 +134,10 @@
 
             font-size:25px;
 
-            transition:2s;
-            transform:translate(46vw, 2.0vh) rotate(20deg);
+            transform: rotate(20deg);
+
+            left: 47.8%;
+            top: 109%;
         }
 
         @media (min-width:1920px){
@@ -143,8 +145,8 @@
 
             transform: rotate(20deg);
 
-            left: 74%;
-            top: 83%;
+            left: 73.5%;
+            top: 109%;
         }
     }
 
@@ -159,8 +161,8 @@
 
             transform: rotate(-18deg);
 
-            left: 92%;
-            top: 70%;
+            left: 91.8%;
+            top: 86%;
         }
     }
 
@@ -177,8 +179,8 @@
 
             transform: rotate(16deg);
 
-            left: 12.8%;
-            top: 68%;
+            left: 11%;
+            top: 84%;
         }
     }
 }

@@ -267,21 +267,21 @@
         position:absolute;
         z-index:2;
         left:59%;
-        top:-1%;
+        bottom:0%;
 
         float:right;
 
         transform:translateX(-50%);
 
         @media (min-width:1024px){
-            top:-5%;
+            bottom: -1%;
             left:50%;
 
             transform:translateX(-50%);
         }
 
         @media (min-width:1920px){
-            top:-1.8%;
+            top: 1.8%;
             left:48%;
 
             transform:translateX(-52%);
