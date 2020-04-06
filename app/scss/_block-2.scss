@@ -36,10 +36,16 @@
             padding:0 18% 0;
         }
 
-        @media (min-width:1920px){
+        @media (min-width:1500px){
             flex-wrap:nowrap;
             justify-content: space-between;
             margin-bottom:89px;
+
+            padding: 0 10% 0;
+        }
+
+        @media (min-width:1920px){
+            padding: 0 18% 0;
         }
     }
 
@@ -79,7 +85,7 @@
             }
         }
 
-        @media (min-width:1920px){
+        @media (min-width:1500px){
             width:100%;
             margin: 0;
             margin-right: 0;
@@ -102,6 +108,11 @@
         @media (min-width:1024px){
             width:30%;
             margin-bottom:16px;
+        }
+
+        @media (min-width:1500px){
+            width:25%;
+            margin-bottom:11px;
         }
 
         @media (min-width:1920px){

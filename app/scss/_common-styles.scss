@@ -121,8 +121,8 @@ $gradient: linear-gradient(0.0deg, #f26522 0%, #fa0891 100%);
     width: 80%;
     margin: 0 ;
     background-image: $gradient;
-    transition: transform 1s;
     opacity: 0;
+    transition: all 1s;
 
     @media (min-width:1024px){
         width: 70%;

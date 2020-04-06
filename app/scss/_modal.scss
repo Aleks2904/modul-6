@@ -10,13 +10,12 @@
 .active{
     opacity: 1;
     visibility: visible;
-    transition: 1s;
+    transition: opacity 1s;
 }
 
 .no-active {
     opacity: 0;
     visibility: hidden;
-    transition: 1s;
 }
 
 .button-close{

@@ -21,7 +21,7 @@ $(document).ready(function(){
     $(window).resize(function(){
         const width = $(window).width();
 
-        if (width > '1919'){
+        if (width >= '1500'){
             minimize_menu_EL.show()
         }else{
             minimize_menu_EL.hide()
