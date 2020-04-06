@@ -83,7 +83,7 @@
         background-color:#fff;
 
         @media (min-width:1500px){
-            display: flex;
+            display: flex !important;
             position: static;
             height: 100%;
             margin: 0;

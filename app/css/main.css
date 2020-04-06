@@ -319,10 +319,10 @@ a {
     background-color: #fff; }
     @media (min-width: 1500px) {
       .header__navigation-ul {
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -ms-flexbox;
-        display: flex;
+        display: -webkit-box !important;
+        display: -webkit-flex !important;
+        display: -ms-flexbox !important;
+        display: flex !important;
         position: static;
         height: 100%;
         margin: 0;
@@ -1051,14 +1051,21 @@ a {
     font-size: 28px;
     font-weight: 700;
     line-height: 40px;
-    margin: 0;
+    width: 80%;
+    margin: 0 auto;
     margin-bottom: 31px;
     color: #fff; }
+    @media (min-width: 880px) {
+      .advertising__title {
+        margin-bottom: 29px;
+        width: 70%; } }
     @media (min-width: 1024px) {
       .advertising__title {
         font-size: 45px;
-        line-height: 60px;
-        margin-bottom: 29px; } }
+        line-height: 60px; } }
+    @media (min-width: 1400px) {
+      .advertising__title {
+        width: 60%; } }
     @media (min-width: 1920px) {
       .advertising__title {
         width: 52%;
@@ -1067,18 +1074,20 @@ a {
     font-size: 15px;
     font-weight: 400;
     line-height: 30px;
-    margin: 0;
-    margin-left: 16px;
+    width: 80%;
+    margin: 0 auto;
     color: #fff; }
     .advertising__subtitle::before {
       content: '*';
       font-size: 20px;
       margin-left: -15px; }
-    @media (min-width: 1024px) {
+    @media (min-width: 880px) {
       .advertising__subtitle {
         font-size: 18px;
-        width: 80%;
-        margin-left: 15px; } }
+        width: 70%; } }
+    @media (min-width: 1400px) {
+      .advertising__subtitle {
+        width: 60%; } }
     @media (min-width: 1920px) {
       .advertising__subtitle {
         width: 50%;
@@ -1198,23 +1207,36 @@ a {
   .footer-navigation__li {
     margin-bottom: 16px;
     list-style: none; }
+    .footer-navigation__li:hover .footer-navigation__a {
+      color: green;
+      -webkit-transform: scale(1.2);
+          -ms-transform: scale(1.2);
+              transform: scale(1.2);
+      -webkit-transition: color 0.25s;
+      -o-transition: color 0.25s;
+      transition: color 0.25s;
+      -webkit-transition: -webkit-transform 0.25s;
+      transition: -webkit-transform 0.25s;
+      -o-transition: transform 0.25s;
+      transition: transform 0.25s;
+      transition: transform 0.25s, -webkit-transform 0.25s; }
     @media (min-width: 1024px) {
       .footer-navigation__li {
         margin-bottom: 14px; } }
   .footer-navigation__a {
     font-size: 15px;
     font-weight: 400;
-    display: block;
+    display: inline-block;
     letter-spacing: .2px;
     color: #8993ad;
-    -webkit-transition: color 0.15s;
-    -o-transition: color 0.15s;
-    transition: color 0.15s; }
-    .footer-navigation__a:hover {
-      color: green;
-      -webkit-transition: color 0.15s;
-      -o-transition: color 0.15s;
-      transition: color 0.15s; }
+    -webkit-transition: color 0.25s;
+    -o-transition: color 0.25s;
+    transition: color 0.25s;
+    -webkit-transition: -webkit-transform 0.25s;
+    transition: -webkit-transform 0.25s;
+    -o-transition: transform 0.25s;
+    transition: transform 0.25s;
+    transition: transform 0.25s, -webkit-transform 0.25s; }
     .footer-navigation__a:last-child {
       margin-bottom: 0; }
     @media (min-width: 1024px) {
@@ -1222,7 +1244,16 @@ a {
         font-size: 18px; } }
 
 .contacts {
-  margin-bottom: 24px; }
+  margin-bottom: 24px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column; }
   @media (min-width: 1024px) {
     .contacts {
       margin-right: 130px; } }
@@ -1230,15 +1261,29 @@ a {
     .contacts {
       margin-right: 213px; } }
   .contacts__phone {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    margin-bottom: 24px; }
-    .contacts__phone:hover .contacts__phone-icon,
-    .contacts__phone:hover .contacts__phone-number {
-      color: green;
-      fill: green; }
+    display: inline-block;
+    margin-bottom: 24px;
+    -webkit-transition: -webkit-transform 0.25s;
+    transition: -webkit-transform 0.25s;
+    -o-transition: transform 0.25s;
+    transition: transform 0.25s;
+    transition: transform 0.25s, -webkit-transform 0.25s; }
+    .contacts__phone:hover {
+      -webkit-transform: scale(1.1);
+          -ms-transform: scale(1.1);
+              transform: scale(1.1);
+      -webkit-transition: -webkit-transform 0.25s;
+      transition: -webkit-transform 0.25s;
+      -o-transition: transform 0.25s;
+      transition: transform 0.25s;
+      transition: transform 0.25s, -webkit-transform 0.25s; }
+      .contacts__phone:hover .contacts__phone-icon,
+      .contacts__phone:hover .contacts__phone-number {
+        color: green;
+        fill: green;
+        -webkit-transition: color fill 0.25s;
+        -o-transition: color fill 0.25s;
+        transition: color fill 0.25s; }
     @media (min-width: 1024px) {
       .contacts__phone {
         margin-bottom: 32px; } }
@@ -1247,7 +1292,10 @@ a {
     height: 14px;
     margin-top: 5px;
     margin-right: 20px;
-    fill: url(#grad); }
+    fill: url(#grad);
+    -webkit-transition: fill 0.25s;
+    -o-transition: fill 0.25s;
+    transition: fill 0.25s; }
     @media (min-width: 1024px) {
       .contacts__phone-icon {
         width: 18px;
@@ -1255,26 +1303,46 @@ a {
   .contacts__phone-number {
     font-size: 20px;
     font-weight: 500;
-    color: #8993ad; }
+    color: #8993ad;
+    -webkit-transition: color 0.25s;
+    -o-transition: color 0.25s;
+    transition: color 0.25s; }
     @media (min-width: 1024px) {
       .contacts__phone-number {
         font-size: 25px;
         font-weight: 400; } }
   .contacts__mail {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex; }
-    .contacts__mail:hover .contacts__mail-icon,
-    .contacts__mail:hover .contacts__mail-number {
-      color: green;
-      fill: green; }
+    display: inline-block;
+    -webkit-transition: -webkit-transform 0.25s;
+    transition: -webkit-transform 0.25s;
+    -o-transition: transform 0.25s;
+    transition: transform 0.25s;
+    transition: transform 0.25s, -webkit-transform 0.25s; }
+    .contacts__mail:hover {
+      -webkit-transform: scale(1.1);
+          -ms-transform: scale(1.1);
+              transform: scale(1.1);
+      -webkit-transition: -webkit-transform 0.25s;
+      transition: -webkit-transform 0.25s;
+      -o-transition: transform 0.25s;
+      transition: transform 0.25s;
+      transition: transform 0.25s, -webkit-transform 0.25s; }
+      .contacts__mail:hover .contacts__mail-icon,
+      .contacts__mail:hover .contacts__mail-number {
+        color: green;
+        fill: green;
+        -webkit-transition: fill color 0.25s;
+        -o-transition: fill color 0.25s;
+        transition: fill color 0.25s; }
   .contacts__mail-icon {
     width: 14px;
     height: 14px;
     margin-top: 5px;
     margin-right: 20px;
-    fill: url(#grad); }
+    fill: url(#grad);
+    -webkit-transition: fill 0.25s;
+    -o-transition: fill 0.25s;
+    transition: fill 0.25s; }
     @media (min-width: 1024px) {
       .contacts__mail-icon {
         width: 22px;
@@ -1283,7 +1351,10 @@ a {
   .contacts__mail-number {
     font-size: 20px;
     font-weight: 500;
-    color: #8993ad; }
+    color: #8993ad;
+    -webkit-transition: color 0.25s;
+    -o-transition: color 0.25s;
+    transition: color 0.25s; }
     @media (min-width: 1024px) {
       .contacts__mail-number {
         font-size: 25px;
@@ -1354,12 +1425,24 @@ a {
     height: 25px; }
 
 .connection__a .connection__svg:hover {
-  color: green;
-  fill: green; }
+  fill: green;
+  -webkit-transform: scale(1.2);
+      -ms-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-transition: -webkit-transform 0.25s;
+  transition: -webkit-transform 0.25s;
+  -o-transition: transform 0.25s;
+  transition: transform 0.25s;
+  transition: transform 0.25s, -webkit-transform 0.25s; }
 
 .connection__svg {
   fill: #8993ad;
-  width: 100%; }
+  width: 100%;
+  -webkit-transition: -webkit-transform 0.25s;
+  transition: -webkit-transform 0.25s;
+  -o-transition: transform 0.25s;
+  transition: transform 0.25s;
+  transition: transform 0.25s, -webkit-transform 0.25s; }
 
 .copyright {
   font-size: 12px;

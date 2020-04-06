@@ -39,6 +39,18 @@
 
             list-style:none;
 
+            &:hover{
+                .footer-navigation__a{
+                    color: green;
+                transform: scale(1.2);
+
+                transition: color 0.25s;
+                transition: transform 0.25s;
+                }
+                
+                
+            }
+
             @media (min-width:1024px){
                 margin-bottom:14px;
             }
@@ -48,19 +60,16 @@
             font-size:15px;
             font-weight:400;
 
-            display:block;
+            display:inline-block;
 
             letter-spacing:.2px;
 
             color:#8993ad;
 
-            transition: color 0.15s;
+            transition: color 0.25s;
+            transition: transform 0.25s;
 
-            &:hover{
-                color: green;
-
-                transition: color 0.15s;
-            }
+            
 
             &:last-child{
                 margin-bottom:0;
@@ -73,6 +82,9 @@
 }
 .contacts {
     margin-bottom:24px;
+    display: flex;
+    flex-direction: column;
+
 
     @media (min-width:1024px){
         margin-right:130px;
@@ -83,15 +95,21 @@
     }
 
         &__phone {
-            display:flex;
+            display: inline-block;
 
             margin-bottom:24px;
+            transition: transform 0.25s;
 
             &:hover{
+                transform: scale(1.1);
+                transition: transform 0.25s;
+
                 .contacts__phone-icon,
                 .contacts__phone-number{
                     color: green;
                     fill: green;
+
+                    transition: color fill 0.25s;
                 }
             }
 
@@ -107,6 +125,7 @@
             margin-right:20px;
 
             fill: url(#grad);
+            transition: fill 0.25s;
 
             @media (min-width:1024px){
                 width:18px;
@@ -119,6 +138,7 @@
             font-weight:500;
 
             color:#8993ad;
+            transition: color 0.25s;
 
             @media (min-width:1024px){
                 font-size:25px;
@@ -127,13 +147,19 @@
         }
 
         &__mail {
-            display:flex;
+            display: inline-block;
+            transition: transform 0.25s;
 
             &:hover{
+                transform: scale(1.1);
+                transition: transform 0.25s;
+
                 .contacts__mail-icon,
                 .contacts__mail-number{
                     color: green;
                     fill: green;
+
+                    transition: fill color 0.25s;
                 }
             }
         }
@@ -145,6 +171,8 @@
             margin-right:20px;
 
             fill: url(#grad);
+
+            transition: fill 0.25s;
 
             @media (min-width:1024px){
                 width:22px;
@@ -159,6 +187,7 @@
             font-weight:500;
 
             color:#8993ad;
+            transition: color 0.25s;
 
             @media (min-width:1024px){
                 font-size:25px;
@@ -253,8 +282,10 @@
     &__a {
         .connection__svg{
             &:hover{
-                color: green;
                 fill: green;
+                transform: scale(1.2);
+
+                transition: transform 0.25s;
             }
         }
     }
@@ -262,6 +293,8 @@
     &__svg {
         fill: #8993ad;
         width: 100%;
+
+        transition: transform 0.25s;
     }
 }
 .copyright {
