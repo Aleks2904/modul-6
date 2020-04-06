@@ -153,13 +153,13 @@ a {
     .advertising__signs-1, .advertising__signs-2, .advertising__signs-3, .advertising__signs-4, .advertising__signs-5 {
       font-size: 48.8px; } }
 
-.request-call-block, .follow-up, .find-price, .order-project {
+.annunciation, .request-call-block, .follow-up, .find-price, .order-project {
   position: fixed;
-  top: 10%;
   left: 50%;
-  -webkit-transform: translateX(-50%);
-      -ms-transform: translateX(-50%);
-          transform: translateX(-50%);
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   padding: 60px 0 60px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -185,13 +185,13 @@ a {
   -o-transition: all 1s;
   transition: all 1s; }
   @media (min-width: 1024px) {
-    .request-call-block, .follow-up, .find-price, .order-project {
+    .annunciation, .request-call-block, .follow-up, .find-price, .order-project {
       width: 70%; } }
   @media (min-width: 1920px) {
-    .request-call-block, .follow-up, .find-price, .order-project {
+    .annunciation, .request-call-block, .follow-up, .find-price, .order-project {
       width: 60%; } }
 
-.request-call-block__title, .follow-up__title, .find-price__title, .order-project__title {
+.annunciation__title, .request-call-block__title, .follow-up__title, .find-price__title, .order-project__title {
   font-size: 30px;
   font-weight: 900;
   margin: 0;

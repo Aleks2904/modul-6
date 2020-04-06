@@ -108,18 +108,17 @@ $gradient: linear-gradient(0.0deg, #f26522 0%, #fa0891 100%);
 
 %modal-block {
     position: fixed;
-    top: 10%;
     left: 50%;
-    transform:translateX(-50%);
+    top: 50%;
+    transform:translate(-50%, -50%);
     padding: 60px 0 60px;
     display: flex;
     visibility: hidden;
     flex-direction: column;
-
     align-items: center;
 
     width: 80%;
-    margin: 0 ;
+    margin: 0;
     background-image: $gradient;
     opacity: 0;
     transition: all 1s;
@@ -185,7 +184,7 @@ $gradient: linear-gradient(0.0deg, #f26522 0%, #fa0891 100%);
     display:block;
 
     width:87.5%;
-    margin:0 auto;
+    margin: 0 auto;
     padding:18px 0;
 
     text-align:center;

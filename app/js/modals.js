@@ -9,6 +9,29 @@ $(document).ready(function () {
         $(this).parents('.modal-all').find('.js-all-block').addClass("no-active")
     });
 
+    /* оповещение о заказе звонка */
+
+    $('#js-request-call-form').on('submit', annunciation)
+
+    function annunciation(){
+        event.preventDefault();
+
+        $(this).parents('.modal-all').find('.js-all-block').removeClass('active')
+        $(this).parents('.modal-all').find('.js-all-block').addClass("no-active")
+
+        $("#js-annunciation").addClass("active")
+        $("#js-annunciation").removeClass('no-active')
+
+        console.log('123')
+
+        setTimeout (function(){
+            $("#js-annunciation").removeClass("active")
+            $("#js-annunciation").addClass('no-active')
+        }, 3000)
+
+        this.reset()
+    }
+
     /* заказать звонок */
 
     $("#js-header-phone-bottom, #js-footer-phone-bottom").on('click',function(){

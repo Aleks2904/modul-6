@@ -69,39 +69,43 @@
     }
 }
 
+.annunciation{
+      @extend %modal-block;
+
+            &__title {
+                  @extend %modal-title;
+		}
+}
+
 .request-call-block {
     @extend %modal-block;
 
 		&__title {
-            @extend %modal-title;
+                  @extend %modal-title;
 		}
 
 		&__form {
-            @extend %modal-form;
+                  @extend %modal-form;
 		}
 
 		&__intro-label {
-            @extend %modal-label;
+                  @extend %modal-label;
 		}
 
 		&__intro-input {
-            @extend %modal-input;
+                  @extend %modal-input;
 		}
 
 		&__tel-label {
-            @extend %modal-label;
+                  @extend %modal-label;
 		}
 
 		&__tel-input {
-            @extend %modal-input;
+                  @extend %modal-input;
 		}
 
 		&__button {
-            @extend %modal-button;
-		}
-
-		&__close {
-            
+                  @extend %modal-button;
 		}
 }
 
@@ -110,10 +114,6 @@
 
 		&__title {
             @extend %modal-title;
-		}
-
-		&__close {
-            
 		}
 }
 
@@ -169,8 +169,6 @@
                   font-size: 30px;
             }
 
-		&__close {
-		}
 }
 
 .order-project {
@@ -178,9 +176,5 @@
 
 		&__title {
             @extend %modal-title;
-		}
-
-		&__close {
-            
 		}
 }

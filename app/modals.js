@@ -4,10 +4,31 @@ $(document).ready(function () {
 
     /* закрытие окна*/
 
-       $(".js-button-close").on('click', function(){
+    $(".js-button-close").on('click', function(){
         $(this).parents('.modal-all').find('.js-all-block').removeClass('active')
         $(this).parents('.modal-all').find('.js-all-block').addClass("no-active")
     });
+
+    /* оповещение о заказе звонка */
+
+    $('#js-request-call').on('submit', annunciation)
+
+    function annunciation(e){
+        e.preventDefault()
+
+        $(this).parents('.modal-all').find('.js-all-block').removeClass('active')
+        $(this).parents('.modal-all').find('.js-all-block').addClass("no-active")
+
+        $("#js-annunciation").addClass("active")
+        $("#js-annunciation").removeClass('no-active')
+
+        console.log('123')
+
+        setTimeout (function(){
+            $("#js-annunciation").removeClass("active")
+            $("#js-annunciation").addClass('no-active')
+        }, 5000)
+    }
 
     /* заказать звонок */
 
@@ -74,9 +95,6 @@ $(document).ready(function () {
         $('#js-find-price-prise').html(allResult);
 
         $('#js-find-price-prise').show();
-
-        console.log(buyPage);
-
     };
     /* заказать проект */
 
