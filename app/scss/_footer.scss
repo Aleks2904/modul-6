@@ -5,28 +5,28 @@
 .footer-container {
     @extend %container;
 
-    padding:46px 19px 51px;
+    padding:46px 0 51px;
 
-    @media (min-width:1024px){
+    @media (min-width:769px){
         display:flex;
         justify-content: space-between;
         padding:104px 40px 36px;
     }
 
-    @media (min-width:1920px){
-        padding:82px 375px 35px;
+    @media (min-width:1200px){
+        padding:82px 0 35px;
     }
 }
 
 .footer-navigation {
     margin-bottom:42px;
 
-    @media (min-width:1024px){
-        margin-right:180px;
+    @media (min-width:769px){
+        margin-right: 10%;
     }
 
-    @media (min-width:1920px){
-        margin-right:300px;
+    @media (min-width:1200px){
+        margin-right: 15.5%;
     }
 
 		&__ul {
@@ -51,7 +51,7 @@
                 
             }
 
-            @media (min-width:1024px){
+            @media (min-width:769px){
                 margin-bottom:14px;
             }
 		}
@@ -75,7 +75,7 @@
                 margin-bottom:0;
             }
 
-            @media (min-width:1024px){
+            @media (min-width:769px){
                 font-size:18px;
             }
 		}
@@ -86,12 +86,11 @@
     flex-direction: column;
 
 
-    @media (min-width:1024px){
-        margin-right:130px;
+    @media (min-width:769px){
+        min-width: 300px;
     }
 
-    @media (min-width:1920px){
-        margin-right:213px;
+    @media (min-width:1200px){
     }
 
         &__phone {
@@ -113,7 +112,7 @@
                 }
             }
 
-            @media (min-width:1024px){
+            @media (min-width:769px){
                 margin-bottom:32px;
             }
         }    
@@ -122,12 +121,12 @@
             width:14px;
             height:14px;
             margin-top:5px;
-            margin-right:20px;
+            margin-right:17px;
 
             fill: url(#grad);
             transition: fill 0.25s;
 
-            @media (min-width:1024px){
+            @media (min-width:769px){
                 width:18px;
                 height:18px;
             }
@@ -140,7 +139,7 @@
             color:#8993ad;
             transition: color 0.25s;
 
-            @media (min-width:1024px){
+            @media (min-width:769px){
                 font-size:25px;
                 font-weight:400;
             }
@@ -167,17 +166,15 @@
         &__mail-icon {
             width:14px;
             height:14px;
-            margin-top:5px;
-            margin-right:20px;
+            margin-right:18px;
+            padding-top: 2px;
 
             fill: url(#grad);
-
             transition: fill 0.25s;
 
-            @media (min-width:1024px){
+            @media (min-width:769px){
                 width:22px;
                 height:22px;
-                margin-right:24px;
             }
 
         }
@@ -189,16 +186,22 @@
             color:#8993ad;
             transition: color 0.25s;
 
-            @media (min-width:1024px){
+            @media (min-width:769px){
                 font-size:25px;
                 font-weight:400;
             }
         }
 }
 .connection {
-    @media (min-width:1024px){
+    @media (min-width:769px){
         display:block;
         width: 30%;
+    }
+
+    @media (min-width:1200px){
+        display:block;
+        width: 30%;
+        padding-left: 80px;
     }
 
     &__button {
@@ -210,7 +213,7 @@
 
         @extend %button;
 
-        @media (min-width:1024px){
+        @media (min-width:769px){
             font-size:16px;
             font-weight:400;
 
@@ -230,6 +233,10 @@
             border:1px solid #ff5e79;
             background-color:transparent;
         }
+
+        @media (min-width:1200px){
+            margin-right: 0 !important;
+        }
     }
 
     &__ul {
@@ -240,12 +247,12 @@
         margin:0 ;
         padding:0;
 
-        @media (min-width:1024px){
+        @media (min-width:769px){
             width:248px;
             padding-top: 2px;
         }
 
-        @media (min-width:1920px){
+        @media (min-width:1200px){
             width:248px;
             padding-top: 2px;
         }
@@ -310,7 +317,7 @@
     color:#fff;
     background-color:#31293c;
 
-    @media (min-width:1024px){
+    @media (min-width:769px){
         font-size:16px;
 
         padding:30px 0;

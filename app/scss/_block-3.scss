@@ -3,11 +3,11 @@
 
     background-color:#fbfbfb;
 
-    @media (min-width:1024px){
+    @media (min-width:769px){
         padding:100px 15px 101px; 
     }
 
-    @media (min-width:1920px){
+    @media (min-width:1200px){
         padding:102px 15px 102px;
         position: relative;
     }
@@ -17,7 +17,7 @@
 
         background-color:#fbfbfb;
 
-        @media (min-width:1920px){
+        @media (min-width:1200px){
             position: relative;
         }
     }
@@ -38,26 +38,26 @@
     margin:43px 0 37px !important;
     padding-bottom:66px;
 
-    @media (min-width:1024px){
+    @media (min-width:769px){
         margin:110px 0 86px !important;
         padding-bottom:135px;
     }
 
-    @media (min-width:1920px){
+    @media (min-width:1200px){
         margin:110px auto 84px !important;
         padding-bottom:10px;
-        width: 62% !important;
+        width: 100% !important;
     }
 }
 .swiper-wrapper {
     margin:0 auto !important;
 }
 .swiper-slide {
-    width:85%;
+    width:100%;
 
     text-align:center;
 
-    @media (min-width:1920){
+    @media (min-width:1200){
         width: 31.6% !important;
     }
 }
@@ -71,13 +71,13 @@
     &__foto {
         margin-bottom:11px;
 
-        @media (min-width:1024px){
+        @media (min-width:769px){
             width: 455px;
             height: 358px;
             margin-bottom:21px;
         }
 
-        @media (min-width:1920px){
+        @media (min-width:1200px){
             width: 100%;
             margin-bottom:35px;
             height: 290px;
@@ -89,11 +89,11 @@
 
         @extend %subtitle;
 
-        @media (min-width:1024px){
+        @media (min-width:769px){
             font-size: 25px;  
         }
 
-        @media (min-width:1920px){
+        @media (min-width:1200px){
             display: inline-block;
             font-size: 20px;
         }
@@ -104,13 +104,13 @@
     height:9px;
     margin:0 8.5px !important;
 
-    @media (min-width:1024px){
+    @media (min-width:769px){
         width:18px;
         height:18px;
         margin:0 15px !important;
     }
 
-    @media (min-width:1920px){
+    @media (min-width:1200px){
         display: none;
     }
 }
@@ -120,18 +120,18 @@
 .swiper-button-all {
     display: none;
 
-    @media (min-width:1920px){
+    @media (min-width:1200px){
         display: block;
     }
 }
 .swiper-button-prev {
-    @media (min-width:1920px){
+    @media (min-width:1200px){
         background: url("../img/icon/arrow.png");
         background-repeat: no-repeat;
         background-position: center;
         position: absolute;
         top: 284px;
-        left: 320px;
+        left: -4%;
         width: 80px;
         height: 80px;
         box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.07);
@@ -145,14 +145,14 @@
     }
 }
 .swiper-button-next {
-    @media (min-width:1920px){
+    @media (min-width:1200px){
         background: url("../img/icon/arrow.png");
         background-repeat: no-repeat;
         background-position: center;
         transform: rotate(180deg);
         position: absolute;
         top: 284px;
-        right: 320px;
+        right: -4%;
         width: 80px;
         height: 80px;
         box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.07);

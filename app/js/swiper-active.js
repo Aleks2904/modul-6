@@ -25,15 +25,11 @@ $(document).ready(function () {
           slidesPerView: 1,
         },
 
-        1024:{
+        769:{
           slidesPerView: 2,
         },
 
-        1500:{
-          slidesPerView: 3,
-        },
-
-        1920:{
+        1200:{
           slidesPerView: 3,
         }
       }
