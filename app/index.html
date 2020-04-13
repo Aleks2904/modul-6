@@ -73,57 +73,56 @@
 
     <main class="main">
         <section class="my-presentation">
-            <span class="my-presentation__signs-1">
-                { }
-            </span>
+            <div class="container-signs">
+                <span class="my-presentation__signs-1">
+                    { }
+                </span>
+    
+                <span class="my-presentation__signs-2">
+                    #
+                </span>
+    
+                <span class="my-presentation__signs-3">
+                    &lt;/&gt;
+                </span>
+    
+                <span class="my-presentation__signs-4">
+                    &lt;div&gt;
+                </span>
+    
+                <span class="my-presentation__signs-5">
+                    &lt;/&gt;
+                </span>
+    
+                <span class="my-presentation__signs-6">
+                    &lt;div&gt;
+                </span>
+            </div>
 
-            <span class="my-presentation__signs-2">
-                #
-            </span>
-
-            <span class="my-presentation__signs-3">
-                &lt;/&gt;
-            </span>
-
-            <span class="my-presentation__signs-4">
-                &lt;div&gt;
-            </span>
-
-            <span class="my-presentation__signs-5">
-                &lt;/&gt;
-            </span>
-
-            <span class="my-presentation__signs-6">
-                &lt;div&gt;
-            </span>
-            
             <div class="my-presentation__container">
-                <div class="my-presentation__signs">
+                <div class="my-presentation__picture">
+                    <svg class="my-presentation__svg" viewbox="0 0 484 400" role="img" aria-label="фон для картинки">
+                        <use xlink:href="img/symbol/sprite.svg#fone"></use>
+                    </svg>
+
+                    <svg class="my-presentation__svg-1024" viewbox="0 0 942 645" role="img" aria-label="фон для картинки">
+                        <use xlink:href="img/symbol/sprite.svg#fone_1024"></use>
+                    </svg>
+
+                    <svg class="my-presentation__svg-1920" viewbox="0 0 942 780" role="img" aria-label="фон для картинки">
+                        <use xlink:href="img/symbol/sprite.svg#fone_desctop"></use>
+                    </svg>
+
+                    <picture>
+                        <source type="image/webp" media="(min-width: 1200px)" srcset="img/block-1/im_foto_1920.webp">
+                        <source type="image/webp" media="(min-width: 769px)" srcset="img/block-1/im_foto_1024.webp">
+                        <source type="image/webp" srcset="img/block-1/im_foto.webp">
+
+                        <source media="(min-width: 1200px)" srcset="img/block-1/im_foto_1920.png">
+                        <source media="(min-width: 769px)" srcset="img/block-1/im_foto_1024.png">
     
-                    <div class="my-presentation__picture">
-                        <svg class="my-presentation__svg" viewbox="0 0 484 400" role="img" aria-label="фон для картинки">
-                            <use xlink:href="img/symbol/sprite.svg#fone"></use>
-                        </svg>
-    
-                        <svg class="my-presentation__svg-1024" viewbox="0 0 942 645" role="img" aria-label="фон для картинки">
-                            <use xlink:href="img/symbol/sprite.svg#fone_1024"></use>
-                        </svg>
-    
-                        <svg class="my-presentation__svg-1920" viewbox="0 0 942 780" role="img" aria-label="фон для картинки">
-                            <use xlink:href="img/symbol/sprite.svg#fone_desctop"></use>
-                        </svg>
-    
-                        <picture>
-                            <source type="image/webp" media="(min-width: 1920px)" srcset="img/block-1/im_foto_1920.webp">
-                            <source type="image/webp" media="(min-width: 1024px)" srcset="img/block-1/im_foto_1024.webp">
-                            <source type="image/webp" srcset="img/block-1/im_foto.webp">
-    
-                            <source media="(min-width: 1920px)" srcset="img/block-1/im_foto_1920.png">
-                            <source media="(min-width: 1024px)" srcset="img/block-1/im_foto_1024.png">
-        
-                            <img src="img/block-1/im_foto.png" alt="тут должно быть мое фото, но мне лень ..." class="my-presentation__img"> 
-                        </picture>
-                    </div>
+                        <img src="img/block-1/im_foto.png" alt="тут должно быть мое фото, но мне лень ..." class="my-presentation__img"> 
+                    </picture>
                 </div>
     
                 <div class="my-info">
@@ -250,15 +249,7 @@
         </section>
 
         <section class="advertising">
-            <div class="advertising__container">
-                <h2 class="advertising__title">
-                    Адаптивная вёрстка под все устройства и&nbsp;браузеры от&nbsp;1000 рублей всего за&nbsp;4&nbsp;часа.*
-                </h2>
-    
-                <p class="advertising__subtitle">
-                    Срок и&nbsp;стоимость могут отличаться от&nbsp;заявленных и&nbsp;рассчитываются индивидуально, в&nbsp;зависимости от&nbsp;сложности задач.
-                </p>
-    
+            <div class="container-signs">
                 <span class="advertising__signs-1">
                     { }
                 </span>
@@ -278,6 +269,16 @@
                 <span class="advertising__signs-5">
                     #
                 </span>
+            </div>
+            
+            <div class="advertising__container">
+                <h2 class="advertising__title">
+                    Адаптивная вёрстка под все устройства и&nbsp;браузеры от&nbsp;1000 рублей всего за&nbsp;4&nbsp;часа.*
+                </h2>
+    
+                <p class="advertising__subtitle">
+                    Срок и&nbsp;стоимость могут отличаться от&nbsp;заявленных и&nbsp;рассчитываются индивидуально, в&nbsp;зависимости от&nbsp;сложности задач.
+                </p>
             </div>
         </section>
     </main>

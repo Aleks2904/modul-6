@@ -1,5 +1,15 @@
 $gradient: linear-gradient(0.0deg, #f26522 0%, #fa0891 100%);
 
+.container-signs{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 1920px;
+    width: 100%;
+    height: 100%;
+}
+
 %container{
     max-width: 1170px;
     margin: 0 auto;

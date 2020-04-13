@@ -5,12 +5,12 @@
 .footer-container {
     @extend %container;
 
-    padding:46px 0 51px;
+    padding:44px 0 51px;
 
     @media (min-width:769px){
         display:flex;
         justify-content: space-between;
-        padding:104px 40px 36px;
+        padding:104px 40px 37px;
     }
 
     @media (min-width:1200px){
@@ -20,9 +20,11 @@
 
 .footer-navigation {
     margin-bottom:42px;
+    margin-left: 20px;
 
     @media (min-width:769px){
         margin-right: 10%;
+        margin-left: 0px;
     }
 
     @media (min-width:1200px){
@@ -82,12 +84,14 @@
 }
 .contacts {
     margin-bottom:24px;
+    margin-left: 20px;
     display: flex;
     flex-direction: column;
 
 
     @media (min-width:769px){
         min-width: 300px;
+        margin-left: 0px;
     }
 
     @media (min-width:1200px){
@@ -164,9 +168,9 @@
         }
 
         &__mail-icon {
-            width:14px;
-            height:14px;
-            margin-right:18px;
+            width:16px;
+            height:16px;
+            margin-right:13px;
             padding-top: 2px;
 
             fill: url(#grad);
@@ -196,6 +200,7 @@
     @media (min-width:769px){
         display:block;
         width: 30%;
+        padding-left: 36px;
     }
 
     @media (min-width:1200px){
@@ -268,6 +273,11 @@
         &:nth-child(1){
             width: 35px;
             height: 21px;
+            margin-left: 20px;
+
+            @media (min-width:769px){
+                margin-left: 0px;
+            }
         }
 
         &:nth-child(2){

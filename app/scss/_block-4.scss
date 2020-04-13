@@ -1,12 +1,13 @@
 .advertising {
     padding:42px 0 43px 18.5px;
+    position: relative;
 
     background-image:$gradient;
 
     @media (min-width:769px){
         position:relative;
 
-        padding:75px 0 80px;
+        padding:75px 0 78px;
     }
 
     @media (min-width:1200px){
@@ -26,7 +27,7 @@
         font-weight:700;
         line-height:40px;
 
-        width: 80%;
+        width: 100%;
         margin:0 auto;
         margin-bottom:31px;
 
@@ -50,7 +51,7 @@
         font-weight:400;
         line-height:30px;
 
-        width: 80%;
+        width: 100%;
         margin:0 auto;
 
         color:#fff;
@@ -85,15 +86,15 @@
             
             transform: rotate(26deg);
 
-            left: 11.7%;
-            top: -25.6%;
+            left: 15.2%;
+            top: 5.6%;
         }
 
         @media (min-width:1200px){
             transform: rotate(26deg);
 
-            left: 4.9%;
-            top: -7.5%;
+            left: 6.8%;
+            top: 16.2%;
         }
     }
 
@@ -110,15 +111,15 @@
 
             transform: rotate(-21.8deg);
 
-            left: 84.7%;
-            top: 100.5%;
+            left: 85.2%;
+            top: 78%;
         }
 
         @media (min-width:1200px){
             transform: rotate(-22deg);
 
-            left: 85.9%;
-            top: 0%;
+            left: 86.4%;
+            top: 21.2%;
         }
     }
 
@@ -135,17 +136,17 @@
 
             transform: rotate(20deg);
 
-            left: 47.8%;
-            top: 109%;
+            left: 49.5%;
+            top: 83%;
         }
 
         @media (min-width:1200px){
-            font-size:38.8px;
+            font-size:36.8px;
 
             transform: rotate(20deg);
 
-            left: 73.5%;
-            top: 109%;
+            left: 74.1%;
+            top: 83%;
         }
     }
 
@@ -160,8 +161,8 @@
 
             transform: rotate(-18deg);
 
-            left: 91.8%;
-            top: 86%;
+            left: 92%;
+            top: 70%;
         }
     }
 
@@ -178,8 +179,8 @@
 
             transform: rotate(16deg);
 
-            left: 11%;
-            top: 84%;
+            left: 13%;
+            top: 69%;
         }
     }
 }

@@ -19,7 +19,7 @@
 
         margin-bottom:34px;
         max-width: 1170px;
-        margin: 0 auto;
+        margin: 0 auto 35px;
 
         @media (min-width:769px){
             margin-bottom:92px;
@@ -41,7 +41,7 @@
         @media (min-width:1200px){
             flex-wrap:nowrap;
             justify-content: space-between;
-            margin-bottom:89px;
+            margin-bottom:92px;
 
             padding:0;
         }
