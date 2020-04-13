@@ -772,6 +772,7 @@ a {
 
 .my-info {
   position: relative;
+  z-index: 10;
   padding-top: 5px; }
   @media (min-width: 769px) {
     .my-info {
@@ -1056,9 +1057,12 @@ a {
   @media (min-width: 1200px) {
     .advertising {
       padding: 75px 0 80px; } }
-  @media (min-width: 769px) {
-    .advertising__container {
-      position: relative; } }
+  .advertising__container {
+    position: relative;
+    z-index: 30; }
+    @media (min-width: 769px) {
+      .advertising__container {
+        position: relative; } }
   .advertising__title {
     font-size: 28px;
     font-weight: 700;
