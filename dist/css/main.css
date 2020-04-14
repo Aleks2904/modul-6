@@ -56,9 +56,11 @@ a {
 .overflow {
   overflow: hidden; }
 
-@media (min-width: 769px) {
-  body {
-    background-color: #fbfbfb; } }
+body {
+  position: relative; }
+  @media (min-width: 769px) {
+    body {
+      background-color: #fbfbfb; } }
 
 .container-signs {
   position: absolute;
@@ -70,6 +72,38 @@ a {
   max-width: 1920px;
   width: 100%;
   height: 100%; }
+
+.up {
+  background: transparent;
+  position: fixed;
+  z-index: 100;
+  bottom: 2%;
+  right: 3%;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  border: none;
+  outline: none !important;
+  -webkit-transition: -webkit-transform 0.25s;
+  transition: -webkit-transform 0.25s;
+  -o-transition: transform 0.25s;
+  transition: transform 0.25s;
+  transition: transform 0.25s, -webkit-transform 0.25s; }
+  .up:hover {
+    -webkit-transform: scale(1.3);
+        -ms-transform: scale(1.3);
+            transform: scale(1.3);
+    -webkit-transition: -webkit-transform 0.25s;
+    transition: -webkit-transform 0.25s;
+    -o-transition: transform 0.25s;
+    transition: transform 0.25s;
+    transition: transform 0.25s, -webkit-transform 0.25s; }
+  .up__svg {
+    fill: darkgray;
+    width: 100%;
+    -webkit-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+            transform: rotate(90deg); }
 
 .header__container, .my-presentation__container, .my-job__container, .work-example__container, .advertising__container, .footer-container {
   max-width: 1170px;
@@ -173,7 +207,7 @@ a {
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  padding: 15% 5%;
+  padding: 10% 5%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -188,7 +222,8 @@ a {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 80%;
+  overflow: auto;
+  width: 90%;
   max-height: 80%;
   margin: 0;
   background-image: -webkit-gradient(linear, left bottom, left top, from(#f26522), to(#fa0891));
