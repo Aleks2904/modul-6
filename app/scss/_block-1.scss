@@ -34,13 +34,12 @@
 
 
   &__signs-1 {
-        position: absolute;
-        transition: transform 2s;
+    
         transform:  rotate(26deg);
 
         left: 15%;
         top: 7.8%;
-        
+    
         @extend %signs;
 
         @media (min-width:769px){
@@ -59,7 +58,6 @@
     }
 
     &__signs-2 {
-        transition: transform 2s;
         transform: rotate(18deg);
 
         left: 12%;
@@ -97,6 +95,8 @@
 
         @extend %signs;
 
+        z-index: 10;
+
         @media (min-width:769px){
             font-size:45px;
             transform: rotate(15deg);
@@ -117,8 +117,6 @@
 
     &__signs-4 {
         font-size:15px;
-
-        transition: transform 2s;
         transform: rotate(18deg);
 
         left: 76.5%;
@@ -148,8 +146,6 @@
     &__signs-5 {
         display:none;
 
-        transition: transform 2s;
-
         @extend %signs;
 
         @media (min-width:769px){
@@ -169,8 +165,6 @@
 
     &__signs-6 {
         display:none;
-
-        transition: transform 2s;
 
         @extend %signs;
 

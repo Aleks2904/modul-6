@@ -118,7 +118,9 @@ body{
     font-weight:700;
 
     position:absolute;
-    z-index: 10;
+    z-index: 20;
+
+    transition: transform 0.25s;
 
     background:$gradient;
     background-clip:text;

@@ -175,7 +175,12 @@ body {
   font-size: 25px;
   font-weight: 700;
   position: absolute;
-  z-index: 10;
+  z-index: 20;
+  -webkit-transition: -webkit-transform 0.25s;
+  transition: -webkit-transform 0.25s;
+  -o-transition: transform 0.25s;
+  transition: transform 0.25s;
+  transition: transform 0.25s, -webkit-transform 0.25s;
   background: -webkit-gradient(linear, left bottom, left top, from(#f26522), to(#fa0891));
   background: -o-linear-gradient(bottom, #f26522 0%, #fa0891 100%);
   background: linear-gradient(0deg, #f26522 0%, #fa0891 100%);
@@ -362,9 +367,9 @@ body {
     -webkit-align-items: center;
         -ms-flex-align: center;
             align-items: center;
-    z-index: 30;
+    z-index: 12;
     display: none;
-    width: 100%;
+    width: 106%;
     height: 100vh;
     margin-top: 30px;
     margin-left: -6%;
@@ -580,12 +585,6 @@ body {
         height: 680px;
         padding-top: 62px; } }
   .my-presentation__signs-1 {
-    position: absolute;
-    -webkit-transition: -webkit-transform 2s;
-    transition: -webkit-transform 2s;
-    -o-transition: transform 2s;
-    transition: transform 2s;
-    transition: transform 2s, -webkit-transform 2s;
     -webkit-transform: rotate(26deg);
         -ms-transform: rotate(26deg);
             transform: rotate(26deg);
@@ -606,11 +605,6 @@ body {
         left: 6.7%;
         top: 7.4%; } }
   .my-presentation__signs-2 {
-    -webkit-transition: -webkit-transform 2s;
-    transition: -webkit-transform 2s;
-    -o-transition: transform 2s;
-    transition: transform 2s;
-    transition: transform 2s, -webkit-transform 2s;
     -webkit-transform: rotate(18deg);
         -ms-transform: rotate(18deg);
             transform: rotate(18deg);
@@ -643,7 +637,8 @@ body {
         -ms-transform: rotate(-27deg);
             transform: rotate(-27deg);
     left: 53.8%;
-    top: 5%; }
+    top: 5%;
+    z-index: 10; }
     @media (min-width: 769px) {
       .my-presentation__signs-3 {
         font-size: 45px;
@@ -662,11 +657,6 @@ body {
         top: 86%; } }
   .my-presentation__signs-4 {
     font-size: 15px;
-    -webkit-transition: -webkit-transform 2s;
-    transition: -webkit-transform 2s;
-    -o-transition: transform 2s;
-    transition: transform 2s;
-    transition: transform 2s, -webkit-transform 2s;
     -webkit-transform: rotate(18deg);
         -ms-transform: rotate(18deg);
             transform: rotate(18deg);
@@ -689,12 +679,7 @@ body {
         left: 41%;
         top: 12%; } }
   .my-presentation__signs-5 {
-    display: none;
-    -webkit-transition: -webkit-transform 2s;
-    transition: -webkit-transform 2s;
-    -o-transition: transform 2s;
-    transition: transform 2s;
-    transition: transform 2s, -webkit-transform 2s; }
+    display: none; }
     @media (min-width: 769px) {
       .my-presentation__signs-5 {
         display: block;
@@ -708,12 +693,7 @@ body {
       .my-presentation__signs-5 {
         display: none; } }
   .my-presentation__signs-6 {
-    display: none;
-    -webkit-transition: -webkit-transform 2s;
-    transition: -webkit-transform 2s;
-    -o-transition: transform 2s;
-    transition: transform 2s;
-    transition: transform 2s, -webkit-transform 2s; }
+    display: none; }
     @media (min-width: 1200px) {
       .my-presentation__signs-6 {
         display: block;
@@ -1257,9 +1237,23 @@ body {
       margin-right: 15.5%; } }
   .footer-navigation__ul {
     margin: 0;
-    padding: 0; }
+    padding: 0;
+    width: 100px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    @media (min-width: 769px) {
+      .footer-navigation__ul {
+        width: 100%; } }
   .footer-navigation__li {
     margin-bottom: 16px;
+    display: inline-block;
     list-style: none; }
     .footer-navigation__li:hover .footer-navigation__a {
       color: green;
@@ -1321,22 +1315,23 @@ body {
     -o-transition: transform 0.25s;
     transition: transform 0.25s;
     transition: transform 0.25s, -webkit-transform 0.25s; }
-    .contacts__phone:hover {
-      -webkit-transform: scale(1.1);
-          -ms-transform: scale(1.1);
-              transform: scale(1.1);
-      -webkit-transition: -webkit-transform 0.25s;
-      transition: -webkit-transform 0.25s;
-      -o-transition: transform 0.25s;
-      transition: transform 0.25s;
-      transition: transform 0.25s, -webkit-transform 0.25s; }
-      .contacts__phone:hover .contacts__phone-icon,
-      .contacts__phone:hover .contacts__phone-number {
-        color: green;
-        fill: green;
-        -webkit-transition: color fill 0.25s;
-        -o-transition: color fill 0.25s;
-        transition: color fill 0.25s; }
+    @media (min-width: 769px) {
+      .contacts__phone:hover {
+        -webkit-transform: scale(1.1);
+            -ms-transform: scale(1.1);
+                transform: scale(1.1);
+        -webkit-transition: -webkit-transform 0.25s;
+        transition: -webkit-transform 0.25s;
+        -o-transition: transform 0.25s;
+        transition: transform 0.25s;
+        transition: transform 0.25s, -webkit-transform 0.25s; }
+        .contacts__phone:hover .contacts__phone-icon,
+        .contacts__phone:hover .contacts__phone-number {
+          color: green;
+          fill: green;
+          -webkit-transition: color fill 0.25s;
+          -o-transition: color fill 0.25s;
+          transition: color fill 0.25s; } }
     @media (min-width: 769px) {
       .contacts__phone {
         margin-bottom: 32px; } }
@@ -1371,22 +1366,23 @@ body {
     -o-transition: transform 0.25s;
     transition: transform 0.25s;
     transition: transform 0.25s, -webkit-transform 0.25s; }
-    .contacts__mail:hover {
-      -webkit-transform: scale(1.1);
-          -ms-transform: scale(1.1);
-              transform: scale(1.1);
-      -webkit-transition: -webkit-transform 0.25s;
-      transition: -webkit-transform 0.25s;
-      -o-transition: transform 0.25s;
-      transition: transform 0.25s;
-      transition: transform 0.25s, -webkit-transform 0.25s; }
-      .contacts__mail:hover .contacts__mail-icon,
-      .contacts__mail:hover .contacts__mail-number {
-        color: green;
-        fill: green;
-        -webkit-transition: fill color 0.25s;
-        -o-transition: fill color 0.25s;
-        transition: fill color 0.25s; }
+    @media (min-width: 769px) {
+      .contacts__mail:hover {
+        -webkit-transform: scale(1.1);
+            -ms-transform: scale(1.1);
+                transform: scale(1.1);
+        -webkit-transition: -webkit-transform 0.25s;
+        transition: -webkit-transform 0.25s;
+        -o-transition: transform 0.25s;
+        transition: transform 0.25s;
+        transition: transform 0.25s, -webkit-transform 0.25s; }
+        .contacts__mail:hover .contacts__mail-icon,
+        .contacts__mail:hover .contacts__mail-number {
+          color: green;
+          fill: green;
+          -webkit-transition: fill color 0.25s;
+          -o-transition: fill color 0.25s;
+          transition: fill color 0.25s; } }
   .contacts__mail-icon {
     width: 16px;
     height: 16px;
