@@ -40,7 +40,7 @@
 
         left: 15%;
         top: 7.8%;
-
+        
         @extend %signs;
 
         @media (min-width:769px){
@@ -198,6 +198,8 @@
             bottom: 5px;
             width:53.5%;
             height:100%;
+
+            background-color: #fbfbfb;
         }
 
         @media (min-width:1200px){
@@ -207,7 +209,7 @@
 
             bottom: 5px;
             width:69%;
-            height:95%;
+            height:94%;
         }
     }
 
@@ -318,6 +320,11 @@
         @media (min-width:769px){
             margin-bottom:30px;
             margin-left:0;
+            font-size: 48px;
+        }
+
+        @media (min-width:900px){
+            font-size: 54px;
         }
 
         @media (min-width:1200px){
@@ -336,6 +343,11 @@
             margin-bottom:50px ;
             white-space:nowrap;
             width: 100%;
+            font-size: 20px;
+        }
+
+        @media (min-width:900px){
+            font-size: 25px;
         }
 
         @media (min-width:1200px){
