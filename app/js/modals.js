@@ -9,6 +9,17 @@ $(document).ready(function () {
         $(this).parents('.modal-all').find('.js-all-block').addClass("no-active")
     });
 
+    $(document).mouseup(function (e){
+        var div = $(".js-all-block");
+        
+        if (!div.is(e.target) && div.has(e.target).length === 0) { 
+            $('.modal-all').find('.js-all-block').removeClass('active')
+            $('.modal-all').find('.js-all-block').addClass("no-active")
+
+            console.log('123')
+        }
+    });
+
     /* оповещение о заказе звонка */
 
     $('#js-request-call-form').on('submit', annunciation)
@@ -107,4 +118,20 @@ $(document).ready(function () {
         $("#js-order-project").addClass("active")
         $("#js-order-project").removeClass('no-active')
     });
+
+
+    //кнопка возврата
+ 
+    $(window).scroll(function() {
+        if($(this).scrollTop() != 0){       
+            $('#js-up').fadeIn(); 
+        }else{
+            $('#js-up').fadeOut();
+        }  
+    });
+            
+    $('#js-up').click(function() {    
+        $('body,html').animate({scrollTop:0},800);
+    });
+         
 });
