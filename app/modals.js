@@ -10,11 +10,13 @@ $(document).ready(function () {
     });
 
     $(document).mouseup(function (e){
-        var div = $(".modal-all");
+        var div = $(".js-all-block");
         
-		if (div.has(e.target)) { 
+		if (!div.is(e.target) && div.has(e.target).length === 0) { 
             $(this).parents('.modal-all').find('.js-all-block').removeClass('active')
             $(this).parents('.modal-all').find('.js-all-block').addClass("no-active")
+
+            console.log('123')
 		}
 	});
 
@@ -30,8 +32,6 @@ $(document).ready(function () {
 
         $("#js-annunciation").addClass("active")
         $("#js-annunciation").removeClass('no-active')
-
-        console.log('123')
 
         setTimeout (function(){
             $("#js-annunciation").removeClass("active")
