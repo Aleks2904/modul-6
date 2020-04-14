@@ -9,6 +9,15 @@ $(document).ready(function () {
         $(this).parents('.modal-all').find('.js-all-block').addClass("no-active")
     });
 
+    $(document).mouseup(function (e){
+        var div = $(".modal-all");
+        
+		if (div.has(e.target)) { 
+            $(this).parents('.modal-all').find('.js-all-block').removeClass('active')
+            $(this).parents('.modal-all').find('.js-all-block').addClass("no-active")
+		}
+	});
+
     /* оповещение о заказе звонка */
 
     $('#js-request-call').on('submit', annunciation)

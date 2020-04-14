@@ -17,8 +17,11 @@
     &__container{
         @extend %container;
 
+        padding: 0 3%;
+
         @media (min-width:769px){
             position:relative;
+            padding: 0;
         }
     }
 
