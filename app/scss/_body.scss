@@ -13,6 +13,14 @@ body{
     border:0;
 }
 
+body{
+    position: relative;
+
+    @media (min-width:769px){
+        background-color: #fbfbfb;
+    }
+}
+
 *,
 *:before,
 *::after{

@@ -1,12 +1,5 @@
 $gradient: linear-gradient(0.0deg, #f26522 0%, #fa0891 100%);
 
-body{
-    position: relative;
-    @media (min-width:769px){
-        background-color: #fbfbfb;
-    }
-}
-
 .container-signs{
     position: absolute;
     top: 0;
@@ -15,10 +8,6 @@ body{
     max-width: 1920px;
     width: 100%;
     height: 100%;
-}
-
-.overflow{
-    overflow: hidden;
 }
 
 .up{

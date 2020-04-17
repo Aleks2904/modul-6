@@ -11,6 +11,12 @@ body {
   padding: 0;
   border: 0; }
 
+body {
+  position: relative; }
+  @media (min-width: 769px) {
+    body {
+      background-color: #fbfbfb; } }
+
 *,
 *:before,
 *::after {
@@ -56,12 +62,6 @@ a {
 .overflow {
   overflow: hidden; }
 
-body {
-  position: relative; }
-  @media (min-width: 769px) {
-    body {
-      background-color: #fbfbfb; } }
-
 .container-signs {
   position: absolute;
   top: 0;
@@ -89,7 +89,7 @@ body {
   -o-transition: transform 0.25s;
   transition: transform 0.25s;
   transition: transform 0.25s, -webkit-transform 0.25s; }
-  .up:hover {
+  .up:active {
     -webkit-transform: scale(1.3);
         -ms-transform: scale(1.3);
             transform: scale(1.3);
@@ -98,6 +98,16 @@ body {
     -o-transition: transform 0.25s;
     transition: transform 0.25s;
     transition: transform 0.25s, -webkit-transform 0.25s; }
+  @media (min-width: 1200px) {
+    .up:hover {
+      -webkit-transform: scale(1.3);
+          -ms-transform: scale(1.3);
+              transform: scale(1.3);
+      -webkit-transition: -webkit-transform 0.25s;
+      transition: -webkit-transform 0.25s;
+      -o-transition: transform 0.25s;
+      transition: transform 0.25s;
+      transition: transform 0.25s, -webkit-transform 0.25s; } }
   .up__svg {
     fill: darkgray;
     width: 100%;
@@ -228,7 +238,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   overflow: auto;
-  width: 90%;
+  max-width: 95%;
   max-height: 80%;
   margin: 0;
   background-image: -webkit-gradient(linear, left bottom, left top, from(#f26522), to(#fa0891));
@@ -240,10 +250,12 @@ body {
   transition: all 1s; }
   @media (min-width: 769px) {
     .annunciation, .request-call-block, .follow-up, .find-price, .order-project {
-      width: 70%; } }
+      max-width: 70%;
+      padding: 7% 5%; } }
   @media (min-width: 1200px) {
     .annunciation, .request-call-block, .follow-up, .find-price, .order-project {
-      width: 60%; } }
+      max-width: 60%;
+      padding: 5% 5%; } }
 
 .annunciation__title, .request-call-block__title, .follow-up__title, .find-price__title, .order-project__title {
   font-size: 30px;
@@ -296,7 +308,7 @@ body {
   -o-transition: transform 1s;
   transition: transform 1s;
   transition: transform 1s, -webkit-transform 1s; }
-  .request-call-block__button:hover, .find-price__button:hover {
+  .request-call-block__button:active, .find-price__button:active {
     -webkit-transform: scale(1.2);
         -ms-transform: scale(1.2);
             transform: scale(1.2);
@@ -305,6 +317,16 @@ body {
     -o-transition: transform 1s;
     transition: transform 1s;
     transition: transform 1s, -webkit-transform 1s; }
+  @media (min-width: 1200px) {
+    .request-call-block__button:hover, .find-price__button:hover {
+      -webkit-transform: scale(1.2);
+          -ms-transform: scale(1.2);
+              transform: scale(1.2);
+      -webkit-transition: -webkit-transform 1s;
+      transition: -webkit-transform 1s;
+      -o-transition: transform 1s;
+      transition: transform 1s;
+      transition: transform 1s, -webkit-transform 1s; } }
 
 .header {
   margin: 0;
@@ -373,7 +395,7 @@ body {
     height: 100vh;
     margin-top: 30px;
     margin-left: -6%;
-    padding: 0;
+    padding-right: 6%;
     padding-top: 50px;
     background-color: #fff; }
     @media (min-width: 1200px) {
@@ -410,7 +432,7 @@ body {
     -webkit-transition: color 0.5s;
     -o-transition: color 0.5s;
     transition: color 0.5s; }
-    .header__navigation-link:hover {
+    .header__navigation-link:active {
       color: #fc557c;
       border-bottom: 1px solid #fc557c;
       -webkit-transition: border color 0.25s;
@@ -420,7 +442,13 @@ body {
       .header__navigation-link {
         font-size: 16px;
         font-weight: 400;
-        margin: 0; } }
+        margin: 0; }
+        .header__navigation-link:hover {
+          color: #fc557c;
+          border-bottom: 1px solid #fc557c;
+          -webkit-transition: border color 0.25s;
+          -o-transition: border color 0.25s;
+          transition: border color 0.25s; } }
   .header__phone {
     display: -webkit-box;
     display: -webkit-flex;
@@ -461,8 +489,17 @@ body {
         background: none; } }
     @media (min-width: 1200px) {
       .header__phone-bottom {
-        margin-top: -13px; } }
-    .header__phone-bottom:hover {
+        margin-top: -13px; }
+        .header__phone-bottom:hover {
+          -webkit-transform: scale(1.2);
+              -ms-transform: scale(1.2);
+                  transform: scale(1.2);
+          -webkit-transition: -webkit-transform 1s;
+          transition: -webkit-transform 1s;
+          -o-transition: transform 1s;
+          transition: transform 1s;
+          transition: transform 1s, -webkit-transform 1s; } }
+    .header__phone-bottom:active {
       -webkit-transform: scale(1.2);
           -ms-transform: scale(1.2);
               transform: scale(1.2);
@@ -515,13 +552,21 @@ body {
   background: transparent;
   border: none;
   outline-color: black; }
-  .button-close:hover {
+  .button-close:active {
     -webkit-transform: scale(1.5);
         -ms-transform: scale(1.5);
             transform: scale(1.5);
     -webkit-transition: 0.5s;
     -o-transition: 0.5s;
     transition: 0.5s; }
+  @media (min-width: 1200px) {
+    .button-close:hover {
+      -webkit-transform: scale(1.5);
+          -ms-transform: scale(1.5);
+              transform: scale(1.5);
+      -webkit-transition: 0.5s;
+      -o-transition: 0.5s;
+      transition: 0.5s; } }
   .button-close__liner-1 {
     position: absolute;
     display: block;
@@ -557,8 +602,12 @@ body {
   color: blanchedalmond;
   border: solid 3px blanchedalmond;
   border-radius: 10px;
-  padding: 10px 25px;
-  font-size: 30px; }
+  padding: 10px 10px;
+  font-size: 28px; }
+  @media (min-width: 769px) {
+    .find-price__prise {
+      padding: 10px 25px;
+      font-size: 30px; } }
 
 .my-presentation {
   margin-bottom: 35px;
@@ -741,6 +790,15 @@ body {
     fill: url(#grad);
     position: absolute; }
     @media (min-width: 769px) {
+      .my-presentation__svg-1024 {
+        display: block;
+        top: 25%;
+        left: -5%;
+        -webkit-transform: rotate(-5deg);
+            -ms-transform: rotate(-5deg);
+                transform: rotate(-5deg);
+        width: 180%; } }
+    @media (min-width: 920px) {
       .my-presentation__svg-1024 {
         display: block;
         top: 10%;
@@ -1255,7 +1313,7 @@ body {
     margin-bottom: 16px;
     display: inline-block;
     list-style: none; }
-    .footer-navigation__li:hover .footer-navigation__a {
+    .footer-navigation__li:active .footer-navigation__a {
       color: green;
       -webkit-transform: scale(1.2);
           -ms-transform: scale(1.2);
@@ -1271,6 +1329,20 @@ body {
     @media (min-width: 769px) {
       .footer-navigation__li {
         margin-bottom: 14px; } }
+    @media (min-width: 1200px) {
+      .footer-navigation__li:hover .footer-navigation__a {
+        color: green;
+        -webkit-transform: scale(1.2);
+            -ms-transform: scale(1.2);
+                transform: scale(1.2);
+        -webkit-transition: color 0.25s;
+        -o-transition: color 0.25s;
+        transition: color 0.25s;
+        -webkit-transition: -webkit-transform 0.25s;
+        transition: -webkit-transform 0.25s;
+        -o-transition: transform 0.25s;
+        transition: transform 0.25s;
+        transition: transform 0.25s, -webkit-transform 0.25s; } }
   .footer-navigation__a {
     font-size: 15px;
     font-weight: 400;
@@ -1316,6 +1388,25 @@ body {
     transition: transform 0.25s;
     transition: transform 0.25s, -webkit-transform 0.25s; }
     @media (min-width: 769px) {
+      .contacts__phone {
+        margin-bottom: 32px; }
+        .contacts__phone:active {
+          -webkit-transform: scale(1.1);
+              -ms-transform: scale(1.1);
+                  transform: scale(1.1);
+          -webkit-transition: -webkit-transform 0.25s;
+          transition: -webkit-transform 0.25s;
+          -o-transition: transform 0.25s;
+          transition: transform 0.25s;
+          transition: transform 0.25s, -webkit-transform 0.25s; }
+          .contacts__phone:active .contacts__phone-icon,
+          .contacts__phone:active .contacts__phone-number {
+            color: green;
+            fill: green;
+            -webkit-transition: color fill 0.25s;
+            -o-transition: color fill 0.25s;
+            transition: color fill 0.25s; } }
+    @media (min-width: 1200px) {
       .contacts__phone:hover {
         -webkit-transform: scale(1.1);
             -ms-transform: scale(1.1);
@@ -1332,9 +1423,6 @@ body {
           -webkit-transition: color fill 0.25s;
           -o-transition: color fill 0.25s;
           transition: color fill 0.25s; } }
-    @media (min-width: 769px) {
-      .contacts__phone {
-        margin-bottom: 32px; } }
   .contacts__phone-icon {
     width: 14px;
     height: 14px;
@@ -1367,6 +1455,23 @@ body {
     transition: transform 0.25s;
     transition: transform 0.25s, -webkit-transform 0.25s; }
     @media (min-width: 769px) {
+      .contacts__mail:active {
+        -webkit-transform: scale(1.1);
+            -ms-transform: scale(1.1);
+                transform: scale(1.1);
+        -webkit-transition: -webkit-transform 0.25s;
+        transition: -webkit-transform 0.25s;
+        -o-transition: transform 0.25s;
+        transition: transform 0.25s;
+        transition: transform 0.25s, -webkit-transform 0.25s; }
+        .contacts__mail:active .contacts__mail-icon,
+        .contacts__mail:active .contacts__mail-number {
+          color: green;
+          fill: green;
+          -webkit-transition: fill color 0.25s;
+          -o-transition: fill color 0.25s;
+          transition: fill color 0.25s; } }
+    @media (min-width: 1200px) {
       .contacts__mail:hover {
         -webkit-transform: scale(1.1);
             -ms-transform: scale(1.1);
@@ -1492,7 +1597,7 @@ body {
     width: 25px;
     height: 25px; }
 
-.connection__a .connection__svg:hover {
+.connection__a .connection__svg:active {
   fill: green;
   -webkit-transform: scale(1.2);
       -ms-transform: scale(1.2);
@@ -1502,6 +1607,18 @@ body {
   -o-transition: transform 0.25s;
   transition: transform 0.25s;
   transition: transform 0.25s, -webkit-transform 0.25s; }
+
+@media (min-width: 1200px) {
+  .connection__a .connection__svg:hover {
+    fill: green;
+    -webkit-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+            transform: scale(1.2);
+    -webkit-transition: -webkit-transform 0.25s;
+    transition: -webkit-transform 0.25s;
+    -o-transition: transform 0.25s;
+    transition: transform 0.25s;
+    transition: transform 0.25s, -webkit-transform 0.25s; } }
 
 .connection__svg {
   fill: #8993ad;
