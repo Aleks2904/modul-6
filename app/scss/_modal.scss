@@ -158,12 +158,13 @@
 
     &__button {
         @extend %modal-button;
+        margin-bottom: 15px;
     }
 
     &__prise {
         display: none;
 
-        margin: 20px;
+        margin: 0px;
         color: blanchedalmond;
         border: solid 3px blanchedalmond;
         border-radius: 10px;

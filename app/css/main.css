@@ -229,6 +229,7 @@ a {
       -ms-flex-align: center;
           align-items: center;
   overflow: auto;
+  overflow-x: hidden;
   max-width: 95%;
   max-height: 80%;
   margin: 0;
@@ -556,9 +557,12 @@ a {
 .find-price__form {
   margin-bottom: 40px; }
 
+.find-price__button {
+  margin-bottom: 15px; }
+
 .find-price__prise {
   display: none;
-  margin: 20px;
+  margin: 0px;
   color: blanchedalmond;
   border: solid 3px blanchedalmond;
   border-radius: 10px;
