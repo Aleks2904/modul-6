@@ -230,8 +230,19 @@
 
         fill: url(#grad);
         position:absolute;
-        
+
         @media (min-width:769px){
+            display: block;
+
+            top:25%;
+            left:-5%;
+
+            transform: rotate(-5deg);
+
+            width:180%;
+        }
+        
+        @media (min-width:920px){
             display: block;
 
             top:10%;

@@ -7,6 +7,7 @@ $(document).ready(function () {
        $(".js-button-close").on('click', function(){
         $(this).parents('.modal-all').find('.js-all-block').removeClass('active')
         $(this).parents('.modal-all').find('.js-all-block').addClass("no-active")
+        $('body').removeClass('overflow')
     });
 
     $(document).mouseup(function (e){
@@ -15,8 +16,7 @@ $(document).ready(function () {
         if (!div.is(e.target) && div.has(e.target).length === 0) { 
             $('.modal-all').find('.js-all-block').removeClass('active')
             $('.modal-all').find('.js-all-block').addClass("no-active")
-
-            console.log('123')
+            $('body').removeClass('overflow')
         }
     });
 
@@ -29,6 +29,7 @@ $(document).ready(function () {
 
         $(this).parents('.modal-all').find('.js-all-block').removeClass('active')
         $(this).parents('.modal-all').find('.js-all-block').addClass("no-active")
+        $('body').addClass('overflow')
 
         $("#js-annunciation").addClass("active")
         $("#js-annunciation").removeClass('no-active')
@@ -38,6 +39,7 @@ $(document).ready(function () {
         setTimeout (function(){
             $("#js-annunciation").removeClass("active")
             $("#js-annunciation").addClass('no-active')
+            $('body').removeClass('overflow')
         }, 3000)
 
         this.reset()
@@ -48,6 +50,7 @@ $(document).ready(function () {
     $("#js-header-phone-bottom, #js-footer-phone-bottom").on('click',function(){
         $("#js-request-call-block").addClass("active")
         $("#js-request-call-block").removeClass('no-active')
+        $('body').addClass('overflow')
     });
 
     /* узнать больше */
@@ -55,6 +58,7 @@ $(document).ready(function () {
     $("#js-my-presentation-buttom").on('click',function(){
         $("#js-follow-up").addClass("active")
         $("#js-follow-up").removeClass('no-active')
+        $('body').addClass('overflow')
     });
 
     /* узнать стоймость */
@@ -64,6 +68,7 @@ $(document).ready(function () {
     $("#js-my-job-button").on('click',function(){
         $("#js-find-price").addClass("active")
         $("#js-find-price").removeClass('no-active')
+        $('body').addClass('overflow')
     });
 
         /*рассчет стоймости*/
@@ -117,6 +122,7 @@ $(document).ready(function () {
     $("#js-work-example-button").on('click',function(){
         $("#js-order-project").addClass("active")
         $("#js-order-project").removeClass('no-active')
+        $('body').addClass('overflow')
     });
 
 
@@ -133,5 +139,24 @@ $(document).ready(function () {
     $('#js-up').click(function() {    
         $('body,html').animate({scrollTop:0},800);
     });
-         
+
+    //скрол в меню
+
+    $('#nav').on("click","a", function (event) {
+        event.preventDefault();
+
+        var id  = $(this).attr('href'),
+            top = $(id).offset().top;
+        $('body,html').animate({scrollTop: top}, 1000);
+    });
+
+    //скрол в модалке
+
+    $('#js-find-price').on("click","a", function (event) {
+        event.preventDefault();
+
+        var id  = $(this).attr('href'),
+            top = $(id).offset().top;
+        $('#js-find-price').animate({scrollTop: top}, 1300);
+    });
 });

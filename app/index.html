@@ -38,19 +38,19 @@
     
                 <ul id="nav" class="header__navigation-ul js-header__navigation-ul">
                     <li class="header__navigation-item">
-                        <a href="#" class="header__navigation-link">
+                        <a href="#services" class="header__navigation-link js-menu-scroll">
                             Услуги
                         </a>
                     </li>
     
                     <li class="header__navigation-item">
-                        <a href="#" class="header__navigation-link">
+                        <a href="#portfolio" class="header__navigation-link js-menu-scroll">
                             Портфолио
                         </a>
                     </li>
     
                     <li class="header__navigation-item">
-                        <a href="#" class="header__navigation-link">
+                        <a href="#price" class="header__navigation-link js-menu-scroll">
                             Стоимость
                         </a>
                     </li>
@@ -143,7 +143,7 @@
 
         <section class="my-job">
             <div class="my-job__container">
-                <h2 class="my-job__title">
+                <h2 class="my-job__title" id="price">
                     Что я делаю
                 </h2>
         
@@ -197,7 +197,7 @@
 
         <section class="work-example">
             <div class="work-example__container">
-                <h2 class="work-example__title">
+                <h2 class="work-example__title" id="portfolio">
                     Примеры моих работ
                 </h2>
     
@@ -272,7 +272,7 @@
             </div>
             
             <div class="advertising__container">
-                <h2 class="advertising__title">
+                <h2 class="advertising__title" id="services">
                     Адаптивная вёрстка под все устройства и&nbsp;браузеры от&nbsp;1000 рублей всего за&nbsp;4&nbsp;часа.*
                 </h2>
     
@@ -382,7 +382,7 @@
         </svg>
     </a> 
 
-    <div class="modal-all">
+    <div class="modal-all mCustomScrollbar" data-mcs-theme="dark">
         <div class="annunciation" id="js-annunciation">
             <h2 class="annunciation__title">
                 В ближайшее время я с вами свяжусь !
@@ -453,9 +453,9 @@
 
                 <input type="number" class="find-price__sloider-input" id="sloider-id" aria-label="введите колличество слайдеров" placeholder="Колличество слайдеров">
             
-                <button type="submit" class="find-price__button" id="js-find-price-button">
+                <a href="#js-find-price-prise" type="submit" class="find-price__button" id="js-find-price-button">
                     Рассчитать стоймость
-                </button>
+                </a>
             </form>
 
             <span class="find-price__prise" id="js-find-price-prise"></span>
