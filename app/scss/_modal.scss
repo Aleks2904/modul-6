@@ -39,11 +39,6 @@
 
     outline-color: black;
 
-    &:active{
-        transform: scale(1.5);
-        transition: 0.5s;
-    }
-
     @media (min-width:1200px){
         &:hover{
             transform: scale(1.5);

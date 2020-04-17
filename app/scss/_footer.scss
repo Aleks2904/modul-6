@@ -50,16 +50,6 @@
 
             list-style:none;
 
-            &:active{
-                .footer-navigation__a{
-                    color: green;
-                transform: scale(1.2);
-
-                transition: color 0.25s;
-                transition: transform 0.25s;
-                }  
-            }
-
             @media (min-width:769px){
                 margin-bottom:14px;
             }
@@ -124,19 +114,6 @@
 
             @media (min-width:769px){ 
                 margin-bottom:32px;
-
-                &:active{
-                    transform: scale(1.1);
-                    transition: transform 0.25s;
-
-                    .contacts__phone-icon,
-                    .contacts__phone-number{
-                        color: green;
-                        fill: green;
-
-                        transition: color fill 0.25s;
-                    }
-                }
             }
 
             @media (min-width:1200px){
@@ -186,21 +163,6 @@
         &__mail {
             display: inline-block;
             transition: transform 0.25s;
-
-            @media (min-width:769px){ 
-                &:active{
-                    transform: scale(1.1);
-                    transition: transform 0.25s;
-
-                    .contacts__mail-icon,
-                    .contacts__mail-number{
-                        color: green;
-                        fill: green;
-
-                        transition: fill color 0.25s;
-                    }
-                }
-            }
 
             @media (min-width:1200px){ 
                 &:hover{
@@ -349,13 +311,6 @@
 
     &__a {
         .connection__svg{
-            &:active{
-                fill: green;
-                transform: scale(1.2);
-
-                transition: transform 0.25s;
-            }
-
             @media (min-width:1200px){
                 &:hover{
                     fill: green;

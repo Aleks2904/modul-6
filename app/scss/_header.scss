@@ -124,14 +124,6 @@
         transition: border 0.5s;
         transition: color 0.5s;
 
-        &:active{
-            color:#fc557c;
-
-            border-bottom: 1px solid #fc557c;
-
-            transition: border color 0.25s;
-        }
-
         @media (min-width:1200px){
             font-size: 16px;
             font-weight: 400;
@@ -198,11 +190,6 @@
                 transform: scale(1.2);
                 transition: transform 1s;
             }
-        }
-
-        &:active{
-            transform: scale(1.2);
-            transition: transform 1s;
         }
 
         &_text {
