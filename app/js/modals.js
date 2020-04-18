@@ -142,7 +142,7 @@ $(document).ready(function () {
 
     //скрол в меню
 
-    $('#nav').on("click","a", function (event) {
+    $('#js-nav-header, #js-nav-footer').on("click","a", function (event) {
         event.preventDefault();
 
         var id  = $(this).attr('href'),
