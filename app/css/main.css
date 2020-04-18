@@ -230,7 +230,7 @@ a {
           align-items: center;
   overflow: auto;
   overflow-x: hidden;
-  max-width: 95%;
+  width: 90%;
   max-height: 80%;
   margin: 0;
   background-image: -webkit-gradient(linear, left bottom, left top, from(#f26522), to(#fa0891));
@@ -242,11 +242,12 @@ a {
   transition: all 1s; }
   @media (min-width: 769px) {
     .annunciation, .request-call-block, .follow-up, .find-price, .order-project {
-      max-width: 70%;
+      width: 70%;
       padding: 7% 5%; } }
   @media (min-width: 1200px) {
     .annunciation, .request-call-block, .follow-up, .find-price, .order-project {
-      max-width: 60%;
+      width: 41%;
+      max-width: 700px;
       padding: 5% 5%; } }
 
 .annunciation__title, .request-call-block__title, .follow-up__title, .find-price__title, .order-project__title {
@@ -374,11 +375,11 @@ a {
             align-items: center;
     z-index: 12;
     display: none;
-    width: 106%;
+    width: 100%;
     height: 100vh;
     margin-top: 30px;
     margin-left: -6%;
-    padding-right: 6%;
+    padding-left: 0%;
     padding-top: 50px;
     background-color: #fff; }
     @media (min-width: 1200px) {
