@@ -6,6 +6,8 @@ $(document).ready(function(){
     button_minimize_EL.on('click', function(){
         event.preventDefault();
 
+        window.width1
+
         minimize_menu_EL.slideToggle();
 
         if ($(this).attr('aria-expanded') == 'false'){
@@ -33,10 +35,15 @@ $(document).ready(function(){
     $(window).resize(function(){
         const width = $(window).width();
 
+        minimize_menu_EL.hide();
+        button_minimize_EL.attr('aria-expanded', 'false');
+        button_minimize_EL.attr('aria-label','развернуть меню');
+        $('body, html').removeClass('overflow');
+
         if (width >= '1200'){
             minimize_menu_EL.show()
         }else{
             minimize_menu_EL.hide()
         }   
-    });
+    })
 });

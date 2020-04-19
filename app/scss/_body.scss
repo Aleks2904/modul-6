@@ -2,8 +2,8 @@ body{
     font-family:'Roboto', sans-serif;
     font-size:16px;
 
-    overflow:auto;
-    overflow-x: hidden;
+    overflow-y:auto;
+    overflow-x: hidden !important;
 
     box-sizing:border-box;
     min-width:320px;
@@ -79,4 +79,7 @@ a{
 
 .overflow{
     overflow: hidden;
+    position: fixed;
+    left: 0;
+    width: 100%;
 }

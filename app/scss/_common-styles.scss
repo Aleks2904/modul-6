@@ -15,7 +15,7 @@ $gradient: linear-gradient(0.0deg, #f26522 0%, #fa0891 100%);
     position: fixed;
     z-index: 100;
     bottom: 2%;
-    right: 3%;
+    right: 20px;
     width: 30px;
     height: 30px;
     padding: 0;
@@ -73,6 +73,7 @@ $gradient: linear-gradient(0.0deg, #f26522 0%, #fa0891 100%);
 
 %button{
     width: 280/320*100%;
+    max-width: 400px;
     height: 55px;
 
     font-size: 16px;
