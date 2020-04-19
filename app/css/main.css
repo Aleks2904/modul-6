@@ -387,6 +387,9 @@ a {
     padding: 0;
     padding-top: 50px;
     background-color: #fff; }
+    @media (min-width: 769px) {
+      .header__navigation-ul {
+        width: 106%; } }
     @media (min-width: 1200px) {
       .header__navigation-ul {
         display: -webkit-box !important;

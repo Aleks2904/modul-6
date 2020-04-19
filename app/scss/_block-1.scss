@@ -339,10 +339,10 @@
     }
 
     &__subtitle {
-        @extend %subtitle;
-
         width:80%;
         margin:0 auto 22px;
+
+        @extend %subtitle;
 
         @media (min-width:769px){
             margin-bottom:50px ;
