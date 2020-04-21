@@ -349,6 +349,9 @@ a {
     -webkit-justify-content: space-between;
         -ms-flex-pack: justify;
             justify-content: space-between; }
+    @media (min-width: 1200px) {
+      .header__container {
+        padding: 0; } }
   .header__navigation {
     background-color: #fbfbfb; }
   .header__burger {

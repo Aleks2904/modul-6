@@ -26,6 +26,10 @@
 
         display:flex;
         justify-content:space-between;
+
+        @media (min-width:1200px){
+            padding: 0;
+        }
     }
 
     &__navigation {
