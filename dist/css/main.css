@@ -260,7 +260,7 @@ a {
     .annunciation, .request-call-block, .follow-up, .find-price, .order-project {
       width: 41%;
       max-width: 700px;
-      padding: 5% 5%; } }
+      padding: 50px 30px; } }
 
 .annunciation__title, .request-call-block__title, .follow-up__title, .find-price__title, .order-project__title {
   font-size: 30px;
