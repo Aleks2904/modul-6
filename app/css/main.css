@@ -60,10 +60,15 @@ a {
   border: 0; }
 
 .overflow {
+  position: relative;
   overflow: hidden;
+  height: 100%;
   position: fixed;
   left: 0;
   width: 100%; }
+
+.main {
+  overflow: hidden; }
 
 .container-signs {
   position: absolute;
@@ -111,7 +116,10 @@ a {
 
 .header__container, .my-presentation__container, .my-job__container, .work-example__container, .advertising__container, .footer-container {
   max-width: 1170px;
-  margin: 0 auto; }
+  width: 100%; }
+  @media (min-width: 1170px) {
+    .header__container, .my-presentation__container, .my-job__container, .work-example__container, .advertising__container, .footer-container {
+      margin: 0 auto; } }
 
 .my-info__title, .my-job__title, .work-example__title {
   font-size: 30px;
@@ -217,7 +225,7 @@ a {
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  padding: 10% 5%;
+  padding: 10% 2%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -387,9 +395,6 @@ a {
     padding: 0;
     padding-top: 50px;
     background-color: #fff; }
-    @media (min-width: 769px) {
-      .header__navigation-ul {
-        width: 106%; } }
     @media (min-width: 1200px) {
       .header__navigation-ul {
         display: -webkit-box !important;
@@ -732,10 +737,12 @@ a {
     overflow: hidden; }
     @media (min-width: 769px) {
       .my-presentation__picture {
-        float: right;
+        position: absolute;
+        right: -2%;
+        top: 40px;
         bottom: 5px;
-        width: 53.5%;
-        height: 100%;
+        width: 69%;
+        height: 94%;
         background-color: #fbfbfb; } }
     @media (min-width: 1200px) {
       .my-presentation__picture {
@@ -765,6 +772,7 @@ a {
     @media (min-width: 769px) {
       .my-presentation__svg-1024 {
         display: block;
+        position: absolute;
         top: 25%;
         left: -5%;
         -webkit-transform: rotate(-5deg);
@@ -774,6 +782,7 @@ a {
     @media (min-width: 920px) {
       .my-presentation__svg-1024 {
         display: block;
+        position: absolute;
         top: 10%;
         left: -2%;
         width: 180%; } }
@@ -787,6 +796,7 @@ a {
     @media (min-width: 1200px) {
       .my-presentation__svg-1920 {
         display: block;
+        position: absolute;
         top: 0.5%;
         left: -14%;
         -webkit-transform: translate(10.5%, 0) rotate(0deg);

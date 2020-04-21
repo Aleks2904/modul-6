@@ -78,8 +78,14 @@ a{
 }
 
 .overflow{
+    position: relative;
     overflow: hidden;
+    height: 100%;
     position: fixed;
     left: 0;
     width: 100%;
+}
+
+.main{
+    overflow: hidden;
 }

@@ -4,19 +4,21 @@ $(document).ready(function () {
 
     /* закрытие окна*/
 
-       $(".js-button-close").on('click', function(){
+    $(".js-button-close").on('click', function(){
         $(this).parents('.modal-all').find('.js-all-block').removeClass('active')
         $(this).parents('.modal-all').find('.js-all-block').addClass("no-active")
-        $('body').removeClass('overflow')
+        enableScroll()
     });
 
     $(document).mouseup(function (e){
         var div = $(".js-all-block");
-        
-        if (!div.is(e.target) && div.has(e.target).length === 0) { 
-            $('.modal-all').find('.js-all-block').removeClass('active')
-            $('.modal-all').find('.js-all-block').addClass("no-active")
-            $('body').removeClass('overflow')
+
+        if(div.hasClass('active')){
+            if (!div.is(e.target) && div.has(e.target).length === 0) { 
+                div.removeClass('active')
+                div.addClass("no-active")
+                enableScroll()
+            }
         }
     });
 
@@ -29,17 +31,15 @@ $(document).ready(function () {
 
         $(this).parents('.modal-all').find('.js-all-block').removeClass('active')
         $(this).parents('.modal-all').find('.js-all-block').addClass("no-active")
-        $('body').addClass('overflow')
+        enableScroll();
 
         $("#js-annunciation").addClass("active")
         $("#js-annunciation").removeClass('no-active')
 
-        console.log('123')
-
         setTimeout (function(){
             $("#js-annunciation").removeClass("active")
             $("#js-annunciation").addClass('no-active')
-            $('body').removeClass('overflow')
+             enableScroll()
         }, 3000)
 
         this.reset()
@@ -48,17 +48,18 @@ $(document).ready(function () {
     /* заказать звонок */
 
     $("#js-header-phone-bottom, #js-footer-phone-bottom").on('click',function(){
+        disableScroll();
         $("#js-request-call-block").addClass("active")
         $("#js-request-call-block").removeClass('no-active')
-        $('body').addClass('overflow')
     });
 
     /* узнать больше */
 
     $("#js-my-presentation-buttom").on('click',function(){
+        event.preventDefault();
+        disableScroll();
         $("#js-follow-up").addClass("active")
         $("#js-follow-up").removeClass('no-active')
-        $('body').addClass('overflow')
     });
 
     /* узнать стоймость */
@@ -68,7 +69,7 @@ $(document).ready(function () {
     $("#js-my-job-button").on('click',function(){
         $("#js-find-price").addClass("active")
         $("#js-find-price").removeClass('no-active')
-        $('body').addClass('overflow')
+        disableScroll();
     });
 
         /*рассчет стоймости*/
@@ -120,9 +121,9 @@ $(document).ready(function () {
     /* заказать проект */
 
     $("#js-work-example-button").on('click',function(){
+        disableScroll();
         $("#js-order-project").addClass("active")
         $("#js-order-project").removeClass('no-active')
-        $('body').addClass('overflow')
     });
 
 
@@ -159,4 +160,22 @@ $(document).ready(function () {
             top = $(id).offset().top;
         $('#js-find-price').animate({scrollTop: top}, 1300);
     });
+
+    //блок скрола при открытие модалок
+    
+    function disableScroll(){
+        localStorage.setItem('pagePosition', window.scrollY);
+
+        var scroll = localStorage.getItem('pagePosition');
+        $('body').addClass('overflow');
+        $('body').css({'top': -scroll + 'px'});
+    };
+
+    function enableScroll(){
+        var scroll = localStorage.getItem('pagePosition');
+        $('body').css({'top': 'auto'});
+        $('body').removeClass('overflow');
+        window.scroll({'top': scroll,
+                    'left': '0'});
+    };
 });
