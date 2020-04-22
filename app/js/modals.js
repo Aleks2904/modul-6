@@ -162,17 +162,36 @@ $(document).ready(function () {
     });
 
     //блок скрола при открытие модалок
-    
-    function disableScroll(){
-        localStorage.setItem('pagePosition', window.scrollY);
+            /*
 
-        var scroll = localStorage.getItem('pagePosition');
+                //вариант с локал стореж
+
+            function disableScroll(){
+                localStorage.setItem('pagePosition', window.scrollY);
+
+                var scroll = localStorage.getItem('pagePosition');
+                $('body').addClass('overflow');
+                $('body').css({'top': -scroll + 'px'});
+            };
+
+            function enableScroll(){
+                var scroll = localStorage.getItem('pagePosition');
+                $('body').css({'top': 'auto'});
+                $('body').removeClass('overflow');
+                window.scroll({'top': scroll,
+                            'left': '0'});
+            };
+            */
+           
+   function disableScroll(){
+        var scroll = $(window).scrollTop()
+        $('body').data('pagePosition', scroll);
         $('body').addClass('overflow');
         $('body').css({'top': -scroll + 'px'});
     };
 
     function enableScroll(){
-        var scroll = localStorage.getItem('pagePosition');
+        var scroll = $('body').data('pagePosition');
         $('body').css({'top': 'auto'});
         $('body').removeClass('overflow');
         window.scroll({'top': scroll,
