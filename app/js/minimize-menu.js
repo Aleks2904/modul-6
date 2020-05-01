@@ -18,7 +18,7 @@ $(document).ready(function(){
             $(this).attr('aria-expanded', 'false');
             $(this).attr('aria-label','развернуть меню');
             $('body, html').removeClass('overflow');
-        }    
+        }   
     });
 
     itme_menu_EL.on('click', function(){
