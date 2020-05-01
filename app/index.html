@@ -391,19 +391,24 @@
             <h2 class="request-call-block__title">
                 Заказать звонок
             </h2>
-
+            
             <form class="request-call-block__form" id="js-request-call-form">
+                <input type="hidden" name="project_name" value="Визиитка">
+                <input type="hidden" name="admin_email" value="Garmatin171@yandex.ru">
+                <input type="hidden" name="form_subject" value="Заявка на звонок">
+
+
                 <label for="request-call-block-id" class="request-call-block__intro-label">
                     Представтесь пожалуйста 
                 </label>
 
-                <input type="text" required class="request-call-block__intro-input" id="request-call-block-id" aria-label="Введите Ф.И.О." placeholder="Введите Ф.И.О.">
+                <input type="text" name="имя" required class="request-call-block__intro-input" id="request-call-block-id" aria-label="Введите Ф.И.О." placeholder="Введите Ф.И.О.">
 
                 <label for="request-call-block-label" class="request-call-block__tel-label">
                     Введите ваш номер
                 </label>
 
-                <input type="text" required class="request-call-block__tel-input" id="request-call-block-label" aria-label="Введите ваш номер телефона" placeholder="+7 - (ххх) - ххх - хх - хх">
+                <input type="text" name="телефон" required class="request-call-block__tel-input" id="request-call-block-label" aria-label="Введите ваш номер телефона" placeholder="+7 - (ххх) - ххх - хх - хх">
 
                 <button type="submit" class="request-call-block__button">
                     Заказать звонок !

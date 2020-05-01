@@ -18,6 +18,7 @@ const jsFiles = [           //указываем путь к js файлам, п
     'libs/jquery/dist/jquery.min.js',
     'libs/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js',
     'libs/swiper/package/js/swiper.js',
+    'libs/jquery-validation/dist/jquery.validate.js',
     'app/js/jquery.maskedinput.min.js',
     'app/js/minimize-menu.js',
     'app/js/modals.js',
@@ -94,7 +95,7 @@ function watch() {
 
 	gulp.watch('./app/scss/**/*.scss', styles);
     gulp.watch(['./app/js/**/*.js', '!./app/js/all.js'], scripts);
-	gulp.watch('./*.html', browserSync.reload);
+	gulp.watch('app/**/*.html').on('change', browserSync.reload);
 }
 
 function clean() {

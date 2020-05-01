@@ -29,6 +29,8 @@ $(document).ready(function () {
     function annunciation(){
         event.preventDefault();
 
+        mainPull();
+
         $(this).parents('.modal-all').find('.js-all-block').removeClass('active')
         $(this).parents('.modal-all').find('.js-all-block').addClass("no-active")
         enableScroll();
@@ -40,10 +42,26 @@ $(document).ready(function () {
             $("#js-annunciation").removeClass("active")
             $("#js-annunciation").addClass('no-active')
              enableScroll()
-        }, 3000)
+        }, 3000);
+    
+        this.reset();
+    };
 
-        this.reset()
-    }
+    /* отправка письма */
+    
+	$('form').each(function () {
+        $(this).validate({
+            submitHandler(form) {
+                let th = $(form);
+
+                $.ajax({
+                    type: 'POST',
+                    url: 'mail.php',
+                    data: th.serialize()
+                })
+            }
+        })
+    })
 
     /* заказать звонок */
 
