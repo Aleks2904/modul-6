@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="img/ficon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/ficon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/ficon/favicon-16x16.png">
+    <link rel="manifest" href="img/ficon/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="preload" href="fonts/Roboto400.woff2" as="font">
+    <link rel="preload" href="fonts/Robotomedium500.woff2" as="font">
+    <link rel="preload" href="fonts/Robotobold700.woff2" as="font">
+    <link rel="preload" href="fonts/Robotoblack900.woff2" as="font">
+
+    <link rel="stylesheet" href="css/libs/normalize.css">
+    <link rel="stylesheet" href="css/libs/libs.min.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    
+    <link rel="stylesheet" href="css/main.css">
+
+    <title>визитка</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header__container">
+            <nav class="header__navigation">
+                <button class="header__burger js-header__burger" aria-label="развернуть меню" aria-expanded="false" aria-controls="js-nav-header">
+                    <span class="header__burger_element"></span>
+                    <span class="header__burger_element"></span>
+                    <span class="header__burger_element"></span>
+                </button>
+    
+                <ul id="js-nav-header" class="header__navigation-ul js-header__navigation-ul">
+                    <li class="header__navigation-item">
+                        <a href="#services" class="header__navigation-link js-menu-scroll">
+                            Услуги
+                        </a>
+                    </li>
+    
+                    <li class="header__navigation-item">
+                        <a href="#portfolio" class="header__navigation-link js-menu-scroll">
+                            Портфолио
+                        </a>
+                    </li>
+    
+                    <li class="header__navigation-item">
+                        <a href="#price" class="header__navigation-link js-menu-scroll">
+                            Стоимость
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+    
+            <div class="header__phone">
+                <a href="tel:+74999955577" class="header__phone-text">
+                    +7 (499) 995-55-77
+                </a>
+        
+                <button type="button" class="header__phone-bottom" id="js-header-phone-bottom">
+                    <span class="header__phone-bottom_text">
+                        Заказать звонок
+                    </span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="my-presentation">
+            <div class="container-signs">
+                <span class="my-presentation__signs-1">
+                    { }
+                </span>
+    
+                <span class="my-presentation__signs-2">
+                    #
+                </span>
+    
+                <span class="my-presentation__signs-3">
+                    &lt;/&gt;
+                </span>
+    
+                <span class="my-presentation__signs-4">
+                    &lt;div&gt;
+                </span>
+    
+                <span class="my-presentation__signs-5">
+                    &lt;/&gt;
+                </span>
+    
+                <span class="my-presentation__signs-6">
+                    &lt;div&gt;
+                </span>
+            </div>
+
+            <div class="my-presentation__container">
+                <div class="my-presentation__picture">
+                    <svg class="my-presentation__svg" viewbox="0 0 484 400" role="img" aria-label="фон для картинки">
+                        <use xlink:href="img/symbol/sprite.svg#fone"></use>
+                    </svg>
+
+                    <svg class="my-presentation__svg-1024" viewbox="0 0 942 645" role="img" aria-label="фон для картинки">
+                        <use xlink:href="img/symbol/sprite.svg#fone_1024"></use>
+                    </svg>
+
+                    <svg class="my-presentation__svg-1920" viewbox="0 0 942 780" role="img" aria-label="фон для картинки">
+                        <use xlink:href="img/symbol/sprite.svg#fone_desctop"></use>
+                    </svg>
+
+                    <picture>
+                        <source type="image/webp" media="(min-width: 1200px)" srcset="img/block-1/im_foto_1920.webp">
+                        <source type="image/webp" media="(min-width: 769px)" srcset="img/block-1/im_foto_1024.webp">
+                        <source type="image/webp" srcset="img/block-1/im_foto.webp">
+
+                        <source media="(min-width: 1200px)" srcset="img/block-1/im_foto_1920.png">
+                        <source media="(min-width: 769px)" srcset="img/block-1/im_foto_1024.png">
+    
+                        <img src="img/block-1/im_foto.png" alt="тут должно быть мое фото, но мне лень ..." class="my-presentation__img"> 
+                    </picture>
+                </div>
+    
+                <div class="my-info">
+                    <h1 class="my-info__title">
+                        Дмитрий Алексеев
+                    </h1>
+    
+                    <p class="my-info__subtitle">
+                        Frontend-разработчик и веб-верстальщик
+                    </p>
+    
+                    <button type="button" class="my-info__buttom" id="js-my-presentation-buttom">
+                        Узнать больше
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="my-job">
+            <div class="my-job__container">
+                <h2 class="my-job__title" id="price">
+                    Что я делаю
+                </h2>
+        
+                <ul class="my-job__example">
+                    <li class="my-job__item">
+                        <svg class="my-job__example-svg" viewbox="0 0 512 512" aria-label="Описани картинки 1">
+                            <use xlink:href="img/symbol/sprite.svg#main1"></use> 
+                        </svg>
+    
+                        <p class="my-job__subtitle">
+                            Вёрстка лендинг&mdash;страниц и&nbsp;сайтов любой сложности
+                        </p>
+                    </li>
+    
+                    <li class="my-job__item">
+                        <svg class="my-job__example-svg" viewbox="0 0 480 480" aria-label="Описани картинки 2">
+                            <use xlink:href="img/symbol/sprite.svg#main2"></use>
+                        </svg>
+    
+                        <p class="my-job__subtitle">
+                            Адаптивная вёрстка под все браузеры и&nbsp;устройства
+                        </p>
+                    </li>
+    
+                    <li class="my-job__item">
+                        <svg class="my-job__example-svg" viewbox="0 0 512 512" aria-label="Описани картинки 3">
+                            <use xlink:href="img/symbol/sprite.svg#main3"></use>
+                        </svg>
+    
+                        <p class="my-job__subtitle">
+                            Frontend&nbsp;&mdash; разработка и&nbsp;программирование
+                        </p>
+                    </li>
+    
+                    <li class="my-job__item">
+                        <svg class="my-job__example-svg" viewbox="0 0 512 512" aria-label="Описани картинки 4">
+                            <use xlink:href="img/symbol/sprite.svg#main4"></use>
+                        </svg>
+    
+                        <p class="my-job__subtitle">
+                            Исправление и&nbsp;доработка существующей вёрстки
+                        </p>
+                    </li>
+                </ul>
+    
+                <button type="button" class="my-job__button" id="js-my-job-button">
+                    Узнать стоимость
+                </button>
+            </div>
+        </section>
+
+        <section class="work-example">
+            <div class="work-example__container">
+                <h2 class="work-example__title" id="portfolio">
+                    Примеры моих работ
+                </h2>
+    
+                <div class="swiper-container">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <a href="#" class="swiper-item">
+                                <img class="swiper-item__foto" src="img/rectangle_4_119.png" alt="малыш">
+    
+                                <p class="swiper-item__subtitle">
+                                    Сайт магазина детской одежды
+                                </p>
+                            </a>
+                        </div>
+    
+                        <div class="swiper-slide">
+                            <a href="#" class="swiper-item">
+                                <img class="swiper-item__foto" src="img/rectangle_4_119.png" alt="малыш">
+
+                                <p class="swiper-item__subtitle">
+                                    Сайт магазина детской одежды
+                                </p>
+                            </a>
+                        </div>
+    
+                        <div class="swiper-slide">
+                            <a href="#" class="swiper-item">
+                                <img class="swiper-item__foto" src="img/rectangle_4_119.png" alt="малыш">
+
+                                <p class="swiper-item__subtitle">
+                                    Сайт магазина детской одежды
+                                </p>
+                            </a>
+                        </div>
+                    </div>
+    
+                    <div class="swiper-pagination"></div>
+                </div>
+    
+                <div class="swiper-button-prev swiper-button-all"></div>
+                <div class="swiper-button-next swiper-button-all"></div>
+    
+                <button type="button" class="work-example__button" id="js-work-example-button">
+                    Заказать проект
+                </button>
+            </div>
+        </section>
+
+        <section class="advertising">
+            <div class="container-signs">
+                <span class="advertising__signs-1">
+                    { }
+                </span>
+    
+                <span class="advertising__signs-2">
+                    &lt;/&gt;
+                </span>
+    
+                <span class="advertising__signs-3">
+                    &lt;div&gt;
+                </span>
+    
+                <span class="advertising__signs-4">
+                    { }
+                </span>
+    
+                <span class="advertising__signs-5">
+                    #
+                </span>
+            </div>
+            
+            <div class="advertising__container">
+                <h2 class="advertising__title" id="services">
+                    Адаптивная вёрстка под все устройства и&nbsp;браузеры от&nbsp;1000 рублей всего за&nbsp;4&nbsp;часа.*
+                </h2>
+    
+                <p class="advertising__subtitle">
+                    Срок и&nbsp;стоимость могут отличаться от&nbsp;заявленных и&nbsp;рассчитываются индивидуально, в&nbsp;зависимости от&nbsp;сложности задач.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <nav class="footer-navigation">
+                <ul class="footer-navigation__ul" id="js-nav-footer">
+                    <li class="footer-navigation__li">
+                        <a href="#services" class="footer-navigation__a">
+                            Услуги
+                        </a>
+                    </li>
+    
+                    <li class="footer-navigation__li">
+                        <a href="#portfolio" class="footer-navigation__a">
+                            Портфолио
+                        </a>
+                    </li>
+    
+                    <li class="footer-navigation__li">
+                        <a href="#price" class="footer-navigation__a">
+                            Стоимость
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+    
+            <div class="contacts">
+                <a href="tel:+74999957755" class="contacts__phone">
+                    <svg class="contacts__phone-icon" > 
+                        <use xlink:href="img/symbol/sprite.svg#phone"></use>
+                    </svg>
+    
+                    <span class="contacts__phone-number">
+                        +7 (499) 995-77-55
+                    </span>
+                </a>
+    
+                <a href="mailto:dmitry@alekseev.com" class="contacts__mail">
+                    <svg class="contacts__mail-icon" viewbox="0 0 511.626 511.626"> 
+                        <use xlink:href="img/symbol/sprite.svg#mail"></use>
+                    </svg>
+    
+                    <span class="contacts__mail-number">
+                        dmitry@alekseev.com
+                    </span>
+                </a>
+            </div>
+    
+            <div class="connection">
+                <button type="button" class="connection__button" id="js-footer-phone-bottom">
+                    Заказать звонок
+                </button>
+    
+                <ul class="connection__ul">
+                    <li class="connection__li">
+                        <a href="http://vk.com" target="_blank" class="connection__a" aria-label="вк">
+                            <svg class="connection__svg" viewbox="0 0 96.124 96.123">
+                                <use xlink:href="img/symbol/sprite.svg#vk"></use>
+                            </svg>
+                        </a>
+                    </li>
+    
+                    <li class="connection__li">
+                        <a href="https://www.facebook.com" target="_blank" class="connection__a" aria-label="фэйсбук">
+                            <svg class="connection__svg" viewbox="0 0 97.395 97.395">
+                                <use xlink:href="img/symbol/sprite.svg#facebook"></use>
+                            </svg>
+                        </a>
+                    </li>
+    
+                    <li class="connection__li">
+                        <a href="https://twitter.com/home" target="_blank" class="connection__a" aria-label="твиттер">
+                            <svg class="connection__svg" viewbox="0 0 612 612">
+                                <use xlink:href="img/symbol/sprite.svg#twitter"></use>
+                            </svg>
+                        </a>
+                    </li>
+    
+                    <li class="connection__li">
+                        <a href="https://www.instagram.com/" target="_blank" class="connection__a" aria-label="инстаграмм">
+                            <svg class="connection__svg" viewbox="0 0 304.36 304.36">
+                                <use xlink:href="img/symbol/sprite.svg#instagram"></use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>    
+        </div>
+
+        <p class="copyright">
+            © Дмитрий Алексеев, 2016 – 2018
+        </p>
+
+    </footer>
+
+    <a class="up" id="js-up" href="#">
+        <svg class="up__svg" viewbox="0 0 512 512" aria-label="Описани картинки 1">
+            <use xlink:href="img/symbol/sprite.svg#up"></use> 
+        </svg>
+    </a> 
+
+    <div class="modal-all mCustomScrollbar" data-mcs-theme="dark">
+        <div class="annunciation" id="js-annunciation">
+            <h2 class="annunciation__title">
+                В ближайшее время я с вами свяжусь !
+            </h2>
+        </div>
+
+        <div class="request-call-block js-all-block" id="js-request-call-block">
+            <h2 class="request-call-block__title">
+                Заказать звонок
+            </h2>
+            
+            <form class="request-call-block__form" action="php/mail.php" method="POST" id="js-request-call-form">
+
+                <label for="request-call-block-id" class="request-call-block__intro-label">
+                    Представтесь пожалуйста 
+                </label>
+
+                <input type="text" name="Имя" required class="request-call-block__intro-input" id="request-call-block-id" aria-label="Введите Ф.И.О." placeholder="Введите Ф.И.О.">
+
+                <label for="request-call-block-label" class="request-call-block__tel-label">
+                    Введите ваш номер
+                </label>
+
+                <input type="text" name="Телефон" required class="request-call-block__tel-input" id="request-call-block-label" aria-label="Введите ваш номер телефона" placeholder="+7 - (ххх) - ххх - хх - хх">
+
+                <button type="submit" class="request-call-block__button">
+                    Заказать звонок !
+                </button>
+            </form>
+
+            <button class="request-call-block__close button-close js-button-close" aria-label="Закрыть окно">
+                <span class="button-close__liner-1"></span>
+                <span class="button-close__liner-2"></span>
+            </button>
+        </div>
+
+        <div class="follow-up js-all-block" id="js-follow-up">
+            <h2 class="follow-up__title">
+                фантазии на оформление этого окна у меня не хватило
+            </h2>
+
+            <button class="follow-up__close button-close js-button-close" aria-label="Закрыть окно">
+                <span class="button-close__liner-1"></span>
+                <span class="button-close__liner-2"></span>
+            </button>
+        </div>
+
+        <div class="find-price js-all-block" id="js-find-price">
+            <h2 class="find-price__title">
+                Узнать цену
+            </h2>
+
+            <form class="find-price__form">
+                <label for="page-id" class="find-price__page-label">
+                    Сколько страниц вы хотите на вашем сайте ? 
+                </label>
+
+                <input type="number" class="find-price__page-input" id="page-id" aria-label="введите колличество страниц" placeholder="Колличество страниц">
+
+                <label for="block-id" class="find-price__block-label">
+                    Сколько блоков вы хотите на вашем сайте ?
+                </label>
+
+                <input type="number" class="find-price__block-input" id="block-id" aria-label="введите колличество блоков" placeholder="Колличество блоков">
+
+                <label for="sloider-id" class="find-price__sloider-label">
+                    Сколько слайдеров вы хотите на вашем сайте ?
+                </label>
+
+                <input type="number" class="find-price__sloider-input" id="sloider-id" aria-label="введите колличество слайдеров" placeholder="Колличество слайдеров">
+            
+                <a href="#js-find-price-prise"  class="find-price__button" id="js-find-price-button">
+                    Рассчитать стоймость
+                </a>
+            </form>
+
+            <span class="find-price__prise" id="js-find-price-prise"></span>
+
+            <button class="find-price__close button-close js-button-close" aria-label="Закрыть окно">
+                <span class="button-close__liner-1"></span>
+                <span class="button-close__liner-2"></span>
+            </button>
+        </div>
+
+        <div class="order-project js-all-block" id="js-order-project">
+            <h2 class="order-project__title">
+                и здесь я не смог придумать не чего оригинального
+            </h2>
+
+            <button class="order-project__close button-close js-button-close" aria-label="Закрыть окно">
+                <span class="button-close__liner-1"></span>
+                <span class="button-close__liner-2"></span>
+            </button>
+        </div>
+    </div>
+
+    <svg class="svg-sprites">
+        <defs> 
+            <lineargradient id="grad" x1="0%" y1="100%" x2="0%" y2="0%">
+                <stop offset = "0%" stop-color = "#ff8f5a"/>
+                <stop offset = "99%" stop-color = "#ff2f96"/>
+                <stop offset = "100%" stop-color = "#ff2f96"/>
+            </lineargradient>
+        </defs>
+    </svg>
+
+  <script src="js/all.js"></script>
+</body>
+</html>
