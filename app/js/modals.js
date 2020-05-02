@@ -23,7 +23,7 @@ $(document).ready(function () {
     });
 
     /* оповещение о заказе звонка */
-
+/*
     $('#js-request-call-form').on('submit', annunciation)
 
     function annunciation(){
@@ -44,23 +44,26 @@ $(document).ready(function () {
     
         this.reset();
     };
-
+*/
     /* отправка письма */
+
     
-	$('form').each(function () {
+
+    $('form').each(function() {
         $(this).validate({
             submitHandler(form) {
                 let th = $(form);
 
                 $.ajax({
                     type: 'POST',
-                    url: 'mail.php',
+                    url: '../php/mail.php',
                     data: th.serialize(),
-                    // eslint-disable-next-line func-names
                 })
             }
-        })
-    })
+        });
+
+        console.log('123')
+    });
 
     /* заказать звонок */
 
