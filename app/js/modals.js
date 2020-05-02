@@ -27,9 +27,7 @@ $(document).ready(function () {
     $('#js-request-call-form').on('submit', annunciation)
 
     function annunciation(){
-        event.preventDefault();
-
-        mainPull();
+        //event.preventDefault();
 
         $(this).parents('.modal-all').find('.js-all-block').removeClass('active')
         $(this).parents('.modal-all').find('.js-all-block').addClass("no-active")
@@ -57,7 +55,8 @@ $(document).ready(function () {
                 $.ajax({
                     type: 'POST',
                     url: 'mail.php',
-                    data: th.serialize()
+                    data: th.serialize(),
+                    // eslint-disable-next-line func-names
                 })
             }
         })
