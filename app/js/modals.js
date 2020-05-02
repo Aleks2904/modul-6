@@ -41,13 +41,14 @@ $(document).ready(function () {
             $("#js-annunciation").addClass('no-active')
              enableScroll()
         }, 3000);
+
     
         this.reset();
     };
 
     /* отправка письма */
 
-    $('form').each(function() {
+    $('form').on('submit',function() {
         $(this).validate({
             submitHandler(form) {
                 let th = $(form);
