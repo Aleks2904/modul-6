@@ -23,11 +23,11 @@ $(document).ready(function () {
     });
 
     /* оповещение о заказе звонка */
-/*
+
     $('#js-request-call-form').on('submit', annunciation)
 
     function annunciation(){
-        //event.preventDefault();
+        event.preventDefault();
 
         $(this).parents('.modal-all').find('.js-all-block').removeClass('active')
         $(this).parents('.modal-all').find('.js-all-block').addClass("no-active")
@@ -44,10 +44,8 @@ $(document).ready(function () {
     
         this.reset();
     };
-*/
-    /* отправка письма */
 
-    
+    /* отправка письма */
 
     $('form').each(function() {
         $(this).validate({
