@@ -1,52 +1,37 @@
-<?php
+<?php 
 
-$method = $_SERVER['REQUEST_METHOD'];
+require_once('phpmailer/PHPMailerAutoload.php');
+$mail = new PHPMailer;
+$mail->CharSet = 'utf-8';
 
-//Script Foreach
-$c = true;
-if ( $method === 'POST' ) {
+$name = $_POST['Имя'];
+$phone = $_POST['Телефон'];
 
-	$project_name = trim($_POST["project_name"]);
-	$admin_email  = trim($_POST["admin_email"]);
-	$form_subject = trim($_POST["form_subject"]);
+//$mail->SMTPDebug = 3;                               // Enable verbose debug output
 
-	foreach ( $_POST as $key => $value ) {
-		if ( $value != "" && $key != "project_name" && $key != "admin_email" && $key != "form_subject" ) {
-			$message .= "
-			" . ( ($c = !$c) ? '<tr>':'<tr>' ) . "
-				<td style='padding: 10px; width: auto;'><b>$key:</b></td>
-				<td style='padding: 10px;width: 100%;'>$value</td>
-			</tr>
-			";
-		}
-	}
-} else if ( $method === 'GET' ) {
+$mail->isSMTP();                                      // Set mailer to use SMTP
+$mail->Host = 'smtp.gmail.com';  																							// Specify main and backup SMTP servers
+$mail->SMTPAuth = true;                               // Enable SMTP authentication
+$mail->Username = 'lukaskurth03.02.2002@gmail.com'; // Ваш логин от почты с которой будут отправляться письма
+$mail->Password = 'Qaz290495'; // Ваш пароль от почты с которой будут отправляться письма
+$mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
+$mail->Port = 465; // TCP port to connect to / этот порт может отличаться у других провайдеров
 
-	$project_name = trim($_GET["project_name"]);
-	$admin_email  = trim($_GET["admin_email"]);
-	$form_subject = trim($_GET["form_subject"]);
+$mail->setFrom('lukaskurth03.02.2002@gmail.com'); // от кого будет уходить письмо?
+$mail->addAddress('Garmatin171@yandex.ru');     // Кому будет уходить письмо 
+//$mail->addAddress('ellen@example.com');               // Name is optional
+//$mail->addReplyTo('info@example.com', 'Information');
+//$mail->addCC('cc@example.com');
+//$mail->addBCC('bcc@example.com');
+//$mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
+//$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
+$mail->isHTML(true);                                  // Set email format to HTML
 
-	foreach ( $_GET as $key => $value ) {
-		if ( $value != "" && $key != "project_name" && $key != "admin_email" && $key != "form_subject" ) {
-			$message .= "
-			" . ( ($c = !$c) ? '<tr>':'<tr>' ) . "
-				<td style='padding: 10px; width: auto;'><b>$key:</b></td>
-				<td style='padding: 10px;width: 100%;'>$value</td>
-			</tr>
-			";
-		}
-	}
-}
+$mail->Subject = 'Заявка с тестового сайта';
+$mail->Body    = '' .$name . ' оставил заявку, его телефон ' .$phone;
+$mail->AltBody = '';
 
-$message = "<table style='width: 50%;'>$message</table>";
-
-function adopt($text) {
-	return '=?UTF-8?B?'.Base64_encode($text).'?=';
-}
-
-$headers = "MIME-Version: 1.0" . PHP_EOL .
-"Content-Type: text/html; charset=utf-8" . PHP_EOL .
-'From: '.adopt($project_name).' <'.$admin_email.'>' . PHP_EOL .
-'Reply-To: '.$admin_email.'' . PHP_EOL;
-
-mail($admin_email, adopt($form_subject), $message, $headers );
+if(!$mail->send()) {
+    echo 'Error';
+} 
+?>

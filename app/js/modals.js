@@ -47,7 +47,7 @@ $(document).ready(function () {
     };
 
     /* отправка письма */
-
+/*
     $('form').on('submit',function() {
         $(this).validate({
             submitHandler(form) {
@@ -63,7 +63,7 @@ $(document).ready(function () {
 
         console.log('123')
     });
-
+*/
     /* заказать звонок */
 
     $("#js-header-phone-bottom, #js-footer-phone-bottom").on('click',function(){
