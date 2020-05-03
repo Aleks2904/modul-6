@@ -392,7 +392,10 @@
                 Заказать звонок
             </h2>
             
-            <form class="request-call-block__form" action="php/mail.php" method="POST" id="js-request-call-form">
+            <form class="request-call-block__form" id="js-request-call-form">
+                <input type="hidden" name="project_name" value="визитка">
+                <input type="hidden" name="admin_email" value="Garmatin171@yandex.ru">
+                <input type="hidden" name="form_subject" value="запрос на звонок">
 
                 <label for="request-call-block-id" class="request-call-block__intro-label">
                     Представтесь пожалуйста 
