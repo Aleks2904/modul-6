@@ -48,20 +48,17 @@ $(document).ready(function () {
 
     /* отправка письма */
 
-    $('form').on('submit',function() {
-        $(this).validate({
-            submitHandler(form) {
-                let th = $(form);
 
-                $.ajax({
-                    type: 'POST',
-                    url: '../php/mail.php',
-                    data: th.serialize(),
-                })
-            }
-        });
+    $(this).on('submit', function () {
+        let th = $(this);
 
-        console.log('123')
+        console.log('321')
+
+        $.ajax({
+            type: 'POST',
+            url: '../php/mail.php',
+            data: th.serialize(),
+        })
     });
 
     /* заказать звонок */
