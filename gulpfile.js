@@ -114,8 +114,8 @@ gulp.task('prebuild', async function() {
     var buildHtml = gulp.src('app/*.html') // Переносим HTML в продакшен
     .pipe(gulp.dest('dist'));
 
-    var buildPHP = gulp.src('app/*.php')
-    .pipe(gulp.dest('dist'))
+    var buildPHP = gulp.src('app/php/**/*')
+    .pipe(gulp.dest('dist/php'))
 
     var buildSvg = gulp.src('app/img/symbol/sprite.svg') // Переносим img в продакшен
     .pipe(gulp.dest('dist/img/symbol'));
