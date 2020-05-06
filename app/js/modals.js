@@ -24,16 +24,15 @@ $(document).ready(function () {
 
     /* оповещение о заказе звонка и отправка письма*/
 
-	$("form").submit(function() { //Change
-        var th = $(this);
-        
+    $("form").submit(function() { //Change
+		var th = $(this);
 		$.ajax({
 			type: "POST",
 			url: "mail.php", //Change
 			data: th.serialize()
 		}).done(function() {
 
-            $('body').find('.js-all-block').removeClass('active')
+			$('body').find('.js-all-block').removeClass('active')
             $('body').parents('.modal-all').find('.js-all-block').addClass("no-active")
             enableScroll();
 
@@ -45,11 +44,13 @@ $(document).ready(function () {
                 $("#js-annunciation").addClass('no-active')
             }, 3000);
 
-            th.trigger("reset");
-
+			setTimeout(function() {
+				// Done Functions
+				th.trigger("reset");
+			}, 1000);
 		});
 		return false;
-    });
+	});
 
     /* заказать звонок */
 
@@ -136,6 +137,7 @@ $(document).ready(function () {
     //кнопка возврата
  
     $(window).scroll(function() {
+        event.preventDefault();
         if($(this).scrollTop() != 0){       
             $('#js-up').fadeIn(); 
         }else{

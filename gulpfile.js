@@ -19,9 +19,9 @@ const jsFiles = [           //указываем путь к js файлам, п
     'libs/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js',
     'libs/swiper/package/js/swiper.js',
     'libs/jquery.maskedinput/dist/jquery.maskedinput.min.js',
+    'app/js/modals.js',
     'app/js/scroll.js',
     'app/js/minimize-menu.js',
-    'app/js/modals.js',
     'app/js/swiper-active.js'
 ]
 
@@ -114,8 +114,8 @@ gulp.task('prebuild', async function() {
     var buildHtml = gulp.src('app/*.html') // Переносим HTML в продакшен
     .pipe(gulp.dest('dist'));
 
-    var buildPHP = gulp.src('app/php/**/*')
-    .pipe(gulp.dest('dist/php'))
+    var buildPHP = gulp.src('app/*.php')
+    .pipe(gulp.dest('dist'))
 
     var buildSvg = gulp.src('app/img/symbol/sprite.svg') // Переносим img в продакшен
     .pipe(gulp.dest('dist/img/symbol'));
