@@ -22,43 +22,33 @@ $(document).ready(function () {
         }
     });
 
-    /* оповещение о заказе звонка */
+    /* оповещение о заказе звонка и отправка письма*/
 
-    $('#js-request-call-form').on('submit', annunciation)
+	$("form").submit(function() { //Change
+        var th = $(this);
+        
+		$.ajax({
+			type: "POST",
+			url: "mail.php", //Change
+			data: th.serialize()
+		}).done(function() {
 
-    function annunciation(){
-        event.preventDefault();
+            $('body').find('.js-all-block').removeClass('active')
+            $('body').parents('.modal-all').find('.js-all-block').addClass("no-active")
+            enableScroll();
 
-        $(this).parents('.modal-all').find('.js-all-block').removeClass('active')
-        $(this).parents('.modal-all').find('.js-all-block').addClass("no-active")
-        enableScroll();
+            $("#js-annunciation").addClass("active")
+            $("#js-annunciation").removeClass('no-active')
 
-        $("#js-annunciation").addClass("active")
-        $("#js-annunciation").removeClass('no-active')
+            setTimeout (function(){
+                $("#js-annunciation").removeClass("active")
+                $("#js-annunciation").addClass('no-active')
+            }, 3000);
 
-        setTimeout (function(){
-            $("#js-annunciation").removeClass("active")
-            $("#js-annunciation").addClass('no-active')
-             enableScroll()
-        }, 3000);
+            th.trigger("reset");
 
-    
-        this.reset();
-    };
-
-    /* отправка письма */
-
-
-    $(this).on('submit', function () {
-        let th = $(this);
-
-        console.log('321')
-
-        $.ajax({
-            type: 'POST',
-            url: '../php/mail.php',
-            data: th.serialize(),
-        })
+		});
+		return false;
     });
 
     /* заказать звонок */
