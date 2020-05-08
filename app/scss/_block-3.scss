@@ -70,17 +70,14 @@
 
     &__foto {
         margin-bottom:11px;
+        object-fit: cover;
 
         @media (min-width:769px){
-            width: 455px;
-            height: 358px;
             margin-bottom:21px;
         }
 
         @media (min-width:1200px){
-            width: 100%;
             margin-bottom:35px;
-            height: 290px;
         }
     }
 

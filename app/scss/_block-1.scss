@@ -353,11 +353,17 @@
             margin-bottom:50px ;
             white-space:nowrap;
             width: 100%;
-            font-size: 20px;
+            font-size: 19px;
+            text-align: left;
         }
 
         @media (min-width:900px){
+            font-size: 22.5px;
+        }
+
+        @media (min-width:1000px){
             font-size: 25px;
+            text-align: center;
         }
 
         @media (min-width:1200px){

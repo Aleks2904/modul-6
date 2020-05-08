@@ -19,6 +19,7 @@ const jsFiles = [           //указываем путь к js файлам, п
     'libs/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js',
     'libs/swiper/package/js/swiper.js',
     'libs/jquery.maskedinput/dist/jquery.maskedinput.min.js',
+    'libs/social-likes/dist/social-likes.min.js',
     'app/js/modals.js',
     'app/js/scroll.js',
     'app/js/minimize-menu.js',
