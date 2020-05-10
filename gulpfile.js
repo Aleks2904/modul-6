@@ -11,6 +11,7 @@ var gulp         = require('gulp'), // Подключаем Gulp
     replace      = require('gulp-replace'), // исправление косяков от cheerio
     svgSprite    = require('gulp-svg-sprite'), //собирает все свг в 1 спрайт ( у него очень большой функционал, почитать api)
     svgMin       = require('gulp-svgmin'),  //минификация свг
+    csso         = require('gulp-csso'), //минификация css
 
     browserSync   = require('browser-sync').create();
 
@@ -26,11 +27,27 @@ const jsFiles = [           //указываем путь к js файлам, п
     'app/js/swiper-active.js'
 ]
 
+const cssFiles = [
+    'app/css/libs/normalize.css',
+    'app/css/libs/libs.min.css',
+    'app/css/fonts.css',
+    'app/css/main.css'
+]
+
 function styles() {
-	return gulp.src('app/scss/**/*.scss') // Берем источник
+	return     gulp.src('app/scss/**/*.scss') // Берем источник
         .pipe(sass()) // Преобразуем Sass в CSS посредством gulp-sass
         .pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true })) // Создаем префиксы
         .pipe(gulp.dest('app/css')) // Выгружаем результата в папку app/css
+
+        .pipe(gulp.src(cssFiles))
+        .pipe(concat('all.css'))
+        .pipe(csso({
+            restructure: true,
+            sourceMap: false,
+            debug: false
+        }))
+        .pipe(gulp.dest('./app/css'))
         .pipe(browserSync.stream());
 }
 
@@ -93,7 +110,7 @@ function watch() {
 		tunnel: false,
 	});
 
-	gulp.watch('./app/scss/**/*.scss', styles);
+    gulp.watch('./app/scss/**/*.scss', styles);
     gulp.watch(['./app/js/**/*.js', '!./app/js/all.js'], scripts);
 	gulp.watch('app/**/*.html').on('change', browserSync.reload);
 }
@@ -103,7 +120,7 @@ function clean() {
 }
 
 gulp.task('prebuild', async function() {
-    var buildCss = gulp.src('app/css/**/*') // Переносим библиотеки в продакшен
+    var buildCss = gulp.src('app/css/all.css') // Переносим библиотеки в продакшен
     .pipe(gulp.dest('dist/css'))
 
     var buildFonts = gulp.src('app/fonts/**/*') // Переносим шрифты в продакшен

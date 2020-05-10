@@ -71,6 +71,8 @@
     &__foto {
         margin-bottom:11px;
         object-fit: cover;
+        width: 100%;
+        max-width: 400px;
 
         @media (min-width:769px){
             margin-bottom:21px;

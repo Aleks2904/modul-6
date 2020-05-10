@@ -75,6 +75,12 @@
         }
 
         @media (min-width:1200px){
+            display: none;
+        }
+
+        @media (min-width:1700px){
+            display: block;
+
             font-size:60px;
 
             transform: rotate(18deg);
@@ -330,11 +336,11 @@
         @media (min-width:769px){
             margin-bottom:30px;
             margin-left:0;
-            font-size: 48px;
+            font-size: 47px;
         }
 
         @media (min-width:900px){
-            font-size: 54px;
+            font-size: 52px;
         }
 
         @media (min-width:1200px){
@@ -358,11 +364,11 @@
         }
 
         @media (min-width:900px){
-            font-size: 22.5px;
+            font-size: 22px;
         }
 
         @media (min-width:1000px){
-            font-size: 25px;
+            font-size: 24px;
             text-align: center;
         }
 

@@ -3,24 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <meta name="author" content="Александр">
+    <meta name="description" lang="ru" content="Создание сайтов">
+    <meta name="keywords" content="Купить сайт, верстальщик, заказать сайт, создание сайтов">
+    <meta name="robots" content="all">
 
     <link rel="apple-touch-icon" sizes="180x180" href="img/ficon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="img/ficon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="img/ficon/favicon-16x16.png">
     <link rel="manifest" href="img/ficon/site.webmanifest">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="theme-color" content="#ffffff">
 
-    <link rel="preload" href="fonts/Roboto400.woff2" as="font">
-    <link rel="preload" href="fonts/Robotomedium500.woff2" as="font">
-    <link rel="preload" href="fonts/Robotobold700.woff2" as="font">
-    <link rel="preload" href="fonts/Robotoblack900.woff2" as="font">
+    <link rel="preconnect" href="//vk.com">
+    <link rel="preconnect" href="//www.facebook.com">
+    <link rel="preconnect" href="//twitter.com/home">
+    <link rel="preconnect" href="//www.instagram.com">
 
-    <link rel="stylesheet" href="css/libs/normalize.css">
-    <link rel="stylesheet" href="css/libs/libs.min.css">
-    <link rel="stylesheet" href="css/fonts.css">
-    
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/all.css">
 
     <title>визитка</title>
 </head>
@@ -60,7 +61,7 @@
                     +7 (499) 995-55-77
                 </a>
         
-                <button type="button" class="header__phone-bottom js-button-open-modal" data-role="request-call-block">
+                <button type="button" aria-label="заказать звонок" class="header__phone-bottom js-button-open-modal" data-role="request-call-block">
                     <span class="header__phone-bottom_text">
                         Заказать звонок
                     </span>
@@ -334,7 +335,7 @@
     
                 <ul class="connection__ul social-likes" data-url="https://alex2904.ru">
                     <li class="connection__li vkontakte">
-                        <a href="http://vk.com" target="_blank" class="connection__a" aria-label="вк">
+                        <a href="http://vk.com" rel="noopener" target="_blank" class="connection__a" aria-label="вк">
                             <svg class="connection__svg" viewbox="0 0 96.124 96.123">
                                 <use xlink:href="img/symbol/sprite.svg#vk"></use>
                             </svg>
@@ -342,7 +343,7 @@
                     </li>
     
                     <li class="connection__li facebook">
-                        <a href="https://www.facebook.com" target="_blank" class="connection__a" aria-label="фэйсбук">
+                        <a href="https://www.facebook.com" rel="noopener" target="_blank" class="connection__a" aria-label="фэйсбук">
                             <svg class="connection__svg" viewbox="0 0 97.395 97.395">
                                 <use xlink:href="img/symbol/sprite.svg#facebook"></use>
                             </svg>
@@ -350,7 +351,7 @@
                     </li>
     
                     <li class="connection__li twitter">
-                        <a href="https://twitter.com/home" target="_blank" class="connection__a" aria-label="твиттер">
+                        <a href="https://twitter.com/home" rel="noopener" target="_blank" class="connection__a" aria-label="твиттер">
                             <svg class="connection__svg" viewbox="0 0 612 612">
                                 <use xlink:href="img/symbol/sprite.svg#twitter"></use>
                             </svg>
@@ -358,7 +359,7 @@
                     </li>
     
                     <li class="connection__li instagram">
-                        <a href="https://www.instagram.com/" target="_blank" class="connection__a" aria-label="инстаграмм">
+                        <a href="https://www.instagram.com/" rel="noopener" target="_blank" class="connection__a" aria-label="инстаграмм">
                             <svg class="connection__svg" viewbox="0 0 304.36 304.36">
                                 <use xlink:href="img/symbol/sprite.svg#instagram"></use>
                             </svg>
