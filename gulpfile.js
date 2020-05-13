@@ -31,22 +31,20 @@ const cssFiles = [
     'app/css/libs/normalize.css',
     'app/css/libs/libs.min.css',
     'app/css/fonts.css',
+    'app/scss/main.scss'
 ]
 
 function styles() {
-	return     gulp.src('app/scss/**/*.scss') // Берем источник
+	return     gulp.src(cssFiles) // Берем источник
         .pipe(sass()) // Преобразуем Sass в CSS посредством gulp-sass
         .pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true })) // Создаем префиксы
-      //  .pipe(gulp.dest('app/css')) // Выгружаем результата в папку app/css
-
-        .pipe(gulp.src(cssFiles))
-        .pipe(concat('main.css'))
+        .pipe(concat('all.css'))
         .pipe(csso({
             restructure: true,
             sourceMap: false,
             debug: false
         }))
-        .pipe(gulp.dest('./app/css'))
+        .pipe(gulp.dest('app/css')) // Выгружаем результата в папку app/css
         .pipe(browserSync.stream());
 }
 
@@ -110,6 +108,7 @@ function watch() {
 	});
 
     gulp.watch('./app/scss/**/*.scss', styles);
+    gulp.watch('./app/css/**/*.css', concat);
     gulp.watch(['./app/js/**/*.js', '!./app/js/all.js'], scripts);
 	gulp.watch('app/**/*.html').on('change', browserSync.reload);
 }
@@ -119,7 +118,7 @@ function clean() {
 }
 
 gulp.task('prebuild', async function() {
-    var buildCss = gulp.src('app/css/main.css') // Переносим библиотеки в продакшен
+    var buildCss = gulp.src('app/css/all.css') // Переносим библиотеки в продакшен
     .pipe(gulp.dest('dist/css'))
 
     var buildFonts = gulp.src('app/fonts/**/*') // Переносим шрифты в продакшен
