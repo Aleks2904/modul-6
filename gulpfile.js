@@ -48,6 +48,7 @@ function styles() {
         .pipe(browserSync.stream());
 }
 
+
 function scripts() {
 	return gulp.src(jsFiles)
 		.pipe(concat('all.js'))
@@ -138,7 +139,6 @@ gulp.task('prebuild', async function() {
 });
 
 gulp.task('styles', styles);
-gulp.task('scripts', scripts);
 gulp.task('img', img);
 gulp.task('svg', svg);
 gulp.task('watch', watch);
